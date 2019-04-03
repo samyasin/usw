@@ -693,7 +693,7 @@
 						<div class="row">
 							<div class="col-xs-12">
 								<div class="lgx-heading">
-									<h2 class="heading-title"><a></a>الأحداث القادمة</h2>
+									<h2 class="heading-title"><a></a>الأحداث </h2>
 									<h4 class="heading-subtitle"> الندوات الدراسية القادمة لدينا لا تفوت
 									</h4>
 								</div>
