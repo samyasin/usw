@@ -1,0 +1,426 @@
+.ar {
+	margin-right: -45px;
+	margin-left: 20px;
+	padding: 4px 4px;
+	background-color: #e39a31;
+	font-family: 'Cairo',
+		sans-serif;
+}
+
+.slider-text-single {
+	font-family: 'Montserrat',
+		sans-serif;
+}
+.lgx-banner-info .title {
+	color: white;
+}
+
+body,
+p {
+	font-family: 'Montserrat',
+		sans-serif !important;
+
+}
+
+.lgx-normal-single footer .title {
+	font-family: 'Montserrat',
+		sans-serif !important;
+                
+}
+
+
+.slider-text-single span.slide {
+     background: rgba(0, 0, 0, 0.6);
+     width : max-content;
+     padding : 5px
+
+   
+ }
+.lgx-banner-info,
+.lgx-filter li a,
+.lgx-header .lgx-navbar .lgx-nav li a,
+.lgx-navbar-search .lgx-menu-search .form-control,
+.lgx-single-course .course-info .course-author .title,
+.lgx-single-service .title {
+	font-family: 'Montserrat',
+		sans-serif !important;
+}
+
+.lgx-heading .heading-title {
+	font-family: 'Montserrat',
+		sans-serif !important;
+	
+}
+
+.lgx-video-area figure figcaption .video-icon .lgx-vertical span {
+	font-size: 15px;
+	font-family: 'Montserrat',
+		sans-serif !important;
+}
+
+b,
+strong {
+	font-weight: 500;
+}
+
+
+
+.lgx-footer-single {
+	text-align: center;
+	font-family: 'Montserrat',
+		sans-serif !important;
+}
+
+.lgx-heading .heading-subtitle {
+	font-family: 'Montserrat',
+		sans-serif !important;
+	
+	font-size: 18px;
+	font-weight: bold;
+
+}
+
+.lgx-btn {
+	font-family: 'Montserrat',
+		sans-serif !important;
+	font-weight: 600;
+}
+
+footer {
+	font-family: 'Montserrat',
+		sans-serif;
+
+}
+
+div.lgx-footer-single,
+.lgx-footer-single ul li {
+	font-family: 'Montserrat',
+		sans-serif;
+}
+
+
+div.lgx-getintouch-area {
+	text-align: center;
+	font-family: 'Montserrat',
+		sans-serif;
+}
+
+.lgx-subscriber-area .title {
+	font-family: 'Montserrat',
+		sans-serif;
+
+}
+
+
+.h1,
+.h2,
+.h3,
+h1,
+h2,
+h3 {
+	font-family: 'Montserrat',
+		sans-serif !important;
+
+}
+
+
+
+.heading-title {
+	font-family: 'Montserrat',
+		sans-serif;
+
+}
+
+.lgx-banner-info .text {
+	font-size: 21px !important;
+	font-weight:1000 !important;
+        color : #fff;
+        display : inline-block !important;
+}
+
+ul.why li {
+	list-style-type: none;
+	padding-bottom: 20px;
+	font-size: 16px;
+	text-align: center;
+	font-weight: 600;
+}
+
+
+
+
+.lgx-footer-single ul li a {
+	font-family: 'Montserrat',
+		sans-serif !important;
+}
+
+div.lgx-footer-single,
+.lgx-footer-single ul li {
+	text-align: center;
+
+}
+.course-bottom .list-inline {
+	padding-right: 100px;
+        padding-top :10px;
+}
+
+.lgx-single-course {
+        padding-bottom:40px
+}
+
+.list-unstyled {
+	font-family: 'Montserrat',
+		sans-serif
+}
+
+
+
+
+.
+.lgx-heading .heading-title {
+	text-align: right;
+	font-weight: 600
+}
+
+.lgx-banner-info .subtitle {
+	font-size :45px ;
+        font-weight: 1000 !important;
+}
+
+
+
+
+.lgx-heading .heading-title {
+	font-family: 'Montserrat',
+		sans-serif !important;
+	direction: rtl;
+	font-size: 40px;
+	margin-top: -35px;
+	margin-bottom: 5px
+}
+
+.course-bottom .list-inline {
+
+        padding-top :10px !important;
+}
+
+.lgx-single-course {
+        padding-bottom:40px !important;
+        width : 95% !important
+}
+
+.course-hits-area .course-hit .course-hit-info .title {
+	font-family: 'Montserrat',
+		sans-serif !important;
+}
+.lgx-registration-info .text {
+	text-align: left
+}
+div.lgx-registration-info b, strong {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.preloader {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   z-index: 9999;
+   background-image: url(../../images/other/loader.gif);
+   background-repeat: no-repeat; 
+   background-color: #FFF;
+   background-position: center;
+}
+
+.lgx-filter li {
+
+margin-bottom : 35px;
+
+}
+
+.lgx-video-area figure figcaption .video-icon .icon:before {
+    width: 124px;
+    height: 124px;
+    
+ }
+ 
+
+.lgx-single-course .course-info .course-bottom ul li:last-child a  {
+ font-family: 'Cairo',
+		sans-serif !important;
+                text-align: center !important;
+                 font-size : 18px !important;
+
+                 
+   }
+   
+   .lgx-single-course .course-info .course-bottom ul li:last-child a  .discount {
+        font-family: 'Cairo',
+        sans-serif !important;
+        font-size:22px !important;
+        font-weight : 700 !important;
+
+        
+     }
+   
+    .lgx-single-course .course-info .course-bottom ul li:last-child a {
+          font-style : unset !important;
+   }
+ 
+   .page .lgx-banner-inner, .page-template .lgx-banner-inner, .single .lgx-banner-inner, .single-post .lgx-banner-inner {
+    background: url(../img/milestone-bg2.jpg) bottom center no-repeat fixed ;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+}
+
+   #exampleModalCenter {
+      padding-top: 40px;
+
+     }
+     
+      #exampleModalCenter img {
+      margin-left: 220px;
+      margin-top: -80px;
+
+     }
+     
+/*
+ul.breadcrumb {
+margin-top:50px !important;
+margin-left:30px
+
+}
+.page .breadcrumb li a, .page-template .breadcrumb li a, .single .breadcrumb li a, .single-post .breadcrumb li a{
+color:black !important
+}
+
+.heading-title span.opacity {
+    background: rgba(0, 0, 0, 0.6);
+    padding-left: 10px;
+    padding-right: 10px;
+
+} 
+*/
+
+/*Media Query*/
+@media (max-width: 500px) {
+          .lgx-about{
+          display : none !important;
+          }
+	.lgx-banner-info .subtitle {
+		font-size: 19px !important;
+		font-weight: 600 !important;
+	}
+
+	.lgx-banner-info .title {
+		font-size: 22px;
+		font-weight: 1000;
+	}
+	.lgx-footer-bottom .lgx-social-footer{
+		width: 100%;
+		text-align: center;
+	}
+
+	.lgx-slider .lgx-banner-info .text {
+                font-size: 16px !important;
+                line-height: 2.25rem;
+                display : inline-block ; 
+                margin-bottom: 2rem;
+
+	}
+
+        .lgx-contact .contact-info {
+        margin-top :15px !important;
+        }
+
+	.lgx-header .header-top .header-top-inner ul li {
+		text-align: center
+	}
+
+	
+	.lgx-footer-single ul li {
+		font-size: 13px !important;
+		font-weight: 500 !important;
+	}
+
+	.lgx-footer-bottom .lgx-social-footer {
+		text-align: center !important;
+	}
+
+	.lgx-header .header-top .header-top-inner .contact,
+	.lgx-header .header-top .header-top-inner .right-menu,
+	.sm-text-center {
+		text-align: center !important;
+	}
+
+	.lgx-footer-bottom .lgx-copyright p {
+		font-weight: 600 !important;
+		text-align: center !important
+	}
+
+	.lgx-heading .heading-title {
+		font-size: 20px
+	}
+
+	.lgx-heading .heading-subtitle {
+
+		font-size: 14px;
+
+	}
+
+	.list-inline {
+		text-align: center;
+	}
+
+	.lgx-footer-single ul li a {
+
+		font-size: 13px !important;
+		font-weight: 500 !important;
+	}
+        
+        .lgx-filter li {
+
+         margin-bottom : 5px;
+
+        }
+         .lgx-single-course {
+       width : 80% !important
+     }
+     #exampleModalCenter {
+      padding-top: 100px;
+
+     }
+     
+      #exampleModalCenter img {
+          margin-left: 140px;
+
+     }
+ .course-hits-area .course-hitcourse-payment {
+       margin-top: -35px !important;
+           direction: rtl;
+
+       }   
+       
+       .course-hits-area .course-hit li {
+       float : left;
+       direction : ltr
+
+       }
+     
+}
+
+@media (min-width: 600px) and (min-width: 700px) {
+	.lgx-heading .heading-title {
+		font-size: 30px
+	}
+
+	.lgx-registration-area {
+		text-align: center;
+		padding-top: 20px;
+	}
+
+}

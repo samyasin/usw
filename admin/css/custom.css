@@ -1,0 +1,43 @@
+/* your styles go here */
+.login-page .form-holder .info {
+	background: #FF6700;
+}
+
+a.upskills {
+	color: #FF6700;
+}
+
+.login-form {
+	background-color: #FF6700;
+	border-color: #FF6700;
+}
+
+.login-form:hover {
+	background-color: #FF6700;
+	border-color: #FF6700;
+	opacity: 0.8;
+
+}
+
+input.input-material ~ label.active {
+	color: darkorange;
+}
+
+.btn-lg {
+	padding: 10px;
+	background-color: white;
+	border-color: black;
+	color : black;
+	font-family: 'Ubuntu', sans-serif;
+	width: 400px
+}
+a.nav-link.logout:hover {
+	background-color: #796AEE;
+	border-radius: 5px
+}
+.container center{
+	margin-bottom:15px
+	
+}
+
+

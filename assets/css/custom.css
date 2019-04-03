@@ -1,0 +1,524 @@
+.slider-text-single {
+
+	font-family: 'Cairo',
+		sans-serif;
+}
+
+body,
+p {
+	font-family: 'Cairo',
+		sans-serif !important;
+
+}
+
+.lgx-banner-info,
+.lgx-filter li a,
+.lgx-header .lgx-navbar .lgx-nav li a,
+.lgx-navbar-search .lgx-menu-search .form-control,
+.lgx-single-course .course-info .course-author .title,
+.lgx-single-service .title {
+	font-family: 'Cairo',
+		sans-serif !important;
+               
+
+}
+
+.lgx-heading .heading-title {
+	font-family: 'Cairo',
+		sans-serif !important;
+	direction: rtl;
+	font-size: 40px;
+	margin-top: -35px;
+	margin-bottom: 5px;
+	text-align: center !important;
+}
+
+.lgx-video-area figure figcaption .video-icon .lgx-vertical span {
+	font-size: 15px;
+	font-family: 'Cairo',
+		sans-serif !important;
+}
+
+b,
+strong {
+	font-weight: 500;
+}
+
+.lgx-header .lgx-navbar .lgx-nav,
+.lgx-search-mobile,
+.lgx-slider .lgx-item-right .banner-btn,
+.lgx-slider .lgx-item-right .text {
+	float: right !important;
+	text-align: right !important;
+	font-size: 10px
+}
+
+.lgx-footer-single {
+	text-align: center;
+	font-family: 'Cairo',
+		sans-serif !important;
+}
+
+.lgx-heading .heading-subtitle {
+	font-family: 'Cairo',
+		sans-serif !important;
+	direction: rtl;
+	font-size: 18px;
+	font-weight: bold;
+
+}
+
+.lgx-btn {
+	font-family: 'Cairo',
+		sans-serif !important;
+	font-weight: 600;
+}
+
+footer {
+	font-family: 'Cairo',
+		sans-serif;
+
+}
+
+div.lgx-footer-single,
+.lgx-footer-single ul li {
+	font-family: 'Cairo',
+		sans-serif;
+}
+
+
+div.lgx-getintouch-area {
+	text-align: center;
+	font-family: 'Cairo',
+		sans-serif;
+}
+
+.lgx-subscriber-area .title {
+	font-family: 'Cairo',
+		sans-serif;
+
+}
+
+.en {
+	margin-left: -40px;
+	padding: 4px 6px;
+	background-color: #e39a31;
+	margin-right: 25px;
+}
+
+.en:hover {
+
+	background-color: #f0ad4e;
+}
+
+.lgx-header .header-top .header-top-inner .right-menu {
+	direction: rtl;
+}
+
+.lgx-single-event .event-info {
+	direction: rtl;
+}
+
+.h1,
+.h2,
+.h3,
+h1,
+h2,
+h3 {
+	font-family: 'Cairo',
+		sans-serif !important;
+
+}
+
+.lgx-footer-bottom .lgx-copyright {
+	text-align: right;
+}
+
+.lgx-footer-bottom .lgx-social-footer {
+	text-align: left;
+}
+
+.heading-title {
+	direction: rtl;
+	font-family: 'Cairo',
+		sans-serif;
+
+}
+
+.lgx-banner-info .text {
+	font-size: 25px;
+	font-weight:1000;
+        color : #fff;
+}
+
+ul.why li {
+	list-style-type: none;
+	padding-bottom: 20px;
+	font-size: 16px;
+	text-align: center;
+	font-weight: 600;
+}
+
+
+
+div.footer {
+	float: right;
+	 !important;
+}
+
+.lgx-footer-single ul li a {
+	font-family: 'Cairo',
+		sans-serif !important;
+}
+
+div.lgx-footer-single,
+.lgx-footer-single ul li {
+	text-align: center;
+
+}
+.course-bottom .list-inline {
+
+        padding-top :10px !important;
+}
+
+.lgx-single-course {
+        padding-bottom:40px !important;
+        width : 95% !important
+}
+
+.list-unstyled {
+	font-family: 'Cairo',
+		sans-serif
+}
+
+.lgx-footer-bottom .lgx-copyright p {
+	float: right;
+}
+.modal-content{
+	direction: rtl;
+}
+
+.lgx-footer-bottom .lgx-social-footer {
+	text-align: left !important;
+
+}
+
+.lgx-heading .heading-title {
+	text-align: right;
+	font-weight: 600
+}
+
+.lgx-banner-info .subtitle {
+               font-size:45px !important;
+                font-weight:800 !important
+}
+
+.page .lgx-banner-inner .lgx-heading-area,
+.page-template .lgx-banner-inner .lgx-heading-area,
+.single .lgx-banner-inner .lgx-heading-area,
+.single-post .lgx-banner-inner .lgx-heading-area {
+	float: right;
+	direction: rtl;
+}
+
+
+.lgx-heading .heading-title {
+	font-family: 'Cairo',
+		sans-serif !important;
+	direction: rtl;
+	font-size: 40px;
+	margin-top: -35px;
+	margin-bottom: 5px
+}
+
+.lgx-contact {
+	direction: rtl;
+}
+
+.lgx-events {
+	direction: rtl
+}
+
+.lgx-courses {
+	direction: rtl
+}
+
+.lgx-photo-gallery {
+	direction: rtl
+}
+
+.course-hits-area .course-hit .course-hit-info .title {
+	font-family: 'Cairo',
+		sans-serif !important;
+}
+
+.lgx-normal-single {
+	direction: rtl
+}
+
+.lgx-course-feature-area {
+
+	direction: ltr
+}
+
+.lgx-btn .alert {
+	direction: rtl;
+}
+
+.label {
+	float: right;
+	text-align: center !important;
+}
+
+.lgx-course-feature-area ul li .value {
+	float: left !important;
+    text-align: center !important;
+}
+
+.preloader {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   z-index: 9999;
+   background-image: url(../../images/other/loader.gif);
+   background-repeat: no-repeat; 
+   background-color: #FFF;
+   background-position: center;
+}
+
+.lgx-filter li {
+
+margin-bottom : 35px !important;
+
+}
+
+
+
+
+ .lgx-video-area figure figcaption .video-icon .icon:before {
+    width:  124px ;
+    height: 124px ;
+
+    
+    }
+
+.lgx-single-course .course-info .course-bottom ul li:last-child a  {
+ font-family: 'Cairo',
+		sans-serif !important;
+                text-align: center !important;
+                 font-size : 18px !important;
+
+                 
+   }
+   
+   .lgx-single-course .course-info .course-bottom ul li:last-child a  .discount {
+        font-family: 'Cairo',
+        sans-serif !important;
+        font-size:22px !important;
+        font-weight : 700 !important;
+
+        
+     }
+   
+    .lgx-single-course .course-info .course-bottom ul li:last-child a {
+          font-style : unset !important;
+   }
+   
+   .page .lgx-banner-inner, .page-template .lgx-banner-inner, .single .lgx-banner-inner, .single-post .lgx-banner-inner {
+    background: url(../img/milestone-bg2.jpg) bottom center no-repeat fixed ;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+}
+
+#exampleModalCenter {
+    padding-top: 40px;
+}
+
+ #exampleModalCenter img {
+      margin-right: 220px;
+      margin-top: -80px;
+
+     }
+     
+ .slider-text-single span.slide {
+    background: rgba(0, 0, 0, 0.6);
+    width: max-content;
+    padding-right :15px;
+    padding-left  : 15px;
+}
+
+.lgx-banner-info .text {
+ margin-top:30px
+}
+
+ul.breadcrumb {
+margin-top:50px;
+margin-left:30px
+
+}
+
+.page .breadcrumb li a, .page-template .breadcrumb li a, .single .breadcrumb li a, .single-post .breadcrumb li a{
+color:black !important
+}
+
+.heading-title span.opacity {
+    background: rgba(0, 0, 0, 0.6);
+    padding-left: 10px;
+    padding-right: 10px;
+
+} 
+
+/*Media Query*/
+@media (max-width:770px) {
+	.lgx-banner-info .subtitle {
+		font-size: 25px !important;
+		font-weight: 1000 !important;
+	}
+
+	.lgx-banner-info .title {
+		font-size: 15px;
+		font-weight: 600;
+	}
+	.lgx-footer-bottom .lgx-social-footer{
+		width: 100%;
+		text-align: center;
+	}
+        
+        .lgx-contact .contact-info {
+        margin-top :15px !important;
+        }
+
+	.lgx-slider .lgx-banner-info .text {
+                font-size: 16px;
+                line-height: 2.25rem;
+                display : inline-block; 
+                margin-bottom: 2rem;
+
+	}
+
+	.lgx-header .header-top .header-top-inner ul li {
+		text-align: center
+	}
+
+	.lgx-about {
+		display: none;
+	}
+
+	.lgx-footer-single ul li {
+		font-size: 13px !important;
+		font-weight: 500 !important;
+	}
+
+	.lgx-footer-bottom .lgx-social-footer {
+		text-align: center !important;
+	}
+
+	.lgx-header .header-top .header-top-inner .contact,
+	.lgx-header .header-top .header-top-inner .right-menu,
+	.sm-text-center {
+		text-align: center !important;
+	}
+
+	.lgx-footer-bottom .lgx-copyright p {
+		font-weight: 600 !important;
+		text-align: center !important
+	}
+
+	.lgx-heading .heading-title {
+		font-size: 20px
+	}
+
+	.lgx-heading .heading-subtitle {
+
+		font-size: 14px;
+
+	}
+
+	.list-inline {
+		text-align: center;
+                padding-left :40px
+	}
+
+	.lgx-footer-single ul li a {
+
+		font-size: 13px !important;
+		font-weight: 500 !important;
+	}
+        
+        .lgx-filter li {
+         margin-bottom : 35px;
+          }
+          
+          lgx-single-course .course-info .course-bottom ul li:last-child a  {
+           font-family: 'Cairo',
+		sans-serif !important;
+                text-align: center !important;
+
+   }
+   .lgx-single-course .course-info .course-bottom ul li:last-child  {
+     padding-right :50px !important;
+                 
+   }
+   .lgx-video-area figure figcaption .video-icon .icon:before {
+    width:  96px ;
+    height: 98px ;
+
+    
+    }
+    
+    .lgx-heading-registration .subtitle {
+    float : right
+    }
+    
+    .lgx-registration-info b {
+     float : right;
+     direction : rtl
+    }
+  
+     .lgx-single-course {
+       width : 85%
+     }
+    #exampleModalCenter {
+      padding-top: 100px;
+
+     }
+     
+      #exampleModalCenter img {
+          margin-right: 140px;
+
+
+     }
+     
+     .course-hits-area .course-hitcourse-payment {
+       margin-top: -35px !important;
+
+       }
+       
+       .course-hits-area .course-hit, .course-hits-area .course-hitcourse-payment {
+      direction: ltr;
+       }
+       .course-hits-area .course-hit li {
+       float : right;
+       }
+       
+       .lgx-banner-info .text {
+         margin-top:8px
+        }
+       
+}
+
+@media (min-width: 600px) and (min-width: 700px) {
+	.lgx-heading .heading-title {
+		font-size: 30px
+	}
+
+	.lgx-registration-area {
+		text-align: center;
+		padding-top: 20px;
+	}
+
+}
