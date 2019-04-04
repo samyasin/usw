@@ -15,13 +15,13 @@ while ($album = mysqli_fetch_assoc($result)) {
 		<div class='card-body'>
 		<h5 class='card-title'>{$album['album_name']}</h5>
 		<a href='images.php?album_id={$album['album_id']}&album_name={$album['album_name']}' class='btn btn-primary'>Show</a>
-				<a href = 'delete_album.php?album_id={$album['album_id']}'>Delete</a>
+				<a href = 'delete_album.php?album_id={$album['album_id']} 'class='btn btn-primary'>Delete</a>
 
         </div>	
 		</div>
 		</div>";
 
-    echo "<div id='myModal' class='modal fade' style='display: none;'>
+    /*echo "<div id='myModal' class='modal fade' style='display: none;'>
 	<div class='modal-dialog modal-confirm'>
 		<div class='modal-content'>
 			<div class='modal-header'>
@@ -39,7 +39,7 @@ while ($album = mysqli_fetch_assoc($result)) {
 			</div>
 		</div>
 	</div>
-     </div>";
+     </div>";*/
 }
 
 
