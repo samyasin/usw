@@ -4,8 +4,8 @@
 <?php
 if (isset($_POST['submit'])){
 	$category_id       = $_POST['category_id'];
-	$course_name       = mysqli_real_escape_string($con,$_POST['course_name']);
-	$course_name_ar    = mysqli_real_escape_string($con,$_POST['course_name_ar']);
+	$course_name       = $_POST['course_name'];
+	$course_name_ar    = $_POST['course_name_ar'];
 	$course_desc       = $_POST['course_desc'];
 	$course_desc_ar    = $_POST['course_desc_ar'];
         $course_outcome    = $_POST['course_out'];
