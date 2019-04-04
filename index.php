@@ -264,7 +264,6 @@
                                                 <div class='lgx-vertical'>
                                                         <div class='lgx-banner-info slider-opa lgx-banner-info-{$sliderSet['text_alignment']}' >  <!--lgx-banner-info-white-->
                                                         <h3 class='subtitle lgx-zoomIn-one' ><span class='slide'>{$sliderSet['arabic_title']}</span></h3>
-                                                        <h2 class='title lgx-fadeInLeft-two'>{$sliderSet['arabic_text']}</h2>
                                                         <p class='text lgx-zoomIn-three'><span class='slide'>{$sliderSet['arabic_desc']}</span></br></p>
                                                         <div class='btn-area lgx-zoomIn-four'>
                                                             <a class='lgx-btn' href='courses.php'>المزيد</a>

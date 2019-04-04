@@ -196,7 +196,7 @@
 <!-- *** ADD YOUR SITE SCRIPT HERE *** -->
 <!-- JQUERY  -->
 <!-- ajax for preloader-->
-<script src="../assets/js/ajax.js"></script>
+<script src="./assets/js/ajax.js"></script>
 <!-- ajax for preloader-->
 <script>
 	$(window).load(function (){
@@ -204,57 +204,57 @@
 	});
 </script>
 
-<script src="../assets/js/vendor/jquery-1.12.4.min.js"></script>
+<script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
 
 <!-- BOOTSTRAP JS  -->
-<script src="../assets/libs/bootstrap/js/bootstrap.min.js"></script>
+<script src="./assets/libs/bootstrap/js/bootstrap.min.js"></script>
 
 
-<script src="../assets/libs/jquery.smooth-scroll.js"></script>
+<script src="./assets/libs/jquery.smooth-scroll.js"></script>
 
 <!-- SKILLS SCRIPT  -->
-<script src="../assets/libs/jquery.validate.js"></script>
+<script src="./assets/libs/jquery.validate.js"></script>
 
 <!-- if load google maps then load this api, change api key as it may expire for limit cross as this is provided with any theme -->
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQvRGGtL6OrpP5xVMxq_0NgiMiRhm3ycI"></script>
 
 <!-- CUSTOM GOOGLE MAP -->
-<script type="text/javascript" src="../assets/libs/gmap/jquery.googlemap.js"></script>
+<script type="text/javascript" src="./assets/libs/gmap/jquery.googlemap.js"></script>
 
 <!-- adding magnific popup js library -->
-<script type="text/javascript" src="../assets/libs/maginificpopup/jquery.magnific-popup.min.js"></script>
+<script type="text/javascript" src="./assets/libs/maginificpopup/jquery.magnific-popup.min.js"></script>
 
 <!-- Owl Carousel  -->
-<script src="../assets/libs/owlcarousel/owl.carousel.min.js"></script>
+<script src="./assets/libs/owlcarousel/owl.carousel.min.js"></script>
 
 
 <!-- COUNTDOWN   -->
-<script src="../assets/libs/countdown.js"></script>
+<script src="./assets/libs/countdown.js"></script>
 
 <!-- Counter JS -->
-<script src="../assets/libs/waypoints.min.js"></script>
-<script src="../assets/libs/counterup/jquery.counterup.min.js"></script>
+<script src="./assets/libs/waypoints.min.js"></script>
+<script src="./assets/libs/counterup/jquery.counterup.min.js"></script>
 
 <!-- PORTFOLIO FILTER   -->
-<script src="../assets/libs/isotope/isotope.pkgd.min.js"></script>
+<script src="./assets/libs/isotope/isotope.pkgd.min.js"></script>
 
 <!-- SMOTH SCROLL -->
-<script src="../assets/libs/jquery.smooth-scroll.min.js"></script>
-<script src="../assets/libs/jquery.easing.min.js"></script>
+<script src="./assets/libs/jquery.smooth-scroll.min.js"></script>
+<script src="./assets/libs/jquery.easing.min.js"></script>
 
 <!-- type js -->
-<script src="../assets/libs/typed/typed.min.js"></script>
+<script src="./assets/libs/typed/typed.min.js"></script>
 
 <!-- instafeed js -->
 <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/instafeed.js/1.4.1/instafeed.min.js"></script>-->
-<script src="../assets/libs/instafeed.min.js"></script>
+<script src="./assets/libs/instafeed.min.js"></script>
 
 <!-- CUSTOM SCRIPT  -->
-<script src="../assets/js/custom.script.js"></script>
+<script src="./assets/js/custom.script.js"></script>
 
 <!--<div class="lgx-switcher-loader"></div>-->
 <!-- For Demo Purpose Only// Remove From Live -->
-<script src="../switcher/js/switcherd41d.js?"></script>
+<script src="./switcher/js/switcherd41d.js?"></script>
 <!-- For Demo Purpose Only //Remove From Live-->
 
 
