@@ -411,7 +411,7 @@ if (isset($_POST['submit'])){
                                                         
                                                         <div class="form-group">
 								<label class="form-control-label">رقم الهاتف</label>
-								<input type="text" name="mobile" class="form-control" placeholder="ادخل رقم هاتفك" required>
+                                                                <input type="number" name="mobile" class="form-control" placeholder="ادخل رقم هاتفك" required>
 							</div>
                                                         
 							<div class="form-group">

@@ -7,7 +7,7 @@
 				<table class="table table-hover">
 					<thead>
 						<tr>
-							<th scope="col">Contact ID</th>
+							<!--<th scope="col">Contact ID</th>-->
 							<th scope="col">Contact Name</th>
 							<th scope="col">Contact Email</th>
 							<th scope="col">Contact Message</th>
@@ -23,11 +23,12 @@
                                         $result = mysqli_query($con,$query);
                                         while ($conSet = mysqli_fetch_assoc($result)){
                                         echo "<tr>";
-                                        echo "<th scope='col'>{$conSet['contact_id']}</th>
-                                        <th scope='col'>{$conSet['contact_name']}</th>
+                                        //echo "<th scope='col'>{$conSet['contact_id']}</th>
+                                        echo "<th scope='col'>{$conSet['contact_name']}</th>
                                         <th scope='col'>{$conSet['contact_email']}</th>
                                         <th scope='col'>";
-                                        echo substr($conSet['contact_message'],1,30);
+                                        //echo substr($conSet['contact_message'],1,30);
+                                        echo "{$conSet['contact_message']}";
                                         echo "</th>
                                         <th scope='col'>";
                                         echo date('D, d-M-Y h:i:s a',strtotime($conSet['contact_add_date']));
