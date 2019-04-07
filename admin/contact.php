@@ -3,7 +3,8 @@
 <section>
 	<div class='container-fluid'>
 		<div class='row'>
-			<div class='col-md-30'>
+			<div class='col-md-12'>
+                            <font size="2" >
 				<table class="table table-sm">
 					<thead>
 						<tr>
@@ -46,6 +47,7 @@
 
 					</tbody>
 				</table>
+                            </font>
 			</div>
 		</div>
 	</div>
