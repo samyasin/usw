@@ -41,6 +41,7 @@
 		<?php
 		echo "<form method='post' action=''>
 		<input type='radio' name='cover' value='{$image['image_src']}'> Set as cover<br>
+                    <a href='../images/albums/$album_name/{$image['image_src']}' class='btn btn-primary'>Show</a>
 		<a href='delete_image.php?image_id={$image['image_id']}&image_src={$image['image_src']}&album_name={$album_name}' class='btn btn-primary'>Delete</a>
 		</div>
 		</div></div>

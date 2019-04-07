@@ -3,8 +3,8 @@
 <section>
 	<div class='container-fluid'>
 		<div class='row'>
-			<div class='col-lg-12'>
-				<table class="table table-hover">
+			<div class='col-md-30'>
+				<table class="table table-sm">
 					<thead>
 						<tr>
 							<!--<th scope="col">Contact ID</th>-->
