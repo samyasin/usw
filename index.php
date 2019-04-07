@@ -266,7 +266,7 @@
                                                         <h3 class='subtitle lgx-zoomIn-one' ><span class='slide'>{$sliderSet['arabic_title']}</span></h3>
                                                         <p class='text lgx-zoomIn-three'><span class='slide'>{$sliderSet['arabic_desc']}</span></br></p>
                                                         <div class='btn-area lgx-zoomIn-four'>
-                                                            <a class='lgx-btn' href='courses.php'>المزيد</a>
+                                                            <a class='lgx-btn' href='courses.php'>المزيد من المعلومات حول الدورات</a>
                                                             
                                                         </div>
                                                     </div>
