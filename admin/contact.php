@@ -2,8 +2,8 @@
 <?php require '../includes/connect_db.php'; ?>
 <section>
     <div class='container-fluid'>
-        <div class='row'>
-            <div class='col-md-15'>
+        
+            <div class='col-lg-15'>
                 <font size="1" >
                 <table class="table table-striped">
                     <thead>
@@ -47,7 +47,7 @@
                 </font>
             </div>
         </div>
-    </div>
+    
 </section>
 
 
