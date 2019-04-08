@@ -712,8 +712,10 @@
                             } else {
                                 echo "<div class='col-md-6'>
                                                         <div class='lgx-featured-event'>
-                                                        <figure>
-                                                        <a href='event.php?event_id={$eventSet['event_id']}'><img src='../images/event/{$eventSet['event_image']}' alt='featured event'></a>
+                                                        
+                                                         <div class='thumb'>
+                                                        <a href='event-single.php?event_id={$eventSet['event_id']}'><img src='images/event/{$eventSet['event_image']}' alt='event' height='120' width='120'></a>
+                                                             </div>
                                                         <figcaption>
                                                         <div class='figcaption'>
                                                         </div>
@@ -736,7 +738,7 @@
                                                         </div>
                                                         </div>
                                                         </figcaption>
-                                                        </figure>
+                                                        
                                                         </div>
                                                         </div>"
                                 ;
