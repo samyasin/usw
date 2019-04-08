@@ -1,56 +1,53 @@
 <?php require '../includes/header.php'; ?>
 <?php require '../includes/connect_db.php'; ?>
 <section>
-	<div class='container-fluid'>
-		<div class='row'>
-			<div class='col-md-12'>
-                            <font size="2" >
-				<table class="table table-sm">
-					<thead>
-						<tr>
-							<!--<th scope="col">Contact ID</th>-->
-							<th scope="col">Contact Name</th>
-							<th scope="col">Contact Email</th>
-							<th scope="col">Contact Message</th>
-							<th scope="col"> submit Date </th>
-                                                        <th scope="col"> Action </th>
+    <div class='container-fluid'>
+        <div class='row'>
+            <div class='col-md-12'>
+                <font size="2" >
+                <table class="table table-sm">
+                    <thead>
+                        <tr>
+                                <!--<th scope="col">Contact ID</th>-->
+                            <th scope="col">Contact Name</th>
+                            <th scope="col">Contact Email</th>
+                            <th scope="col">Contact Message</th>
+                            <th scope="col"> submit Date </th>
+                            <th scope="col"> Action </th>
 
-						</tr>
-					</thead>
-					<tbody>
+                        </tr>
+                    </thead>
+                    <tbody>
 
-                                        <?php $query  = "SELECT *
+                        <?php
+                        $query = "SELECT *
                                         FROM contact";
-                                        $result = mysqli_query($con,$query);
-                                        while ($conSet = mysqli_fetch_assoc($result)){
-                                        echo "<tr>";
-                                        //echo "<th scope='col'>{$conSet['contact_id']}</th>
-                                        echo "<th scope='col'>{$conSet['contact_name']}</th>
+                        $result = mysqli_query($con, $query);
+                        while ($conSet = mysqli_fetch_assoc($result)) {
+                            echo "<tr>";
+                            //echo "<th scope='col'>{$conSet['contact_id']}</th>
+                            echo "<th scope='col'>{$conSet['contact_name']}</th>
                                         <th scope='col'>{$conSet['contact_email']}</th>
                                         <th scope='col'>";
-                                        //echo substr($conSet['contact_message'],1,30);
-                                        echo "{$conSet['contact_message']}";
-                                        echo "</th>
+                            //echo substr($conSet['contact_message'],1,30);
+                            echo "{$conSet['contact_message']}";
+                            echo "</th>
                                         <th scope='col'>";
-                                        echo date('D, d-M-Y h:i:s a',strtotime($conSet['contact_add_date']));
-                                        
-                                        echo "
+                            echo date('D, d-M-Y h:i:s a', strtotime($conSet['contact_add_date']));
+
+                            echo "
                                         <th scope='col'><a href='delete_contact.php?contact_id={$conSet['contact_id']}' class='btn btn-danger' >Delete</a></th>
                                         </th></tr>";
-                                        
-                                        }
-                                        
-                                        
-                                        
-                                        ?>
- 
+                        }
+                        ?>
 
-					</tbody>
-				</table>
-                            </font>
-			</div>
-		</div>
-	</div>
+
+                    </tbody>
+                </table>
+                </font>
+            </div>
+        </div>
+    </div>
 </section>
 
 

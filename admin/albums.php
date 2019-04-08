@@ -21,25 +21,25 @@ while ($album = mysqli_fetch_assoc($result)) {
 		</div>
 		</div>";
 
-    /*echo "<div id='myModal' class='modal fade' style='display: none;'>
-	<div class='modal-dialog modal-confirm'>
-		<div class='modal-content'>
-			<div class='modal-header'>
-				<div class='icon-box'>
-					<i class='fa fa-check-o'></i>
-				</div>				
-				<h4 class='modal-title'>Delete !</h4>	
-			</div>
-			<div class='modal-body'>
-				<p class='text-center'>Are you sure !</p>
-			</div>
-			<div class='modal-footer'>
-				<a href = 'delete_album.php?album_id={$album['album_id']}'>Delete</a>
-                                <a data-dismiss='modal' class='btn btn-primary'>Cancel</a>
-			</div>
-		</div>
-	</div>
-     </div>";*/
+    /* echo "<div id='myModal' class='modal fade' style='display: none;'>
+      <div class='modal-dialog modal-confirm'>
+      <div class='modal-content'>
+      <div class='modal-header'>
+      <div class='icon-box'>
+      <i class='fa fa-check-o'></i>
+      </div>
+      <h4 class='modal-title'>Delete !</h4>
+      </div>
+      <div class='modal-body'>
+      <p class='text-center'>Are you sure !</p>
+      </div>
+      <div class='modal-footer'>
+      <a href = 'delete_album.php?album_id={$album['album_id']}'>Delete</a>
+      <a data-dismiss='modal' class='btn btn-primary'>Cancel</a>
+      </div>
+      </div>
+      </div>
+      </div>"; */
 }
 
 
@@ -103,36 +103,36 @@ if (isset($_POST['submit'])) {
 <!--
 <div class="row m-t-30">
     <div class="col-md-12">
-        <!-- DATA TABLE--><!--
-        <div class="table-responsive m-b-40">
-            <table class="table table-borderless table-data3">
-                <thead>
-                    <tr>
-                        <th>name</th>
-                        <th>Delete</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php
-                    /*
-                    $query = "select * from album"; //read and display data
-                    $result = mysqli_query($con, $query);
-                    while ($testSet = mysqli_fetch_assoc($result)) {
-                        echo "<tr>";
-                        echo " <td> {$testSet['album_id']}</td>";
+<!-- DATA TABLE--><!--
+<div class="table-responsive m-b-40">
+    <table class="table table-borderless table-data3">
+        <thead>
+            <tr>
+                <th>name</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+<?php
+/*
+  $query = "select * from album"; //read and display data
+  $result = mysqli_query($con, $query);
+  while ($testSet = mysqli_fetch_assoc($result)) {
+  echo "<tr>";
+  echo " <td> {$testSet['album_id']}</td>";
 
 
-                        echo "<td> <a href = 'delete_album.php?album_id={$testSet['album_id']}'>Delete</a></td>"; //delete
-                        echo "</tr>";
-                    }*/
-                    ?>
+  echo "<td> <a href = 'delete_album.php?album_id={$testSet['album_id']}'>Delete</a></td>"; //delete
+  echo "</tr>";
+  } */
+?>
 
 
-                </tbody>
-            </table>
-        </div>
-        <!-- END DATA TABLE--><!--
-    </div>
+        </tbody>
+    </table>
+</div>
+<!-- END DATA TABLE--><!--
+</div>
 </div>-->
 
 <?php require '../includes/footer.php'; ?>
