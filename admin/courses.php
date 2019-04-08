@@ -178,12 +178,12 @@ if (isset($_POST['submit'])){
 
 							<div class="form-group">
 								<label class="form-control-label">Start Date</label>
-								<input type="date" name="start_date" class="form-control">
+								<input type="date" name="start_date" class="form-control"  value="2019-07-22" min="2019-01-01" >
 							</div>
 
 							<div class="form-group">
 								<label class="form-control-label">End Date</label>
-								<input type="date" name="end_date" class="form-control">
+								<input type="date" name="end_date" class="form-control" value="2019-07-22" min="2019-01-02" >
 							</div>
 
 
