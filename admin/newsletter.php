@@ -18,13 +18,15 @@
                         $query = "SELECT *
                                         FROM newsletter";
                         $result = mysqli_query($con, $query);
+                        $i = 1;
                         while ($conSet = mysqli_fetch_assoc($result)) {
                             echo "<tr>";
                             echo "
-                                        <th scope='col'>{$conSet['No.']}</th>
+                                        <th scope='col'>{$i}</th>
                                         <th scope='col'>{$conSet['email']}</th>
                                         
                                         </th></tr>";
+                                        $i++;
                         }
                         ?>
 
