@@ -3,9 +3,9 @@
 <section>
     <div class='container-fluid'>
         <div class='row'>
-            <div class='col-md-12'>
-                <font size="2" >
-                <table class="table table-sm">
+            <div class='col-lg-12'>
+                <font size="1" >
+                <table class="table table-striped">
                     <thead>
                         <tr>
                                 <!--<th scope="col">Contact ID</th>-->
@@ -30,7 +30,7 @@
                                         <th scope='col'>{$conSet['contact_email']}</th>
                                         <th scope='col'>";
                             //echo substr($conSet['contact_message'],1,30);
-                            echo "{$conSet['contact_message']}";
+                            echo "<div class='card w-25'><div class='card-body'><p class='card-text'>With supporting text below as a natural lead-in to additional content.</p>{$conSet['contact_message']}  </div>";
                             echo "</th>
                                         <th scope='col'>";
                             echo date('D, d-M-Y h:i:s a', strtotime($conSet['contact_add_date']));
