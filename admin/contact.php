@@ -3,7 +3,7 @@
 <section>
     <div class='container-fluid'>
         <div class='row'>
-            <div class='col-lg-12'>
+            <div class='col-md-15'>
                 <font size="1" >
                 <table class="table table-striped">
                     <thead>

@@ -58,12 +58,43 @@ if (isset($error)){
 							<th scope="col">Arabic Description</th>
 							<th scope="col">Text Align</th>
 							<th scope="col">Action</th>
+                                                        <th scope="col">Action</th>
 
 						</tr>
 					</thead>
 					<tbody>
+                                            <?php
+$query = "select * from slider";
 
-						<?php $query  = "SELECT * FROM slider";
+$result = mysqli_query($con, $query);
+
+while ($sliderSet = mysqli_fetch_assoc($result)) {
+
+    echo "<tr>";
+
+    echo "<th scope ='row'>{$sliderSet['image_id']}</th>";
+
+    echo "<th scope ='row'><img src='../images/slider/{$sliderSet['image_src']}' alt='...' height='120' width='200'></th>";
+
+    echo "<th scope ='row'>{$sliderSet['english_title']}</th>";
+
+    echo "<th scope ='row'>{$sliderSet['english_desc']}</th>";
+    
+    echo "<th scope ='row'>{$sliderSet['arabic_title']}</th>";
+                      
+    echo "<th scope ='row'>{$sliderSet['arabic_desc']}</th>";
+     
+    echo "<th scope ='row'>{$sliderSet['text_alignment']}</th>";   
+    
+    echo "<th scope='row'><a class='btn btn-primary' href='update_slider.php?image_id={$sliderSet['image_id']}&image_src={$sliderSet['image_src']}'>Update</a></th>";                                         
+   
+    echo "<th scope='row'><a class='btn btn-primary' href='delete_img_slider.php?image_id={$sliderSet['image_id']}&image_src={$sliderSet['image_src']}'>Delete</a></th>";
+
+    echo "</tr>";
+}
+?>
+
+						<?php /*$query  = "SELECT * FROM slider";
 						      $result = mysqli_query($con,$query);
 						         while ($sliderSet = mysqli_fetch_assoc($result)){
 									 $arabic_desc  = substr($sliderSet['arabic_desc'],0,30);
@@ -82,7 +113,7 @@ if (isset($error)){
 									";
                                     echo "<tr>";
 
-						          }
+						          }*/
 						?>
 						<tr>
 							<th scope="col"></th>
