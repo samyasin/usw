@@ -393,7 +393,7 @@ if (isset($_POST['submit'])) {
                                                                 <div class="modal-content">
                                                                     <div class="modal-header">
                                                                         <h5 class="modal-title" id="exampleModalCenterTitle">اسألنا عن التفاصيل</h5>
-                                                                        <img src="../images/other/Logo-01.png"  height="80" width="80">
+                                                                        <img src="./images/other/Logo-01.png"  height="80" width="80">
                                                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                                             <span aria-hidden="true">&times;</span>
                                                                         </button>
