@@ -688,7 +688,7 @@
                             <div class="row">
                                 <div class="col-xs-12">
                                     <div class="lgx-heading">
-                                        <h2 class="heading-title"><a></a><center>Upcoming Events</center></h2>
+                                        <h2 class="heading-title"><a></a><center>Events</center></h2>
                                         <h4 class="heading-subtitle">Our Upcoming Seminars You Dont Miss Out!</h4>
                                     </div>
                                 </div>
