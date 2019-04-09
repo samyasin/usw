@@ -253,11 +253,12 @@
 						<div id="lgx-main-slider" class="owl-carousel">
 
 							<!--SLIDER ITEM 1-->
-							<?php $query  = "SELECT * FROM slider limit 6";
-					              $result = mysqli_query($con,$query);
-                         while($sliderSet = mysqli_fetch_assoc($result) ){
-                       echo"<div class='lgx-item-common'>
+							<?php  $query = "SELECT * FROM slider limit 6";
+                                $result = mysqli_query($con, $query);
+                                while ($sliderSet = mysqli_fetch_assoc($result)) {
+                                    echo"<div class='lgx-item-common'>
                         <div class='col-sm-12g'>
+                        <div class='opacity'></div>
                             <div class='slider-text-single'>
                                 <figure>
                                     <img src='../images/slider/{$sliderSet['image_src']}' alt='cv'/>
@@ -265,12 +266,11 @@
                                         <div class='lgx-container'>
                                             <div class='lgx-hover-link'>
                                                 <div class='lgx-vertical'>
-														<div class='lgx-banner-info lgx-banner-info-{$sliderSet['text_alignment']}'>  <!--lgx-banner-info-white-->
-                                                        <h3 class='subtitle lgx-zoomIn-one'><span class='slide'>{$sliderSet['english_title']}</span></h3>
-                                                        <h2 class='title lgx-fadeInLeft-two'>{$sliderSet['english_text']}</h2>
+                                                        <div class='lgx-banner-info slider-opa lgx-banner-info-{$sliderSet['text_alignment']}' >  <!--lgx-banner-info-white-->
+                                                        <h3 class='subtitle lgx-zoomIn-one' ><span class='slide'>{$sliderSet['english_title']}</span></h3>
                                                         <p class='text lgx-zoomIn-three'><span class='slide'>{$sliderSet['english_desc']}</span></br></p>
                                                         <div class='btn-area lgx-zoomIn-four'>
-                                                            <a class='lgx-btn' href='courses.php'>more</a>
+                                                            <a class='lgx-btn' href='courses.php'>view more information about courses</a>
                                                            
                                                         </div>
                                                     </div>

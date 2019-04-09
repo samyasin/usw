@@ -405,7 +405,7 @@ if (isset($_POST['submit'])){
                                                         
                                                         <div class="form-group">
 								<label class="form-control-label">Mobile</label>
-								<input type="text" name="mobile" class="form-control" placeholder="Enter Your Mobile" required>
+                                                                <input type="number" name="mobile" class="form-control" placeholder="Enter Your Mobile" required>
 							</div>
                                                         
 							<div class="form-group">
