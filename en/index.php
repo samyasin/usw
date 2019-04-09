@@ -688,17 +688,20 @@
                             <div class="row">
                                 <div class="col-xs-12">
                                     <div class="lgx-heading">
-                                        <h2 class="heading-title"><a></a>Upcoming Events</h2>
+                                        <h2 class="heading-title"><a></a><center>Upcoming Events</center></h2>
                                         <h4 class="heading-subtitle">Our Upcoming Seminars You Dont Miss Out!</h4>
                                     </div>
                                 </div>
                             </div>
                             <!--//.ROW-->
                             <?php
-                            $query = "SELECT * FROM event limit 5 OFFSET 1";
-                            $result = mysqli_query($con, $query);
-                            while ($eventSet = mysqli_fetch_assoc($result)) {
-                                echo "<div class='col-md-6'>
+                            $query = "SELECT * FROM event limit 1";
+                            $res = mysqli_query($con, $query);
+                            $eventSet = mysqli_fetch_assoc($res);
+                            if (empty($eventSet)) {
+                                echo "<center><h2>لا يوجد أحداث بعد..</h2></center>";
+                            } else {
+                                 echo "<div class='col-md-6'>
 									<div class='lgx-single-event'>
 										<div class='thumb'>
 											<a href='event-single.php?event_id={$eventSet['event_id']}'><img src='../images/event/{$eventSet['event_image']}' alt='event'></a>
@@ -717,7 +720,7 @@
 									</div>
 								</div>";
                             }
-                            ?>                                      
+                            ?>                                        
 
                            <?php
                             $query = "SELECT * FROM event limit 5 OFFSET 1";

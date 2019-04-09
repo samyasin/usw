@@ -711,37 +711,23 @@
                                 echo "<center><h2>لا يوجد أحداث بعد..</h2></center>";
                             } else {
                                 echo "<div class='col-md-6'>
-                                                        <div class='lgx-featured-event'>
-                                                        
-                                                         <div class='thumb'>
-                                                        <a href='event-single.php?event_id={$eventSet['event_id']}'><img src='images/event/{$eventSet['event_image']}' alt='event' height='120' width='120'></a>
-                                                             </div>
-                                                        <figcaption>
-                                                        <div class='figcaption'>
-                                                        </div>
-                                                        <div class='event-info'>
-                                                        <div class='date'><h4>";
-                                echo date("d", strtotime($eventSet['start_date']));
-                                echo "<span>";
+									<div class='lgx-single-event'>
+										<div class='thumb'>
+											<a href='event-single.php?event_id={$eventSet['event_id']}'><img src='images/event/{$eventSet['event_image']}' alt='event'></a>
+										</div>
+										<div class='event-info'>
+											<a class='date' href='#'>";
                                 echo date("F", strtotime($eventSet['start_date']));
-                                echo "</span></h4></div>
-                                                        <div class='info-right'><p>";
-                                echo date("h:i:a", strtotime($eventSet['start_time']));
-                                echo " - ";
-                                echo date("h:i:a", strtotime($eventSet['end_time']));
-                                echo "</p> 
-                                                                        <h4 class='location'>";
-                                echo $eventSet['location'];
-                                echo "</h4> 
-                                                        <h3 class='title'><a href='event-single.php?event_id={$eventSet['event_id']}'</a>
-                                                        </h3>
-                                                        </div>
-                                                        </div>
-                                                        </figcaption>
-                                                        
-                                                        </div>
-                                                        </div>"
-                                ;
+                                echo " ";
+                                echo date("d", strtotime($eventSet['start_date']));
+                                echo ",";
+                                echo date("Y");
+                                echo "</a>
+											<h4 class='location'>{$eventSet['location']}</h4>
+											<h3 class='title'><a href='event-single.php?event_id={$eventSet['event_id']}'>{$eventSet['event_name']}</a></h3>
+										</div>
+									</div>
+								</div>";
                             }
                             ?>
                             <?php
