@@ -6,8 +6,18 @@
 
     <head>
         <!-- SITE TITLE -->
+        <?php
+        $name = basename($_SERVER['PHP_SELF'], ".php");
+        $query = "SELECT * FROM course ";
+        $res = mysqli_query($con, $query);
+        $metaSet = mysqli_fetch_assoc($res);
+        echo "<title>{$metaSet['meta_title_ar']}</title>";
+        echo "<meta name='decription'  content='{$metaSet['meta_desc_ar']}'";
+        echo "<meta name='keywords'  content='{$metaSet['meta_keys_ar']}'>";
+        ?>
 
         <?php
+        /*/
         $name = basename($_SERVER['PHP_SELF'], ".php");
         $query = "SELECT * FROM meta WHERE page_name='{$name}'";
         $res = mysqli_query($con, $query);
@@ -15,6 +25,8 @@
         echo "<title>{$metaSet['title']}</title>";
         echo "<meta name='decription'  content='{$metaSet['description']}'";
         echo "<meta name='keywords'  content='{$metaSet['keywords']}'>";
+         
+         */
         ?>
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
