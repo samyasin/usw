@@ -344,7 +344,7 @@ if (isset($_POST['submit'])) {
                                                                                         </figure>-->
                                                                                     </header>
                                                                                     <section>
-                                                                                        <div class="lgx-course-feature-area">
+                                                                                        <div class="lgx-course-feature-area" style="float: left;">
                                                                                             <h3 class="title">تفاصيل الدورة</h3>
                                                                                             <ul class="list-unstyled lgx-course-feature">
                                                                                                 <li class="duration-feature"> <i class="fa fa-clock-o"></i> <span class="label"> المدة </span> <span class="value"> 
@@ -368,10 +368,17 @@ if (isset($_POST['submit'])) {
                                                                                         <p>
                                                                                             <?php echo $courseSet['course_desc_ar']; ?>
                                                                                         </p>
+                                                                                        
+                                                                                        <br>
+
 
                                                                                         <h3>محتويات الدورة</h3>
+                                                                                        <?php
+                                                                                        echo $courseSet['course_content_ar'];
+                                                                                        ?>
+                                                                                        <br>
+                                                                                        
 
-                                                                                        <?php echo $courseSet['course_content_ar']; ?>
 
                                                                                         <h3>أهداف الدورة</h3>
                                                                                         <p>
