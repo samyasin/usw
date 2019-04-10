@@ -273,7 +273,7 @@
 						<div class="row">
 							<div class="col-xs-12">
 								<div class="lgx-heading">
-									<h2 class="heading-title">Offerd Courses</h2>
+									<h2 class="heading-title"><center>Offerd Courses</center></h2>
 									<h4 class="heading-subtitle">Some Trendy And Popular Courses Offerd</h4>
 								</div>
 							</div>

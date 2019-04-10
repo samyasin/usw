@@ -274,7 +274,7 @@
 							<div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
 								<div class="lgx-about-area">
 									<div class="lgx-heading">
-										<h2 class="heading-title">Why UPSKILLS
+                                                                            <h2 class="heading-title"><center>Why UPSKILLS</center>
 										</h2>
 										<h4 class="heading-subtitle">We offer a set of high quality services to help develop individuals and institutions
 											 
