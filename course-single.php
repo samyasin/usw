@@ -369,7 +369,7 @@ if (isset($_POST['submit'])) {
                                                                                             <?php echo $courseSet['course_desc_ar']; ?>
                                                                                         </p>
                                                                                         
-                                                                                        <br>
+                                                                                        <br><br>
 
 
                                                                                         <h3>محتويات الدورة</h3>
