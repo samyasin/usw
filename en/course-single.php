@@ -26,15 +26,15 @@ if (isset($_POST['submit'])) {
     <head>
         <!-- SITE TITLE -->
 
-<?php
-$name = basename($_SERVER['PHP_SELF'], ".php");
-$query = "SELECT * FROM meta WHERE page_name='{$name}'";
-$res = mysqli_query($con, $query);
-$metaSet = mysqli_fetch_assoc($res);
-echo "<title>{$metaSet['title_ar']}</title>";
-echo "<meta name='decription'  content='{$metaSet['description_ar']}'";
-echo "<meta name='keywords'  content='{$metaSet['keywords_ar']}'>";
-?>
+        <?php
+        $name = basename($_SERVER['PHP_SELF'], ".php");
+        $query = "SELECT * FROM meta WHERE page_name='{$name}'";
+        $res = mysqli_query($con, $query);
+        $metaSet = mysqli_fetch_assoc($res);
+        echo "<title>{$metaSet['title_ar']}</title>";
+        echo "<meta name='decription'  content='{$metaSet['description_ar']}'";
+        echo "<meta name='keywords'  content='{$metaSet['keywords_ar']}'>";
+        ?>
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
@@ -286,7 +286,7 @@ echo "<meta name='keywords'  content='{$metaSet['keywords_ar']}'>";
                         <li><a href="index.php" style="color:black"><i class="icon-home6"></i>Home</a></li>
                         <li class="active">Courses</li>
                         <li class="active">
-<?php echo $_GET['category_name']; ?>
+                            <?php echo $_GET['category_name']; ?>
                         </li>
                     </ul>
                     <div class="lgx-inner">
@@ -297,7 +297,7 @@ echo "<meta name='keywords'  content='{$metaSet['keywords_ar']}'>";
                                         <header>
                                             <div class="text-area">
                                                     <!--<h1 class="title"><a href="<?php echo " course-single.php?course_id=" . $_GET['course_id'] . " &category_name=" . $_GET['category_name']; ?>">
-<?php echo $courseSet['course_name']; ?></a></h1>-->
+                                                <?php echo $courseSet['course_name']; ?></a></h1>-->
                                                 <div class="course-hits-area">
 
                                                     <ul class="list-inline course-hit">
@@ -315,7 +315,7 @@ echo "<meta name='keywords'  content='{$metaSet['keywords_ar']}'>";
 
                                                                 <h4 class="title"><a href="#">Categories</a></h4>
                                                                 <h5 class="subtitle"><a href="#" rel="tag">
-<?php echo $_GET['category_name']; ?></a></h5>
+                                                                        <?php echo $_GET['category_name']; ?></a></h5>
                                                             </div>
                                                         </li>
                                                         <li>
@@ -333,6 +333,7 @@ echo "<meta name='keywords'  content='{$metaSet['keywords_ar']}'>";
                                                         <button class="button lgx-btn" data-toggle='modal' data-target='#exampleModalCenter'> Take this course </button>
 
                                                     </div>
+                                                    
 
                                                 </div>
                                             </div>
@@ -347,14 +348,14 @@ echo "<meta name='keywords'  content='{$metaSet['keywords_ar']}'>";
                                                 <h3 class="title">Course Features</h3>
                                                 <ul class="list-unstyled lgx-course-feature">
                                                     <li class="duration-feature"> <i class="fa fa-clock-o"></i> <span class="label">Duration</span> <span class="value">
-<?php echo $courseSet['course_hours']; ?> hours</span></li>
+                                                            <?php echo $courseSet['course_hours']; ?> hours</span></li>
                                                     <!--<li class="skill-feature"> <i class="fa fa-level-up"></i> <span class="label">level</span> <span class="value">
-                                                            <?php echo $courseSet['course_level']; ?></span></li>-->
+                                                    <?php echo $courseSet['course_level']; ?></span></li>-->
                                                     <li class="language-feature"> <i class="fa fa-language"></i> <span class="label">Language</span> <span class="value">Arabic/English</span></li>
                                                     <!--<li class="students-feature"> <i class="fa fa-dollar"></i> <span class="label">Price</span> <span class="value"><del>
-<?php echo $courseSet['course_price']; ?></del> JD</span></li>-->
+                                                    <?php echo $courseSet['course_price']; ?></del> JD</span></li>-->
                                                     <li class="students-feature"> <i class="fa fa-money"></i> <span class="label">Discount</span> <span class="value">
-                                                    <?php echo $courseSet['course_special_price']; ?> %</span></li>
+                                                            <?php echo $courseSet['course_special_price']; ?> %</span></li>
                                                     <li class="assessments-feature"> <i class="fa fa-calendar-o"></i> <span class="label">Start Date</span> <span class="value">
                                                             <?php echo date('Y-m-d', strtotime($courseSet['start_date'])); ?></span></li>
                                                     <li class="assessments-feature"> <i class="fa fa-calendar-check-o"></i> <span class="label">End Date</span> <span class="value">
@@ -363,16 +364,52 @@ echo "<meta name='keywords'  content='{$metaSet['keywords_ar']}'>";
 
                                                 </ul>
                                             </div>
-                                            <h3>Course Description</h3>
-                                            <p>
-<?php echo $courseSet['course_desc']; ?>
-                                            </p>
+                                            <div class="wrapper">
+                                                <h3>Course Description</h3>
+                                                <p>
+                                                    <?php echo $courseSet['course_desc']; ?>
+                                                </p>
 
-                                            <h3>Course Content</h3>
-<?php echo $courseSet['course_content']; ?>
+                                                <h3>Course Content</h3>
+                                                <?php echo $courseSet['course_content']; ?>
 
-                                            <h3>Course Outcome</h3>
-<?php echo $courseSet['course_outcome']; ?>
+                                                <h3>Course Outcome</h3>
+                                                <?php echo $courseSet['course_outcome']; ?>
+                                            </div>
+                                            <div class="container">
+                                                        <h2>Video Example</h2>
+                                                        <!-- Button to Open the Modal -->
+                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+                                                            Open Video
+                                                        </button>
+
+                                                        <!-- The Modal -->
+                                                        <div class="modal" id="myModal">
+                                                            <div class="modal-dialog">
+                                                                <div class="modal-content">
+
+                                                                    <!-- Modal Header -->
+                                                                    <div class="modal-header">
+                                                                        <h4 class="modal-title">Video Discriprtion</h4>
+                                                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                                    </div>
+
+                                                                    <!-- Modal body -->
+                                                                    <div class="modal-body">
+                                                                        <video src="/Desktop/FullStackDev1.mp4" type="video/mp4" width="320" height="240" controls >
+                                                                        </video>
+                                                                    </div>
+
+                                                                    <!-- Modal footer -->
+                                                                    <div class="modal-footer">
+                                                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
                                         </section>
 
                                     </article>
@@ -433,4 +470,4 @@ echo "<meta name='keywords'  content='{$metaSet['keywords_ar']}'>";
                 </div>
             </div>
 
-<?php require '../includes/website_en_footer.php'; ?>
+            <?php require '../includes/website_en_footer.php'; ?>

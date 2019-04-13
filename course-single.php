@@ -347,7 +347,7 @@ if (isset($_POST['submit'])) {
                                                                                         </figure>-->
                                                                                     </header>
                                                                                     <section>
-                                                                                        <div class="lgx-course-feature-area" style="float: left;">
+                                                                                        <div class="lgx-course-feature-area">
                                                                                             <h3 class="title">تفاصيل الدورة</h3>
                                                                                             <ul class="list-unstyled lgx-course-feature">
                                                                                                 <li class="duration-feature"> <i class="fa fa-clock-o"></i> <span class="label"> المدة </span> <span class="value"> 
@@ -367,6 +367,7 @@ if (isset($_POST['submit'])) {
 
                                                                                             </ul>
                                                                                         </div>
+                                                                                        <div class="wrapper">
                                                                                         <h3>تفاصيل الدورة</h3>
                                                                                         <p>
                                                                                             <?php echo $courseSet['course_desc_ar']; ?>
@@ -387,6 +388,7 @@ if (isset($_POST['submit'])) {
                                                                                         <p>
                                                                                             <?php echo $courseSet['course_outcome_ar']; ?>
                                                                                         </p>
+                                                                                        </div>
                                                                                     </section>
 
                                                                                 </article>
