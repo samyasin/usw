@@ -104,14 +104,17 @@ if (isset($_POST['submit'])) {
                                         <div class="contact">
                                             <ul class="list-inline">
                                                 <!--<li class="login-register"><a href="#">Login/Register</a></li>-->
-                                                <a href="en/index.php" type="button" class="btn btn-warning en">EN</a>
-                                                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                                <li><a href="https://web.facebook.com/upskills1/"><i class="fa fa-facebook-f" aria-hidden="true"></i></a></li>
+                                                <!--<a href="en/course-single.php?<?//php echo $courseSet['course_id']&$courseSet['course_name']; ?>" type="button" class="btn btn-warning en">EN</a>-->
+                                                <a href="en/courses.php" type="button" class="btn btn-warning en">EN</a>
+                                                <!--<li><a href=""><i class="fa fa-twitter"></i></a></li>-->
+                                                <li><a href="https://web.facebook.com/upskills1/"><i class="fa fa-facebook-f"></i></a></li>
                                                 <!--
-                                                <li><a href="#"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
+                                                <li><a href=""><i class="fa fa-google-plus"></i></a></li>
                                                 -->
-                                                <li><a href="#"><i class="fa fa-google" aria-hidden="true"></i></a></li>
-                                                <li><a href="https://www.youtube.com/channel/UCIeGyNQeeS-Etd_bwRXEZ5A/"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+                                                <li><a href="https://www.linkedin.com/in/upskills-academy-b67743154/"><i class="fa fa-linkedin"></i></a></li>
+                                                <!--						<li><a href=""><i class="fa fa-instagram"></i></a></li>-->
+                                                <!--						<li><a href=""><i class="fa fa-pinterest-p"></i></a></li>-->
+                                                <li><a href="https://www.youtube.com/channel/UCIeGyNQeeS-Etd_bwRXEZ5A/"><i class="fa fa-youtube-play"></i></a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -368,7 +371,7 @@ if (isset($_POST['submit'])) {
                                                                                         <p>
                                                                                             <?php echo $courseSet['course_desc_ar']; ?>
                                                                                         </p>
-                                                                                        
+
                                                                                         <br><br>
 
 
@@ -377,7 +380,7 @@ if (isset($_POST['submit'])) {
                                                                                         echo $courseSet['course_content_ar'];
                                                                                         ?>
                                                                                         <br>
-                                                                                        
+
 
 
                                                                                         <h3>أهداف الدورة</h3>

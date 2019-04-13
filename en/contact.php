@@ -113,7 +113,7 @@ if (isset($_POST['submit'])) {
                                         <div class="right-menu">
                                             <ul class="list-inline">
                                                 <!--<li class="login-register"><a href="#">Login/Register</a></li>-->
-                                                <a href="../about.php" type="button" class="btn btn-warning en">AR</a>
+                                                <a href="../contact.php" type="button" class="btn btn-warning en">AR</a>
        <!--<li><a href=""><i class="fa fa-twitter"></i></a></li>-->
                                                 <li><a href="https://web.facebook.com/upskills1/"><i class="fa fa-facebook-f"></i></a></li>
                                                 <!--

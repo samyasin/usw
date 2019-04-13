@@ -17,15 +17,15 @@
         ?>
 
         <?php
-        /*/
-        $name = basename($_SERVER['PHP_SELF'], ".php");
-        $query = "SELECT * FROM meta WHERE page_name='{$name}'";
-        $res = mysqli_query($con, $query);
-        $metaSet = mysqli_fetch_assoc($res);
-        echo "<title>{$metaSet['title']}</title>";
-        echo "<meta name='decription'  content='{$metaSet['description']}'";
-        echo "<meta name='keywords'  content='{$metaSet['keywords']}'>";
-         
+        /* /
+          $name = basename($_SERVER['PHP_SELF'], ".php");
+          $query = "SELECT * FROM meta WHERE page_name='{$name}'";
+          $res = mysqli_query($con, $query);
+          $metaSet = mysqli_fetch_assoc($res);
+          echo "<title>{$metaSet['title']}</title>";
+          echo "<meta name='decription'  content='{$metaSet['description']}'";
+          echo "<meta name='keywords'  content='{$metaSet['keywords']}'>";
+
          */
         ?>
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -99,14 +99,16 @@
                                         <div class="contact">
                                             <ul class="list-inline">
                                                 <!--<li class="login-register"><a href="#">Login/Register</a></li>-->
-                                                <a href="en/index.php" type="button" class="btn btn-warning en">EN</a>
-                                                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                                <li><a href="https://web.facebook.com/upskills1/"><i class="fa fa-facebook-f" aria-hidden="true"></i></a></li>
+                                                <a href="en/events.php" type="button" class="btn btn-warning en">EN</a>
+                                                 <!--<li><a href=""><i class="fa fa-twitter"></i></a></li>-->
+                                                <li><a href="https://web.facebook.com/upskills1/"><i class="fa fa-facebook-f"></i></a></li>
                                                 <!--
-                                                <li><a href="#"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
+                                                <li><a href=""><i class="fa fa-google-plus"></i></a></li>
                                                 -->
-                                                <li><a href="#"><i class="fa fa-google" aria-hidden="true"></i></a></li>
-                                                <li><a href="https://www.youtube.com/channel/UCIeGyNQeeS-Etd_bwRXEZ5A/"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+                                                <li><a href="https://www.linkedin.com/in/upskills-academy-b67743154/"><i class="fa fa-linkedin"></i></a></li>
+                                                <!--						<li><a href=""><i class="fa fa-instagram"></i></a></li>-->
+                                                <!--						<li><a href=""><i class="fa fa-pinterest-p"></i></a></li>-->
+                                                <li><a href="https://www.youtube.com/channel/UCIeGyNQeeS-Etd_bwRXEZ5A/"><i class="fa fa-youtube-play"></i></a></li>
                                             </ul>
                                         </div>
                                     </div>
