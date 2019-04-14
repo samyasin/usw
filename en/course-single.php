@@ -269,7 +269,7 @@ if (isset($_POST['submit'])) {
                                 <div class="col-xs-12">
                                     <div class="lgx-heading-area">
                                         <div class="lgx-heading lgx-heading-white">
-                                            <h2 class="heading-title"><span class='opacity' style="background: rgba(0, 0, 0, 0.6);padding-left: 10px;padding-right: 10px;"><a href="<?php echo $_SERVER['PHP_SELF'] . "?course_id=" . $_GET['course_id'] . "&category_name=" . $_GET['category_name']; ?>" style="color:white"><?php echo $courseSet['course_name']; ?></a></span></h2>
+                                            <h2 class="lgx-item-left"><span class='opacity' style="background: rgba(0, 0, 0, 0.6);padding-left: 10px;padding-right: 10px;"><a href="<?php echo $_SERVER['PHP_SELF'] . "?course_id=" . $_GET['course_id'] . "&category_name=" . $_GET['category_name']; ?>"><?php echo $courseSet['course_name']; ?></a></span></h2>
                                         </div>
 
                                     </div>
@@ -321,6 +321,45 @@ if (isset($_POST['submit'])) {
                                                         <li>
 
                                                     </ul>
+                                                    <?php
+                                            if ( $courseSet['course_id']== 30 )
+                                                echo ' <div class="container">
+                                                        
+                                                        <!-- Button to Open the Modal -->
+                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+                                                            Open Video
+                                                        </button>
+
+                                                        <!-- The Modal -->
+                                                        <div class="modal" id="myModal">
+                                                            <div class="modal-dialog">
+                                                                <div class="modal-content">
+
+                                                                    <!-- Modal Header -->
+                                                                    <div class="modal-header">
+                                                                        <h4 class="modal-title">Video Discriprtion</h4>
+                                                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                                    </div>
+
+                                                                    <!-- Modal body -->
+                                                                    <div class="modal-body">
+                                                                        <video src="/Desktop/FullStackDev1.mp4" type="video/mp4" width="320" height="240" controls >
+                                                                        </video>
+                                                                    </div>
+
+                                                                    <!-- Modal footer -->
+                                                                    <div class="modal-footer">
+                                                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>';
+                                            
+                                            
+                                            ?>
 
                                                     <div class="course-hitcourse-payment">
                                                         <!--<div class="course-price">
@@ -364,6 +403,12 @@ if (isset($_POST['submit'])) {
 
                                                 </ul>
                                             </div>
+                                            <?php
+                                            if ( $courseSet['course_id']== 30 )
+                                                echo '';
+                                            
+                                            
+                                            ?>
                                             <div class="wrapper">
                                                 <h3>Course Description</h3>
                                                 <p>
@@ -376,40 +421,8 @@ if (isset($_POST['submit'])) {
                                                 <h3>Course Outcome</h3>
                                                 <?php echo $courseSet['course_outcome']; ?>
                                             </div>
-                                            <div class="container">
-                                                        <h2>Video Example</h2>
-                                                        <!-- Button to Open the Modal -->
-                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
-                                                            Open Video
-                                                        </button>
-
-                                                        <!-- The Modal -->
-                                                        <div class="modal" id="myModal">
-                                                            <div class="modal-dialog">
-                                                                <div class="modal-content">
-
-                                                                    <!-- Modal Header -->
-                                                                    <div class="modal-header">
-                                                                        <h4 class="modal-title">Video Discriprtion</h4>
-                                                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                                                    </div>
-
-                                                                    <!-- Modal body -->
-                                                                    <div class="modal-body">
-                                                                        <video src="/Desktop/FullStackDev1.mp4" type="video/mp4" width="320" height="240" controls >
-                                                                        </video>
-                                                                    </div>
-
-                                                                    <!-- Modal footer -->
-                                                                    <div class="modal-footer">
-                                                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                                                                    </div>
-
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-                                                    </div>
+                                            
+                                           
                                         </section>
 
                                     </article>

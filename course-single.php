@@ -337,6 +337,46 @@ if (isset($_POST['submit'])) {
                                                                                                     <button class="button lgx-btn" data-toggle='modal' data-target='#exampleModalCenter'> اسألنا عن التفاصيل </button>
 
                                                                                                 </div>
+                                                                                                <?php
+                                            if ( $courseSet['course_id']== 30 )
+                                                echo ' <div class="container">
+                                                        
+                                                        <!-- Button to Open the Modal -->
+                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+                                                            Open Video
+                                                        </button>
+
+                                                        <!-- The Modal -->
+                                                        <div class="modal" id="myModal">
+                                                            <div class="modal-dialog">
+                                                                <div class="modal-content">
+
+                                                                    <!-- Modal Header -->
+                                                                    <div class="modal-header">
+                                                                        <h4 class="modal-title">Video Discriprtion</h4>
+                                                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                                    </div>
+
+                                                                    <!-- Modal body -->
+                                                                    <div class="modal-body">
+                                                                        <video src="/Desktop/FullStackDev1.mp4" type="video/mp4" width="320" height="240" controls >
+                                                                        </video>
+                                                                    </div>
+
+                                                                    <!-- Modal footer -->
+                                                                    <div class="modal-footer">
+                                                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>';
+                                            
+                                            
+                                            ?>
+
 
                                                                                             </div>
                                                                                         </div>
@@ -350,7 +390,7 @@ if (isset($_POST['submit'])) {
                                                                                         <div class="lgx-course-feature-area">
                                                                                             <h3 class="title">تفاصيل الدورة</h3>
                                                                                             <ul class="list-unstyled lgx-course-feature">
-                                                                                                <li class="duration-feature"> <i class="fa fa-clock-o"></i> <span class="label"> المدة </span> <span class="value"> 
+                                                                                                <li class="duration-feature"> <i class="fa fa-clock-o "></i> <span class="label"> المدة </span> <span class="value"> 
                                                                                                         <span dir="ltr">ساعة</span> <?php echo $courseSet['course_hours']; ?> </span></li>
                                                                                         <!--<li class="skill-feature"> <i class="fa fa-level-up"></i> <span class="label">level</span> <span class="value">
                                                                                                 <?php echo $courseSet['course_level']; ?></span></li>-->
@@ -373,14 +413,14 @@ if (isset($_POST['submit'])) {
                                                                                             <?php echo $courseSet['course_desc_ar']; ?>
                                                                                         </p>
 
-                                                                                        <br><br>
+                                                                                        
 
 
                                                                                         <h3>محتويات الدورة</h3>
                                                                                         <?php
                                                                                         echo $courseSet['course_content_ar'];
                                                                                         ?>
-                                                                                        <br>
+                                                                                        
 
 
 

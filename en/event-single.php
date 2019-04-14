@@ -258,7 +258,7 @@ $eventSet = mysqli_fetch_assoc($result);
                                 <div class="col-xs-12">
                                     <div class="lgx-heading-area">
                                         <div class="lgx-heading lgx-heading-white">
-                                            <h2 class="heading-title"><a style="color:white" href="<?php echo $_SERVER['PHP_SELF'] . "?event_id=" . $event_id ?>">Upcoming Events</a></h2>
+                                            <h2 class="lgx-item-left"><a style="color:white" href="<?php echo $_SERVER['PHP_SELF'] . "?event_id=" . $event_id ?>" class="lgx-item-left">Upcoming Events</a></h2>
                                         </div>
                                         <ul class="breadcrumb">
                                             <li><a href="index.php"><i class="icon-home6"></i>Home</a></li>
