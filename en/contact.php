@@ -1,4 +1,4 @@
-<?php require 'includes/connect_db.php'; ?>
+<?php require '../includes/connect_db.php'; ?>
 <?php
 if (isset($_POST['submit'])) {
     $name = $_POST['name'];
@@ -9,9 +9,8 @@ if (isset($_POST['submit'])) {
 
         $query = "INSERT INTO `contact`(`contact_id`, `contact_name`, `contact_email`, `contact_subject`, `contact_message`,`contact_add_date`) VALUES (null,'$name','$email','$subject','$message',NOW())";
         if (mysqli_query($con, $query)) {
-            $alert = "<div class='lgx-btn alert' style='width:75%;margin-top:20px;margin-right:20px;margin-bottom:-30px; direction: rtl;
-    float: right;'>
-		<strong>.. تم إرسال الرسالة بنجاح</strong>
+            $alert = "<div class='lgx-btn' style='width:75%;margin-top:20px;margin-left:20px;margin-bottom:-30px'>
+		<strong>Your Query successfully sent..</strong>
 		</div>";
         } else {
             $alert = mysqli_error($con);
@@ -32,9 +31,9 @@ if (isset($_POST['submit'])) {
         $query = "SELECT * FROM meta WHERE page_name='{$name}'";
         $res = mysqli_query($con, $query);
         $metaSet = mysqli_fetch_assoc($res);
-        echo "<title>{$metaSet['title']}</title>";
-        echo "<meta name='decription'  content='{$metaSet['description']}'";
-        echo "<meta name='keywords'  content='{$metaSet['keywords']}'>";
+        echo "<title>{$metaSet['title_ar']}</title>";
+        echo "<meta name='decription'  content='{$metaSet['description_ar']}'";
+        echo "<meta name='keywords'  content='{$metaSet['keywords_ar']}'>";
         ?>
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -49,37 +48,36 @@ if (isset($_POST['submit'])) {
         <!-- when you post this page url in facebook , this image will be shown -->
         <!-- facebook open graph ends from here -->
 
-        <link rel="icon" type="image/png" href="images/other/Logo-01.png">
+        <link rel="icon" type="image/png" href="../images/other/Logo-01.png">
 
         <!-- BOOTSTRAP CSS -->
-        <link rel="stylesheet" href="assets/libs/bootstrap/css/bootstrap.min.css" media="all" />
-
-        <!--Custom CSS -->
-
-        <link rel="stylesheet" href="assets/css/custom.css" media="all" />
-        <!-- FONT AWESOME -->
-        <link rel="stylesheet" href="assets/libs/fontawesome/css/font-awesome.min.css" media="all" />
+        <link rel="stylesheet" href="../assets/libs/bootstrap/css/bootstrap.min.css" media="all" /><!-- 
+        
+        <!--BOOTSTRAP CSS -->
+        <link rel="stylesheet" href="../assets/css/custom_en.css"	 media="all" />
 
         <!-- FONT AWESOME -->
-        <link rel="stylesheet" href="assets/libs/maginificpopup/magnific-popup.css" media="all" />
+        <link rel="stylesheet" href="../assets/libs/fontawesome/css/font-awesome.min.css" media="all" />
+
+        <!-- FONT AWESOME -->
+        <link rel="stylesheet" href="../assets/libs/maginificpopup/magnific-popup.css" media="all" />
 
         <!-- OWL CAROUSEL CSS -->
-        <link rel="stylesheet" href="assets/libs/owlcarousel/owl.carousel.min.css" media="all" />
-        <link rel="stylesheet" href="assets/libs/owlcarousel/owl.theme.default.min.css" media="all" />
+        <link rel="stylesheet" href="../assets/libs/owlcarousel/owl.carousel.min.css" media="all" />
+        <link rel="stylesheet" href="../assets/libs/owlcarousel/owl.theme.default.min.css" media="all" />
 
         <!-- GOOGLE FONT -->
         <!--<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Merriweather:300,400,400i,700,900%7cLato:400,700,900"/>-->
-        <link href="https://fonts.googleapis.com/css?family=Cairo|Changa" rel="stylesheet">
-
         <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,900%7cUbuntu:300,300i,400,500,700" />
+        <link href="https://fonts.googleapis.com/css?family=Montserrat|Cairo" rel="stylesheet">
 
-        <link rel="stylesheet" href="assets/libs/animate/animate.css" media="all" />
+        <link rel="stylesheet" href="../assets/libs/animate/animate.css" media="all" />
 
         <!-- MASTER  STYLESHEET  -->
-        <link id="lgx-master-style" rel="stylesheet" href="assets/css/style-default.min.css" media="all" />
+        <link id="lgx-master-style" rel="stylesheet" href="../assets/css/style-default.min.css" media="all" />
 
         <!-- MODERNIZER CSS  -->
-        <script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
+        <script src="../assets/js/vendor/modernizr-2.8.3.min.js"></script>
 
     </head>
 
@@ -106,9 +104,17 @@ if (isset($_POST['submit'])) {
                                     <div class="col-md-6">
                                         <div class="contact">
                                             <ul class="list-inline">
+                                                <li><span class="question-text">Questions?</span> <i class="fa fa-phone" aria-hidden="true"></i>(079)5 693 900 </li>
+                                                <li><i class="fa fa-envelope" aria-hidden="true"></i>info@upskills-academy.com</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="right-menu">
+                                            <ul class="list-inline">
                                                 <!--<li class="login-register"><a href="#">Login/Register</a></li>-->
-                                                <a href="en/contact.php" type="button" class="btn btn-warning en">EN</a>
-        <!--<li><a href=""><i class="fa fa-twitter"></i></a></li>-->
+                                                <a href="../contact.php" type="button" class="btn btn-warning en">AR</a>
+       <!--<li><a href=""><i class="fa fa-twitter"></i></a></li>-->
                                                 <li><a href="https://web.facebook.com/upskills1/"><i class="fa fa-facebook-f"></i></a></li>
                                                 <!--
                                                 <li><a href=""><i class="fa fa-google-plus"></i></a></li>
@@ -120,15 +126,6 @@ if (isset($_POST['submit'])) {
                                             </ul>
                                         </div>
                                     </div>
-                                    <div class="col-md-6">
-                                        <div class="contact">
-                                            <ul class="list-inline right-menu">
-                                                <li><span class="question-text">أيّ أسئلة ؟</span> <i class="fa fa-phone" aria-hidden="true"></i> 900 693 5 (079) </li>
-                                                <li><i class="fa fa-envelope" aria-hidden="true"></i> info@upskills-academy.com</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
                                 </div>
                             </div>
                         </div>
@@ -153,16 +150,16 @@ if (isset($_POST['submit'])) {
                                                             <span class="icon-bar"></span>
                                                         </button>
                                                         <a href="#toggle-search" class="hidden-lg hidden-md hidden-sm lgx-search-mobile search-animate"><span class="glyphicon glyphicon-search"></span></a>
-                                                        <div class="lgx-logo">
+                                                        <div class="lgx-logo" style="margin-top:8px">
                                                             <a href="index.php" class="lgx-scroll">
-                                                                <img src="images/other/Logo3.png" alt="Logo" />
+                                                                <img src="../images/other/Logo3.png" alt="Logo" />
                                                             </a>
                                                         </div>
                                                     </div>
                                                     <div class="collapse navbar-collapse">
                                                         <ul class="nav navbar-nav lgx-nav">
                                                             <li>
-
+                                                                <a href="index.php" class="dropdown-toggle active" role="button" aria-haspopup="true" aria-expanded="false">Home</a>
                                                                 <!--<ul class="dropdown-menu multi-level">
                                                                         <li><a href="index.php">Home (Default)</a></li>
                                                                         <li><a href="home-slider.html">Home Slider</a></li>
@@ -226,15 +223,11 @@ if (isset($_POST['submit'])) {
                                                                         </li>
                                                                 </ul>
                                                         </li>-->
-
-
-                                                            <li><a class="lgx-scroll" href="contact.php">تواصل معنا</a></li>
-                                                            <li><a class="lgx-scroll" href="gallery.php">معرض الصور</a></li>
-                                                            <li><a class="lgx-scroll" href="courses.php">الدورات</a></li>
-                                                            <li><a class="lgx-scroll" href="events.php">الأحداث</a></li>
-                                                            <li><a class="lgx-scroll active" href="about.php">عنّا</a></li>
-                                                            <li><a href="index.php" class="dropdown-toggle active" role="button" aria-haspopup="true" aria-expanded="false">الرئيسية</a></li>
-
+                                                            <li><a class="lgx-scroll active" href="about.php">About Us</a></li>
+                                                            <li><a class="lgx-scroll " href="courses.php" >Courses</a></li>
+                                                            <li><a class="lgx-scroll" href="events.php">Events</a></li>
+                                                            <li><a class="lgx-scroll" href="gallery.php">Gallery</a></li>
+                                                            <li><a class="lgx-scroll" href="contact.php">Contact Us</a></li>
                                                             <li class="hidden-xs"><a href="#toggle-search" class="search-animate"><span class="glyphicon glyphicon-search"></span></a></li>
                                                         </ul>
                                                     </div>
@@ -275,11 +268,11 @@ if (isset($_POST['submit'])) {
                                 <div class="col-xs-12">
                                     <div class="lgx-heading-area">
                                         <div class="lgx-heading lgx-heading-white">
-                                            <h2 class="heading-title">تواصل معنا</h2>
+                                            <h2 class="lgx-item-left">Get In Touch</h2>
                                         </div>
                                         <ul class="breadcrumb">
-                                            <li><a href="index.php"><i class="icon-home6"></i>الرئيسية</a></li>
-                                            <li class="active">تواصل معنا</li>
+                                            <li><a href="index.php"><i class="icon-home6"></i>Home</a></li>
+                                            <li class="active">Contact us</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -288,7 +281,7 @@ if (isset($_POST['submit'])) {
                         </div><!-- //.CONTAINER -->
                     </div><!-- //.INNER -->
                 </div>
-            </section>
+            </section>	
             <?php
             if (isset($alert)) {
                 echo $alert;
@@ -302,58 +295,29 @@ if (isset($_POST['submit'])) {
 
 
                             <div class="row">
-                                <div class="col-sm-12 col-md-6">
-                                    <div class="contact-info">
-                                        <div class="lgx-box">
-                                                <!--<span class="lgx-icon"><i class="fa fa-map-marker"></i></span>-->
-                                            <div class="address">
-                                                <h3 class="title">الموقع</h3>
-                                                المدينة الرياضية , شارع الشهيد , عمان - الأردن
-
-                                                                                        <!--<p>SKYPE:jhon.doe</p>-->
-                                            </div>
-                                        </div>
-                                        <div class="lgx-box">
-                                                <!--<span class="lgx-icon"><i class="fa fa-headphones"></i></span>-->
-                                            <div class="address">
-                                                <h3 class="title">تفاصيل</h3>
-                                                <p> هاتف : 900 693 5 (079) </p>
-                                            </div>
-                                        </div>
-                                        <div class="lgx-box">
-                                                <!--<span class="lgx-icon"><i class="fa fa-envelope"></i></span>-->
-                                            <div class="address">
-                                                <h3 class="title">البريد الإلكتروني</h3>
-                                                <p>info@upskills-academy.com</p>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--//.COL-->
 
                                 <div class="col-sm-12 col-md-6">
 
                                     <form method="POST" class="">
                                         <div class="form-group">
-                                            <input type="text" name="name" class="form-control lgxname" id="lgxname" placeholder="ادخل اسمك" required>
+                                            <input type="text" name="name" class="form-control lgxname" id="lgxname" placeholder="Enter Your Name" required>
                                         </div>
 
                                         <div class="form-group">
-                                            <input type="email" name="email" class="form-control lgxemail" id="lgxemail" placeholder="ادخل بريدك الإلكتروني" required>
+                                            <input type="email" name="email" class="form-control lgxemail" id="lgxemail" placeholder="Enter email" required>
                                         </div>
 
                                         <div class="form-group">
-                                            <input type="text" name="subject" class="form-control lgxsubject" id="lgxsubject" placeholder="ادخل الموضوع" required>
+                                            <input type="text" name="subject" class="form-control lgxsubject" id="lgxsubject" placeholder="Subject" required>
                                         </div>
 
                                         <div class="form-group">
-                                            <textarea class="form-control lgxmessage" name="message" id="lgxmessage" rows="5" placeholder="ادخل الرسالة" required></textarea>
+                                            <textarea class="form-control lgxmessage" name="message" id="lgxmessage" rows="5" placeholder="We expect drop some line from you..." required></textarea>
                                         </div>
 
 
-                                        <button type="submit" name="submit" class="lgx-btn "><span>إرسال</span></button>
-                                    </form>
+                                        <button type="submit" name="submit" class="lgx-btn " ><span>Send Massage</span></button>
+                                    </form><br>
 
                                     <!-- MODAL SECTION -->
                                     <div id="lgx-form-modal" class="modal fade lgx-form-modal" tabindex="-1" role="dialog" aria-hidden="true">
@@ -375,13 +339,42 @@ if (isset($_POST['submit'])) {
                                     </div> <!-- //MODAL -->
 
                                 </div>
+                                <!--//.COL-->
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="contact-info">
+                                        <div class="lgx-box">
+                                                <!--<span class="lgx-icon"><i class="fa fa-map-marker"></i></span>-->
+                                            <div class="address">
+                                                <h3 class="title">Location</h3>
+                                                Al-Saheed St., Amman,Jordan
 
+                                                                                        <!--<p>SKYPE:jhon.doe</p>-->
+                                            </div>
+                                        </div>
+                                        <div class="lgx-box">
+                                                <!--<span class="lgx-icon"><i class="fa fa-headphones"></i></span>-->
+                                            <div class="address">
+                                                <h3 class="title">Contact Info</h3>
+                                                <p>PHONE: (06)51 666 90</p>
+                                                <p>(079)5 693 900</p>
+                                            </div>
+                                        </div>
+                                        <div class="lgx-box">
+                                                <!--<span class="lgx-icon"><i class="fa fa-envelope"></i></span>-->
+                                            <div class="address">
+                                                <h3 class="title">Mail Info.</h3>
+                                                <p>info@upskills-academy.com</p>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <br>
                             <div class="row">
                                 <div class="col-xs-12">
                                     <div class="innerpage-section">
-                                        <center><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13536.077755815664!2d35.9031799!3d31.9874885!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xdc9535598d200ad!2supskills+academy!5e0!3m2!1sar!2sjo!4v1550067494111" width="900" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                                        <center><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13536.077755815664!2d35.9031799!3d31.9874885!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xdc9535598d200ad!2supskills+academy!5e0!3m2!1sar!2sjo!4v1550067494111" width="900" height="450" frameborder="0" allowfullscreen></iframe>
                                         </center>
                                     </div>
                                 </div>
@@ -398,4 +391,4 @@ if (isset($_POST['submit'])) {
 
 
 
-            <?php require'includes/website_footer.php' ?>
+            <?php require'../includes/website_en_footer.php' ?>

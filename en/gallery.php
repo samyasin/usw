@@ -1,4 +1,4 @@
-<?php require 'includes/connect_db.php'; ?>
+<?php require '../includes/connect_db.php'; ?>
 <!doctype html>
 <html class="no-js" lang="en">
 
@@ -6,15 +6,24 @@
 
     <head>
         <!-- SITE TITLE -->
-
         <?php
         $name = basename($_SERVER['PHP_SELF'], ".php");
-        $query = "SELECT * FROM meta WHERE page_name='{$name}'";
+        $query = "SELECT * FROM course";
         $res = mysqli_query($con, $query);
         $metaSet = mysqli_fetch_assoc($res);
-        echo "<title>{$metaSet['title']}</title>";
-        echo "<meta name='decription'  content='{$metaSet['description']}'";
-        echo "<meta name='keywords'  content='{$metaSet['keywords']}'>";
+        echo "<title>{$metaSet['meta_title']}</title>";
+        echo "<meta name='decription'  content='{$metaSet['meta_desc']}'";
+        echo "<meta name='keywords'  content='{$metaSet['meta_keys']}'>";
+        ?>
+        <?php
+        /*
+          $name    = basename($_SERVER['PHP_SELF'],".php");
+          $query   = "SELECT * FROM meta WHERE page_name='{$name}'";
+          $res     = mysqli_query($con,$query);
+          $metaSet = mysqli_fetch_assoc($res);
+          echo "<title>{$metaSet['title_ar']}</title>";
+          echo "<meta name='decription'  content='{$metaSet['description_ar']}'";
+          echo "<meta name='keywords'  content='{$metaSet['keywords_ar']}'>"; */
         ?>
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -29,41 +38,42 @@
         <!-- when you post this page url in facebook , this image will be shown -->
         <!-- facebook open graph ends from here -->
 
-        <link rel="icon" type="image/png" href="images/other/Logo-01.png">
+        <link rel="icon" type="image/png" href="../images/other/Logo-01.png">
 
         <!-- BOOTSTRAP CSS -->
-        <link rel="stylesheet" href="assets/libs/bootstrap/css/bootstrap.min.css" media="all" />
-
-        <!--Custom CSS -->
-
-        <link rel="stylesheet" href="assets/css/custom.css" media="all" />
-        <!-- FONT AWESOME -->
-        <link rel="stylesheet" href="assets/libs/fontawesome/css/font-awesome.min.css" media="all" />
+        <link rel="stylesheet" href="../assets/libs/bootstrap/css/bootstrap.min.css" media="all" /><!-- 
+        
+        <!--BOOTSTRAP CSS -->
+        <link rel="stylesheet" href="../assets/css/custom_en.css"	 media="all" />
 
         <!-- FONT AWESOME -->
-        <link rel="stylesheet" href="assets/libs/maginificpopup/magnific-popup.css" media="all" />
+        <link rel="stylesheet" href="../assets/libs/fontawesome/css/font-awesome.min.css" media="all" />
+
+        <!-- FONT AWESOME -->
+        <link rel="stylesheet" href="../assets/libs/maginificpopup/magnific-popup.css" media="all" />
 
         <!-- OWL CAROUSEL CSS -->
-        <link rel="stylesheet" href="assets/libs/owlcarousel/owl.carousel.min.css" media="all" />
-        <link rel="stylesheet" href="assets/libs/owlcarousel/owl.theme.default.min.css" media="all" />
+        <link rel="stylesheet" href="../assets/libs/owlcarousel/owl.carousel.min.css" media="all" />
+        <link rel="stylesheet" href="../assets/libs/owlcarousel/owl.theme.default.min.css" media="all" />
 
         <!-- GOOGLE FONT -->
         <!--<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Merriweather:300,400,400i,700,900%7cLato:400,700,900"/>-->
-        <link href="https://fonts.googleapis.com/css?family=Cairo|Changa" rel="stylesheet">
-
         <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,900%7cUbuntu:300,300i,400,500,700" />
+        <link href="https://fonts.googleapis.com/css?family=Montserrat|Cairo" rel="stylesheet">
 
         <!--photo Gallery-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css" />
         <link rel="stylesheet" href="../assets/css/compact-gallery.css">
 
-        <link rel="stylesheet" href="assets/libs/animate/animate.css" media="all" />
+        <link rel="stylesheet" href="../assets/libs/animate/animate.css" media="all" />
 
         <!-- MASTER  STYLESHEET  -->
-        <link id="lgx-master-style" rel="stylesheet" href="assets/css/style-default.min.css" media="all" />
+        <link id="lgx-master-style" rel="stylesheet" href="../assets/css/style-default.min.css" media="all" />
 
         <!-- MODERNIZER CSS  -->
-        <script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
+        <script src="../assets/js/vendor/modernizr-2.8.3.min.js"></script>
+
+
 
     </head>
 
@@ -90,8 +100,15 @@
                                     <div class="col-md-6">
                                         <div class="contact">
                                             <ul class="list-inline">
-                                                <!--<li class="login-register"><a href="#">Login/Register</a></li>-->
-                                                <a href="en/gallery.php" type="button" class="btn btn-warning en">EN</a>
+                                                <li><span class="question-text">Questions?</span> <i class="fa fa-phone" aria-hidden="true"></i>(079)5 693 900 </li>
+                                                <li><i class="fa fa-envelope" aria-hidden="true"></i> info@upskills-academy.com</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="right-menu">
+                                            <ul class="list-inline">
+                                                <a href="../gallery.php" type="button" class="btn btn-warning en">AR</a>
         <!--<li><a href=""><i class="fa fa-twitter"></i></a></li>-->
                                                 <li><a href="https://web.facebook.com/upskills1/"><i class="fa fa-facebook-f"></i></a></li>
                                                 <!--
@@ -104,15 +121,6 @@
                                             </ul>
                                         </div>
                                     </div>
-                                    <div class="col-md-6">
-                                        <div class="contact">
-                                            <ul class="list-inline right-menu">
-                                                <li><span class="question-text">أيّ أسئلة ؟</span> <i class="fa fa-phone" aria-hidden="true"></i> 900 693 5 (079) </li>
-                                                <li><i class="fa fa-envelope" aria-hidden="true"></i> info@upskills-academy.com</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
                                 </div>
                             </div>
                         </div>
@@ -139,14 +147,14 @@
                                                         <a href="#toggle-search" class="hidden-lg hidden-md hidden-sm lgx-search-mobile search-animate"><span class="glyphicon glyphicon-search"></span></a>
                                                         <div class="lgx-logo" style="margin-top:8px">
                                                             <a href="index.php" class="lgx-scroll">
-                                                                <img src="images/other/Logo3.png" alt="Logo" />
+                                                                <img src="../images/other/Logo3.png" alt="Logo" />
                                                             </a>
                                                         </div>
                                                     </div>
                                                     <div class="collapse navbar-collapse">
                                                         <ul class="nav navbar-nav lgx-nav">
                                                             <li>
-
+                                                                <a href="index.php" class="dropdown-toggle active" role="button" aria-haspopup="true" aria-expanded="false">Home</a>
                                                                 <!--<ul class="dropdown-menu multi-level">
                                                                         <li><a href="index.php">Home (Default)</a></li>
                                                                         <li><a href="home-slider.html">Home Slider</a></li>
@@ -210,15 +218,11 @@
                                                                         </li>
                                                                 </ul>
                                                         </li>-->
-
-
-                                                            <li><a class="lgx-scroll" href="contact.php">تواصل معنا</a></li>
-                                                            <li><a class="lgx-scroll" href="#lgx-photo-gallery" style="color:#e39a31">معرض الصور</a></li>
-                                                            <li><a class="lgx-scroll" href="courses.php">الدورات</a></li>
-                                                            <li><a class="lgx-scroll" href="events.php">الأحداث</a></li>
-                                                            <li><a class="lgx-scroll active" href="about.php">عنّا</a></li>
-                                                            <li><a href="index.php" class="dropdown-toggle active" role="button" aria-haspopup="true" aria-expanded="false">الرئيسية</a></li>
-
+                                                            <li><a class="lgx-scroll active" href="about.php">About Us</a></li>
+                                                            <li><a class="lgx-scroll " href="courses.php" >Courses</a></li>
+                                                            <li><a class="lgx-scroll" href="events.php">Events</a></li>
+                                                            <li><a class="lgx-scroll" href="gallery.php">Gallery</a></li>
+                                                            <li><a class="lgx-scroll" href="contact.php">Contact Us</a></li>
                                                             <li class="hidden-xs"><a href="#toggle-search" class="search-animate"><span class="glyphicon glyphicon-search"></span></a></li>
                                                         </ul>
                                                     </div>
@@ -251,6 +255,7 @@
             </header>
             <!--HEADER END-->
 
+
             <section>
                 <div class="lgx-banner lgx-banner-inner">
                     <div class="lgx-inner">
@@ -259,16 +264,15 @@
                                 <div class="col-xs-12">
                                     <div class="lgx-heading-area">
                                         <div class="lgx-heading lgx-heading-white">
-                                            <h2 class="heading-title">معرض الصور</h2>
+                                            <h2 class="lgx-item-left">Photo Gallery</h2>
                                         </div>
                                         <ul class="breadcrumb">
-                                            <li><a href="index.php"><i class="icon-home6"></i>الرئيسية</a></li>
-                                            <li class="active">معرض الصور</li>
+                                            <li><a href="index.php"><i class="icon-home6"></i>Home</a></li>
+                                            <li class="active">Gallery</li>
                                         </ul>
                                     </div>
                                 </div>
-                            </div>
-                            <!--//.ROW-->
+                            </div><!--//.ROW-->
                         </div><!-- //.CONTAINER -->
                     </div><!-- //.INNER -->
                 </div>
@@ -281,27 +285,28 @@
             <section class="gallery-block compact-gallery">
                 <div class="container">
                     <div class="lgx-heading">
-                        <h2 class="heading-title"><a></a>معرض الصور</h2>
-                        <h4 class="heading-subtitle">بعض اللقطات المدهشة من أكاديميتنا</h4>
+                        <h2 class="heading-title"><a></a><center>Photo Gallery</center></h2>
+                        <h4 class="heading-subtitle">Some of amazing Screenshots for UpSkills Academy</h4>
                     </div>
                     <div class="row no-gutters">
+                        <center>
 
-                        <?php
-                        $query = "SELECT image_src,album_name FROM image,album
+<?php
+$query = "SELECT image_src,album_name FROM image,album
 						                    WHERE image.album_id = album.album_id";
-                        $res = mysqli_query($con, $query);
-                        while ($imageSet = mysqli_fetch_assoc($res)) {
-                            echo "<div class='col-md-6 col-lg-4  item zoom-on-hover'>
-                    <a class='lightbox' href='./images/albums/{$imageSet['album_name']}/{$imageSet['image_src']}'>
-                        <img class='img-fluid image' height='247' width='370' src='./images/albums/{$imageSet['album_name']}/{$imageSet['image_src']}'>
+$res = mysqli_query($con, $query);
+while ($imageSet = mysqli_fetch_assoc($res)) {
+    echo "<div class='col-md-6 col-lg-4 item zoom-on-hover'>
+                    <a class='lightbox' href='../images/albums/{$imageSet['album_name']}/{$imageSet['image_src']}'>
+                        <img class='img-fluid image' height='247' width='370' src='../images/albums/{$imageSet['album_name']}/{$imageSet['image_src']}'>
                         <span class='description'>
                             <span class='description-heading'>UpSkills Academy</span>
 
                         </span>
                     </a>
                 </div>";
-                        }
-                        ?>
+}
+?> </center>
                     </div>
                 </div>
                 <!--//.CONAINER-->
@@ -311,11 +316,10 @@
             <!--PHOTO GALLERY END-->
 
 
-
             <!--photo gallery -->
             <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
             <script>
                 baguetteBox.run('.compact-gallery', {animation: 'slideIn'});
             </script>
 
-<?php require 'includes/website_footer.php'; ?>
+<?php require '../includes/website_en_footer.php'; ?>
