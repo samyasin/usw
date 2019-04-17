@@ -11,7 +11,7 @@ if (isset($_POST['submit'])) {
         if (mysqli_query($con, $query)) {
             $alert = "<div class='lgx-btn alert' style='width:75%;margin-top:20px;margin-right:20px;margin-bottom:-30px; direction: rtl;
     float: right;'>
-		<strong>.. تم إرسال الرسالة بنجاح</strong>
+		<strong>..  تم إرسال الرسالة بنجاح</strong>
 		</div>";
         } else {
             $alert = mysqli_error($con);
