@@ -104,7 +104,7 @@ if (isset($_POST['submit'])) {
                                         <div class="contact">
                                             <ul class="list-inline">
                                                 <!--<li class="login-register"><a href="#">Login/Register</a></li>-->
-                                                <!--<a href="en/course-single.php?<?//php echo $courseSet['course_id']&$courseSet['course_name']; ?>" type="button" class="btn btn-warning en">EN</a>-->
+                                                <!--<a href="en/course-single.php?<? //php echo $courseSet['course_id']&$courseSet['course_name'];    ?>" type="button" class="btn btn-warning en">EN</a>-->
                                                 <a href="en/courses.php" type="button" class="btn btn-warning en">EN</a>
                                                 <!--<li><a href=""><i class="fa fa-twitter"></i></a></li>-->
                                                 <li><a href="https://web.facebook.com/upskills1/"><i class="fa fa-facebook-f"></i></a></li>
@@ -151,7 +151,7 @@ if (isset($_POST['submit'])) {
                                                             <span class="icon-bar"></span>
                                                         </button>
                                                         <a href="#toggle-search" class="hidden-lg hidden-md hidden-sm lgx-search-mobile search-animate"><span class="glyphicon glyphicon-search"></span></a>
-                                                        <div class="lgx-logo" style="margin-top:8px">
+                                                        <div class="lgx-logo">
                                                             <a href="index.php" class="lgx-scroll">
                                                                 <img src="images/other/Logo3.png" alt="Logo" />
                                                             </a>
@@ -302,18 +302,11 @@ if (isset($_POST['submit'])) {
                                                                                         <div class="text-area">
                                                                                                 <!--<h1 class="title"><a href="<?php echo " course-single.php?course_id=" . $_GET['course_id'] . " &category_name=" . $_GET['category_name_ar']; ?>">
                                                                                             <?php echo $courseSet['course_name_ar']; ?></a></h1>-->
+
                                                                                             <div class="course-hits-area">
 
-                                                                                                <ul class="list-inline course-hit">
-                                                                                                    <!--<li>
-                                                <div class="course-author">
-                                                    <img src="" class="avatar" alt="Admin bar avatar">
-                                                    <div class="author-info">
-                                                        <h4 class="title"><a href="#">Jonathon</a></h4>
-                                                        <h5 class="subtitle">Lecturar</h5>
-                                                    </div>
-                                                </div>
-                                            </li>-->
+                                                                                                <ul class="list-inline course-hit ar-float-r">
+
                                                                                                     <li>
                                                                                                         <div class="course-hit-info">
 
@@ -321,11 +314,18 @@ if (isset($_POST['submit'])) {
                                                                                                             <h5 class="subtitle"><a href="#" rel="tag">
                                                                                                                     <?php echo $_GET['category_name']; ?></a></h5>
                                                                                                         </div>
-                                                                                                    </li>
-                                                                                                    <li>
+                                                                                                    </li>                                                                                       
 
                                                                                                 </ul>
 
+<<<<<<< HEAD
+                                                                                                <div class="course-hitcourse-payment ar-float-l">
+                                                                                                    <button class="button lgx-btn" data-toggle='modal' data-target='#exampleModalCenter'> اسألنا عن التفاصيل </button>
+                                                                                                </div>
+
+
+
+=======
                                                                                                 <div class="course-hitcourse-payment">
                                                                                                     <!--<div class="course-price">
                                                                                             <div class="value free-course"><del>
@@ -378,6 +378,7 @@ if (isset($_POST['submit'])) {
                                             ?>
 
 
+>>>>>>> parent of 557aa84... edit
                                                                                             </div>
                                                                                         </div>
                                                                                         <!--<figure>
@@ -387,6 +388,11 @@ if (isset($_POST['submit'])) {
                                                                                         </figure>-->
                                                                                     </header>
                                                                                     <section>
+                                                                                        <?php
+                                                                                        if ($courseSet['course_id'] == 30) {
+                                                                                            echo '<iframe width="560" height="315" src="https://www.youtube.com/embed/xNlQVdK1gEE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+                                                                                        }
+                                                                                        ?>
                                                                                         <div class="lgx-course-feature-area">
                                                                                             <h3 class="title">تفاصيل الدورة</h3>
                                                                                             <ul class="list-unstyled lgx-course-feature">
@@ -408,26 +414,26 @@ if (isset($_POST['submit'])) {
                                                                                             </ul>
                                                                                         </div>
                                                                                         <div class="wrapper">
-                                                                                        <h3>تفاصيل الدورة</h3>
-                                                                                        <p>
-                                                                                            <?php echo $courseSet['course_desc_ar']; ?>
-                                                                                        </p>
-
-                                                                                        
-
-
-                                                                                        <h3>محتويات الدورة</h3>
-                                                                                        <?php
-                                                                                        echo $courseSet['course_content_ar'];
-                                                                                        ?>
-                                                                                        
+                                                                                            <h3>تفاصيل الدورة</h3>
+                                                                                            <p>
+                                                                                                <?php echo $courseSet['course_desc_ar']; ?>
+                                                                                            </p>
 
 
 
-                                                                                        <h3>أهداف الدورة</h3>
-                                                                                        <p>
-                                                                                            <?php echo $courseSet['course_outcome_ar']; ?>
-                                                                                        </p>
+
+                                                                                            <h3>محتويات الدورة</h3>
+                                                                                            <?php
+                                                                                            echo $courseSet['course_content_ar'];
+                                                                                            ?>
+
+
+
+
+                                                                                            <h3>أهداف الدورة</h3>
+                                                                                            <p>
+                                                                                                <?php echo $courseSet['course_outcome_ar']; ?>
+                                                                                            </p>
                                                                                         </div>
                                                                                     </section>
 
