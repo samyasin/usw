@@ -266,12 +266,55 @@ margin-bottom : 35px;
    }
  
    .page .lgx-banner-inner, .page-template .lgx-banner-inner, .single .lgx-banner-inner, .single-post .lgx-banner-inner {
-    background: url(../img/milestone-bg2.jpg) bottom center no-repeat fixed ;
+    background: url(../img/WEBSITE/contactus.jpg) bottom center no-repeat fixed ;
     -webkit-background-size: cover;
     -o-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
 }
+   .page-template .lgx-banner-inner,.single-post .lgx-banner-inner{
+    background: url(../img/WEBSITE/photogallery1.jpg) bottom center   ;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+}
+.page-template2 .lgx-banner-inner,.single-post .lgx-banner-inner{
+    background: url(../img/WEBSITE/photo.jpg) bottom center   ;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+}
+.page-template3 .lgx-banner-inner,.single-post .lgx-banner-inner{
+    background: url(../img/WEBSITE/contact.jpg) bottom center   ;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+}
+.page-template4 .lgx-banner-inner,.single-post .lgx-banner-inner{
+    background: url(../img/WEBSITE/event1.jpg) bottom center   ;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+}
+.page-template5 .lgx-banner-inner,.single-post .lgx-banner-inner{
+    background: url(../img/WEBSITE/photogallery2.jpg) bottom center   ;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+}
+.page-template6 .lgx-banner-inner,.single-post .lgx-banner-inner{
+    background: url(../img/WEBSITE/photogallery2.jpg) bottom center   ;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+}
+
 
    #exampleModalCenter {
       padding-top: 40px;
