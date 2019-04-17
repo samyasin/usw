@@ -62,7 +62,7 @@
 
     </head>
 
-    <body class="page page-template">
+    <body class="page page-template4">
 
         <!--[if lt IE 8]>
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
@@ -206,7 +206,7 @@
                                                         </li>-->
                                                             <li><a class="lgx-scroll active" href="about.php">About Us</a></li>
                                                             <li><a class="lgx-scroll " href="courses.php" >Courses</a></li>
-                                                            <li><a class="lgx-scroll" href="events.php" style="color:#e39a31">Events</a></li>
+                                                            <li><a class="lgx-scroll" href="events.php">Events</a></li>
                                                             <li><a class="lgx-scroll" href="gallery.php">Gallery</a></li>
                                                             <li><a class="lgx-scroll" href="contact.php">Contact Us</a></li>
                                                             <li class="hidden-xs"><a href="#toggle-search" class="search-animate"><span class="glyphicon glyphicon-search"></span></a></li>
