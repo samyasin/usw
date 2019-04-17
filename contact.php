@@ -11,7 +11,7 @@ if (isset($_POST['submit'])) {
         if (mysqli_query($con, $query)) {
             $alert = "<div class='lgx-btn alert' style='width:75%;margin-top:20px;margin-right:20px;margin-bottom:-30px; direction: rtl;
     float: right;'>
-		<strong>..  تم إرسال الرسالة بنجاح</strong>
+		<strong>.. تم إرسال الرسالة بنجاح</strong>
 		</div>";
         } else {
             $alert = mysqli_error($con);
@@ -83,7 +83,7 @@ if (isset($_POST['submit'])) {
 
     </head>
 
-    <body class="page page-template">
+    <body class="page page-template3">
 
         <!--[if lt IE 8]>
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
@@ -153,7 +153,7 @@ if (isset($_POST['submit'])) {
                                                             <span class="icon-bar"></span>
                                                         </button>
                                                         <a href="#toggle-search" class="hidden-lg hidden-md hidden-sm lgx-search-mobile search-animate"><span class="glyphicon glyphicon-search"></span></a>
-                                                        <div class="lgx-logo" style="margin-top:8px">
+                                                        <div class="lgx-logo">
                                                             <a href="index.php" class="lgx-scroll">
                                                                 <img src="images/other/Logo3.png" alt="Logo" />
                                                             </a>
@@ -228,7 +228,7 @@ if (isset($_POST['submit'])) {
                                                         </li>-->
 
 
-                                                            <li><a class="lgx-scroll" href="contact.php" style="color:#e39a31">تواصل معنا</a></li>
+                                                            <li><a class="lgx-scroll" href="contact.php">تواصل معنا</a></li>
                                                             <li><a class="lgx-scroll" href="gallery.php">معرض الصور</a></li>
                                                             <li><a class="lgx-scroll" href="courses.php">الدورات</a></li>
                                                             <li><a class="lgx-scroll" href="events.php">الأحداث</a></li>
