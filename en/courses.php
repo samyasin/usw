@@ -205,7 +205,7 @@
                                                                 </ul>
                                                         </li>-->
                                                             <li><a class="lgx-scroll active" href="about.php">About Us</a></li>
-                                                            <li><a class="lgx-scroll " href="courses.php" style="color:#e39a31">Courses</a></li>
+                                                            <li><a class="lgx-scroll " href="courses.php">Courses</a></li>
                                                             <li><a class="lgx-scroll" href="events.php">Events</a></li>
                                                             <li><a class="lgx-scroll" href="gallery.php">Gallery</a></li>
                                                             <li><a class="lgx-scroll" href="contact.php">Contact Us</a></li>
