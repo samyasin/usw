@@ -151,7 +151,7 @@ if (isset($_POST['submit'])) {
                                                             <span class="icon-bar"></span>
                                                         </button>
                                                         <a href="#toggle-search" class="hidden-lg hidden-md hidden-sm lgx-search-mobile search-animate"><span class="glyphicon glyphicon-search"></span></a>
-                                                        <div class="lgx-logo" style="margin-top:8px">
+                                                        <div class="lgx-logo">
                                                             <a href="index.php" class="lgx-scroll">
                                                                 <img src="../images/other/Logo3.png" alt="Logo" />
                                                             </a>
@@ -322,8 +322,8 @@ if (isset($_POST['submit'])) {
 
                                                     </ul>
                                                     <?php
-                                            if ( $courseSet['course_id']== 30 )
-                                                echo ' <div class="container">
+                                            //if ( $courseSet['course_id']== 30 )
+                                                /*echo ' <div class="container">
                                                         
                                                         <!-- Button to Open the Modal -->
                                                         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
@@ -356,7 +356,7 @@ if (isset($_POST['submit'])) {
                                                             </div>
                                                         </div>
 
-                                                    </div>';
+                                                    </div>';*/
                                             
                                             
                                             ?>
@@ -383,6 +383,10 @@ if (isset($_POST['submit'])) {
                                             </figure>-->
                                         </header>
                                         <section>
+                                            <?php 
+                                                 if ($courseSet['course_id'] == 30){
+                                                     echo '<iframe width="560" height="315" src="https://www.youtube.com/embed/xNlQVdK1gEE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+                                                  } ?>
                                             <div class="lgx-course-feature-area">
                                                 <h3 class="title">Course Features</h3>
                                                 <ul class="list-unstyled lgx-course-feature">
