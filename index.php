@@ -203,10 +203,10 @@
 
 
                                                             <li><a class="lgx-scroll" href="contact.php">تواصل معنا</a></li>
-                                                            <li><a class="lgx-scroll" href="#lgx-photo-gallery">معرض الصور</a></li>
-                                                            <li><a class="lgx-scroll" href="#lgx-courses">الدورات</a></li>
-                                                            <li><a class="lgx-scroll" href="#lgx-events">الأحداث</a></li>
-                                                            <li><a class="lgx-scroll active" href="#lgx-about">عنّا</a></li>
+                                                            <li><a class="lgx-scroll" href="gallery.php">معرض الصور</a></li>
+                                                            <li><a class="lgx-scroll" href="courses.php">الدورات</a></li>
+                                                            <li><a class="lgx-scroll" href="events.php">الأحداث</a></li>
+                                                            <li><a class="lgx-scroll active" href="about.php">عنّا</a></li>
                                                             <li><a href="index.php" class="dropdown-toggle active" role="button" aria-haspopup="true" aria-expanded="false" style="color:#e39a31">الرئيسية</a></li>
 
                                                             <li class="hidden-xs"><a href="#toggle-search" class="search-animate"><span class="glyphicon glyphicon-search"></span></a></li>
