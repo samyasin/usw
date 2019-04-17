@@ -63,7 +63,7 @@
 
     </head>
 
-    <body class="page page-template">
+    <body class="page page-template5">
 
         <!--[if lt IE 8]>
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
@@ -133,7 +133,7 @@
                                                             <span class="icon-bar"></span>
                                                         </button>
                                                         <a href="#toggle-search" class="hidden-lg hidden-md hidden-sm lgx-search-mobile search-animate"><span class="glyphicon glyphicon-search"></span></a>
-                                                        <div class="lgx-logo" style="margin-top:8px">
+                                                        <div class="lgx-logo">
                                                             <a href="index.php" class="lgx-scroll">
                                                                 <img src="images/other/Logo3.png" alt="Logo" />
                                                             </a>
@@ -212,7 +212,7 @@
                                                             <li><a class="lgx-scroll" href="gallery.php">معرض الصور</a></li>
                                                             <li><a class="lgx-scroll" href="courses.php">الدورات</a></li>
                                                             <li><a class="lgx-scroll" href="events.php">الأحداث</a></li>
-                                                            <li><a class="lgx-scroll active" href="about.php" style="color:#e39a31">عنّا</a></li>
+                                                            <li><a class="lgx-scroll active" href="about.php">عنّا</a></li>
                                                             <li><a href="index.php" class="dropdown-toggle active" role="button" aria-haspopup="true" aria-expanded="false" >الرئيسية</a></li>
 
                                                             <li class="hidden-xs"><a href="#toggle-search" class="search-animate"><span class="glyphicon glyphicon-search"></span></a></li>
