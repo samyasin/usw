@@ -283,7 +283,7 @@ if (isset($_POST['submit'])) {
             <section>
                 <div id="lgx-course" class="lgx-course lgx-normal-single">
                     <ul class="breadcrumb">
-                        <li><a href="index.php" style="color:black"><i class="icon-home6"></i>Home</a></li>
+                        <li><a href="index.php"><i class="icon-home6"></i>Home</a></li>
                         <li class="active">Courses</li>
                         <li class="active">
                             <?php echo $_GET['category_name']; ?>
