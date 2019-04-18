@@ -282,7 +282,7 @@ if (isset($_POST['submit'])) {
             </section>
             <section>
                 <div id="lgx-course" class="lgx-course lgx-normal-single">
-                    <ul class="breadcrumb" style="margin-top:50px;margin-left:30px">
+                    <ul class="breadcrumb">
                         <li><a href="index.php" style="color:black"><i class="icon-home6"></i>Home</a></li>
                         <li class="active">Courses</li>
                         <li class="active">
@@ -361,12 +361,7 @@ if (isset($_POST['submit'])) {
 
                                                 </ul>
                                             </div>
-                                            <?php
-                                            if ( $courseSet['course_id']== 30 )
-                                                echo '';
                                             
-                                            
-                                            ?>
                                             <div class="wrapper">
                                                 <h3>Course Description</h3>
                                                 <p>
