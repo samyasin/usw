@@ -318,25 +318,14 @@ if (isset($_POST['submit'])) {
 
                                                                                                 </ul>
 
-<<<<<<< HEAD
+
                                                                                                 <div class="course-hitcourse-payment ar-float-l">
                                                                                                     <button class="button lgx-btn" data-toggle='modal' data-target='#exampleModalCenter'> اسألنا عن التفاصيل </button>
                                                                                                 </div>
 
 
 
-=======
-                                                                                                <div class="course-hitcourse-payment">
-                                                                                                    <!--<div class="course-price">
-                                                                                            <div class="value free-course"><del>
-                                                                                                            </del>$<br>
-
-                                                                                            </div>
-                                                                                    </div>-->
-
-                                                                                                    <button class="button lgx-btn" data-toggle='modal' data-target='#exampleModalCenter'> اسألنا عن التفاصيل </button>
-
-                                                                                                </div>
+                                                                                               
                                                                                                 <?php
                                             if ( $courseSet['course_id']== 30 )
                                                 echo ' <div class="container">
@@ -378,7 +367,7 @@ if (isset($_POST['submit'])) {
                                             ?>
 
 
->>>>>>> parent of 557aa84... edit
+
                                                                                             </div>
                                                                                         </div>
                                                                                         <!--<figure>
