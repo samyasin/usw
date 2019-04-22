@@ -307,7 +307,13 @@ margin-bottom : 35px;
     -moz-background-size: cover;
     background-size: cover;
 }
-
+.page-template6 .lgx-banner-inner,.single-post .lgx-banner-inner{
+    background: url(../img/WEBSITE/ranger-4df6c1b6.png) bottom center   ;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+}
 
 
    #exampleModalCenter {

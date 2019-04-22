@@ -80,7 +80,7 @@ if (isset($_POST['submit'])) {
 
     </head>
 
-    <body class="page page-template">
+    <body class="page page-template6">
 
         <!--[if lt IE 8]>
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
@@ -104,7 +104,7 @@ if (isset($_POST['submit'])) {
                                         <div class="contact">
                                             <ul class="list-inline">
                                                 <!--<li class="login-register"><a href="#">Login/Register</a></li>-->
-                                                <!--<a href="en/course-single.php?<? //php echo $courseSet['course_id']&$courseSet['course_name'];    ?>" type="button" class="btn btn-warning en">EN</a>-->
+                                                <!--<a href="en/course-single.php?<? //php echo $courseSet['course_id']&$courseSet['course_name'];      ?>" type="button" class="btn btn-warning en">EN</a>-->
                                                 <a href="en/courses.php" type="button" class="btn btn-warning en">EN</a>
                                                 <!--<li><a href=""><i class="fa fa-twitter"></i></a></li>-->
                                                 <li><a href="https://web.facebook.com/upskills1/"><i class="fa fa-facebook-f"></i></a></li>
@@ -266,14 +266,22 @@ if (isset($_POST['submit'])) {
             <!--HEADER END-->
 
             <section>
-                <div class="lgx-banner lgx-banner-inner" style="background-image:url('images/course/<?php echo $courseSet['course_image']; ?>')">
+                <div class="lgx-banner lgx-banner-inner">
                     <div class="lgx-inner">
                         <div class="container">
                             <div class="row">
                                 <div class="col-xs-12">
                                     <div class="lgx-heading-area">
                                         <div class="lgx-heading lgx-heading-white">
-                                            <h2 class="heading-title"><span class='opacity' ><a href="<?php echo $_SERVER['PHP_SELF'] . "?course_id=" . $_GET['course_id'] . "&category_name=" . $_GET['category_name']; ?>" style="color:white"><?php echo $courseSet['course_name_ar']; ?></a><span></h2>
+                                          
+                                            <h2 class="breadcrumb"><i class='active' ><a href="<?php echo $_SERVER['PHP_SELF'] . "?course_id=" . $_GET['course_id'] . "&category_name=" . $_GET['category_name']; ?>" ><?php echo $courseSet['course_name_ar']; ?></a><i></h2>
+                                                        <br><ul class="breadcrumb">
+                                                            <li><a href="index.php"><i class="icon-home6"></i>الرئيسية</a></li>
+                                                            <li class="active">الدورات</li>
+                                                            <li class="active">
+                                                                <?php echo $_GET['category_name']; ?>
+                                                            </li>
+                                                        </ul>
                                                         </div>
 
                                                         </div>
@@ -286,13 +294,7 @@ if (isset($_POST['submit'])) {
                                                         </section>
                                                         <section>
                                                             <div id="lgx-course" class="lgx-course lgx-normal-single">
-                                                                <ul class="breadcrumb">
-                                                                    <li><a href="index.php"><i class="icon-home6"></i>الرئيسية</a></li>
-                                                                    <li class="active">الدورات</li>
-                                                                    <li class="active">
-                                                                        <?php echo $_GET['category_name']; ?>
-                                                                    </li>
-                                                                </ul>
+
                                                                 <div class="lgx-inner">
                                                                     <div class="container">
                                                                         <div class="row">
@@ -303,34 +305,7 @@ if (isset($_POST['submit'])) {
                                                                                                 <!--<h1 class="title"><a href="<?php echo " course-single.php?course_id=" . $_GET['course_id'] . " &category_name=" . $_GET['category_name_ar']; ?>">
                                                                                             <?php echo $courseSet['course_name_ar']; ?></a></h1>-->
 
-                                                                                            <div class="course-hits-area">
 
-                                                                                                <ul class="list-inline course-hit ar-float-r">
-
-                                                                                                    <li>
-                                                                                                        <div class="course-hit-info">
-
-                                                                                                            <h4 class="title"><a href="#">الفئات</a></h4>
-                                                                                                            <h5 class="subtitle"><a href="#" rel="tag">
-                                                                                                                    <?php echo $_GET['category_name']; ?></a></h5>
-                                                                                                        </div>
-                                                                                                    </li>                                                                                       
-
-                                                                                                </ul>
-
-
-                                                                                                <div class="course-hitcourse-payment ar-float-l">
-                                                                                                    <button class="button lgx-btn" data-toggle='modal' data-target='#exampleModalCenter'> اسألنا عن التفاصيل </button>
-                                                                                                </div>
-
-
-
-                                                                                               
-                                                                                              
-
-
-
-                                                                                            </div>
                                                                                         </div>
                                                                                         <!--<figure>
         
@@ -347,19 +322,26 @@ if (isset($_POST['submit'])) {
                                                                                         <div class="lgx-course-feature-area">
                                                                                             <h3 class="title">تفاصيل الدورة</h3>
                                                                                             <ul class="list-unstyled lgx-course-feature">
-                                                                                                <li class="duration-feature"> <i class="fa fa-clock-o "></i> <span class="label"> المدة </span> <span class="value"> 
+
+
+                                                                                                <li class="duration-feature"> <i class="fa fa- "></i><span class="label"> الفئات &nbsp;<i class="fa fa-book "></i></span> <span class="value"> 
+                                                                                                        <span dir="ltr"></span> <?php echo $_GET['category_name']; ?> </span></li>
+                                                                                                <li class="duration-feature"> <i class="fa fa- "></i> <span class="label"> المدة &nbsp;<i class="fa fa-clock-o "></i></span> <span class="value"> 
                                                                                                         <span dir="ltr">ساعة</span> <?php echo $courseSet['course_hours']; ?> </span></li>
                                                                                         <!--<li class="skill-feature"> <i class="fa fa-level-up"></i> <span class="label">level</span> <span class="value">
                                                                                                 <?php echo $courseSet['course_level']; ?></span></li>-->
-                                                                                                <li class="language-feature"> <i class="fa fa-language"></i> <span class="label"> اللغة </span> <span class="value"> عربي / إنجليزي </span></li>
+                                                                                                <li class="language-feature"> <i class="fa fa-"></i> <span class="label"> اللغة &nbsp;<i class="fa fa-language"></i></span> <span class="value"> عربي / إنجليزي </span></li>
                                                                                                 <!--<li class="students-feature"> <i class="fa fa-dollar"></i> <span class="label">Price</span> <span class="value"><del>
                                                                                                 <?php echo $courseSet['course_price']; ?></del> JD</span></li>-->
-                                                                                                <li class="students-feature"> <i class="fa fa-money"></i> <span class="label"> الخصم</span> <span class="value">
+                                                                                                <li class="students-feature"> <i class="fa fa-"></i> <span class="label">  الخصم&nbsp;<i class="fa fa-money"></i></span> <span class="value">
                                                                                                         <?php echo $courseSet['course_special_price']; ?> %</span></li>
-                                                                                                <li class="assessments-feature">  <i class="fa fa-calendar-o"> </i>   <span class="label"> تاريخ البدء </span> <span class="value">
+                                                                                                <li class="assessments-feature">  <i class="fa fa-"> </i>   <span class="label"> تاريخ البدء &nbsp;<i class="fa fa-calendar-o"> </i></span> <span class="value">
                                                                                                         <?php echo date('Y-m-d', strtotime($courseSet['start_date'])); ?></span></li>
-                                                                                                <li class="assessments-feature"> <i class="fa fa-calendar-check-o"> </i> <span class="label"> تاريخ الإنتهاء </span> <span class="value">
+                                                                                                <li class="assessments-feature"> <i class="fa fa-"> </i> <span class="label"> تاريخ الإنتهاء &nbsp;<i class="fa fa-calendar-check-o"> </i></span> <span class="value">
                                                                                                         <?php echo date('Y-m-d', strtotime($courseSet['end_date'])); ?></span></li>
+                                                                                                <li><div class="course-hitcourse-payment ar-float-l">
+                                                                                                        <button class="button lgx-btn" data-toggle='modal' data-target='#exampleModalCenter'> اسألنا عن التفاصيل </button>
+                                                                                                    </div></li>
 
 
                                                                                             </ul>
