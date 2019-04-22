@@ -273,9 +273,8 @@ if (isset($_POST['submit'])) {
                                 <div class="col-xs-12">
                                     <div class="lgx-heading-area">
                                         <div class="lgx-heading lgx-heading-white">
-                                          
-                                            <h2 class="breadcrumb"><i class='active' ><a href="<?php echo $_SERVER['PHP_SELF'] . "?course_id=" . $_GET['course_id'] . "&category_name=" . $_GET['category_name']; ?>" ><?php echo $courseSet['course_name_ar']; ?></a><i></h2>
-                                                        <br><ul class="breadcrumb">
+                                            <h2 class="heading-title"><span class='breadcrumb' ><a href="<?php echo $_SERVER['PHP_SELF'] . "?course_id=" . $_GET['course_id'] . "&category_name=" . $_GET['category_name']; ?>" ><?php echo $courseSet['course_name_ar']; ?></a><span></h2>
+                                                        <ul class="breadcrumb">
                                                             <li><a href="index.php"><i class="icon-home6"></i>الرئيسية</a></li>
                                                             <li class="active">الدورات</li>
                                                             <li class="active">
