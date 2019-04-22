@@ -268,8 +268,28 @@ if (isset($_POST['submit'])) {
                             <div class="row">
                                 <div class="col-xs-12">
                                     <div class="lgx-heading-area">
+                                        
                                         <div class="lgx-heading lgx-heading-white">
+                                            
                                             <h2 class="lgx-item-left"><span class='opacity' style="background: rgba(0, 0, 0, 0.6);padding-left: 10px;padding-right: 10px;"><a href="<?php echo $_SERVER['PHP_SELF'] . "?course_id=" . $_GET['course_id'] . "&category_name=" . $_GET['category_name']; ?>"><?php echo $courseSet['course_name']; ?></a></span></h2>
+                                             <div class="course-hitcourse-payment">
+                                                        <!--<div class="course-price">
+                                                <div class="value free-course"><del>
+                                                                </del>$<br>
+
+                                                </div>
+                                        </div>-->
+
+                                                        <button class="button lgx-btn" data-toggle='modal' data-target='#exampleModalCenter'> Take this course </button>
+
+                                                    </div>
+                                            <ul class="breadcrumb">
+                                                <li><a href="index.php" ><i class="icon-home6"></i>Home</a></li>
+                                                <li class="active">Courses</li>
+                                                <li class="active">
+                                                    <?php echo $_GET['category_name']; ?>
+                                                </li>
+                                            </ul>
                                         </div>
 
                                     </div>
@@ -282,13 +302,7 @@ if (isset($_POST['submit'])) {
             </section>
             <section>
                 <div id="lgx-course" class="lgx-course lgx-normal-single">
-                    <ul class="breadcrumb">
-                        <li><a href="index.php" ><i class="icon-home6"></i>Home</a></li>
-                        <li class="active">Courses</li>
-                        <li class="active">
-                            <?php echo $_GET['category_name']; ?>
-                        </li>
-                    </ul>
+                    
                     <div class="lgx-inner">
                         <div class="container">
                             <div class="row">
@@ -315,17 +329,7 @@ if (isset($_POST['submit'])) {
                                                     </ul>
                                                   
 
-                                                    <div class="course-hitcourse-payment">
-                                                        <!--<div class="course-price">
-                                                <div class="value free-course"><del>
-                                                                </del>$<br>
-
-                                                </div>
-                                        </div>-->
-
-                                                        <button class="button lgx-btn" data-toggle='modal' data-target='#exampleModalCenter'> Take this course </button>
-
-                                                    </div>
+                                                   
                                                     
 
                                                 </div>
@@ -344,6 +348,9 @@ if (isset($_POST['submit'])) {
                                             <div class="lgx-course-feature-area">
                                                 <h3 class="title">Course Features</h3>
                                                 <ul class="list-unstyled lgx-course-feature">
+                                                    
+                                                    <li class="duration-feature"> <i class="fas fa-book-open"></i> <span class="label">Categories</span> <span class="value">
+                                                            <?php echo $_GET['category_name']; ?> </span></li>
                                                     <li class="duration-feature"> <i class="fa fa-clock-o"></i> <span class="label">Duration</span> <span class="value">
                                                             <?php echo $courseSet['course_hours']; ?> hours</span></li>
                                                     <!--<li class="skill-feature"> <i class="fa fa-level-up"></i> <span class="label">level</span> <span class="value">
