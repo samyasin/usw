@@ -8,12 +8,12 @@
         <!-- SITE TITLE -->
         <?php
         $name = basename($_SERVER['PHP_SELF'], ".php");
-        $query = "SELECT * FROM course";
+        $query = "SELECT * FROM meta WHERE page_name='{$name}'";
         $res = mysqli_query($con, $query);
         $metaSet = mysqli_fetch_assoc($res);
-        echo "<title>{$metaSet['meta_title']}</title>";
-        echo "<meta name='decription'  content='{$metaSet['meta_desc']}'";
-        echo "<meta name='keywords'  content='{$metaSet['meta_keys']}'>";
+        echo "<title>{$metaSet['title']}</title>";
+        echo "<meta name='decription'  content='{$metaSet['description']}'";
+        echo "<meta name='keywords'  content='{$metaSet['keywords']}'>";
         ?>
         <?php
         /*
