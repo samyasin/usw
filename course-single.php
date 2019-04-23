@@ -353,6 +353,7 @@ $cerset = mysqli_fetch_assoc($result)
                                                                                             </ul>
                                                                                             
                                                                                         </div>
+                                                                                        
                                                                                         <div class="wrapper">
                                                                                             <h3>تفاصيل الدورة</h3>
                                                                                             <p>
