@@ -294,7 +294,7 @@ if (isset($_POST['submit'])) {
                                                         <section>
                                                             <div id="lgx-course" class="lgx-course lgx-normal-single">
 
-                                                                <div class="lgx-inner">
+                                                                <div class="lgx-inner2">
                                                                     <div class="container">
                                                                         <div class="row">
                                                                             <div class="col-sm-12">
