@@ -26,7 +26,7 @@ if (isset($_POST['submit'])) {
 
         $name = rand() . "-" . $_FILES['cer_image']['name'];
 
-        $query = "INSERT INTO `certification`( `cer_name`, `cer_description`, `cer_image`) VALUES ('$email','$password','$name')";
+        $query = "INSERT INTO `certification`( `cer_name`, `cer_description`, `cer_image`) VALUES ('$cer_name','$cer_description','$name')";
         //echo $query; die ;
 
 
@@ -195,7 +195,7 @@ while ($cerset = mysqli_fetch_assoc($result)) {
 
     
 
-    echo "<th scope='row'><a href='delete_admin.php?admin_id={$cerset['cer_id']}&cer_image={$cerset['cer_image']}' class ='btn btn-danger'>Delete</a></th>";
+    echo "<th scope='row'><a href='delete_certification.php?cer_id={$cerset['cer_id']}&cer_image={$cerset['cer_image']}' class ='btn btn-danger'>Delete</a></th>";
 
     echo "</tr>";
 }
