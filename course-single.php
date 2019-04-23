@@ -370,7 +370,7 @@ echo $courseSet['course_content_ar'];
                                                                                             </p>
                                                                                             <h3>شهادة الاكاديمية في <?php echo $courseSet['course_name_ar']; ?></h3>
                                                                                             <p>
-                                                                                                <img src="./assets/img/WEBSITE/500_F_83358366_YQDgkf2cIpqPt3zKwPbTZsP67piRjfr8.jpg">
+                                                                                                <img src="./assets/img/WEBSITE/UPشهادة-سلامه.gif" height="315" width="560">
                                                                                             </p>
                                                                                         </div>
                                                                                     </section>
