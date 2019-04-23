@@ -268,11 +268,11 @@ if (isset($_POST['submit'])) {
                             <div class="row">
                                 <div class="col-xs-12">
                                     <div class="lgx-heading-area">
-                                        
+
                                         <div class="lgx-heading lgx-heading-white">
-                                            
+
                                             <h2 class="lgx-item-left"><span class='opacity' ><a href="<?php echo $_SERVER['PHP_SELF'] . "?course_id=" . $_GET['course_id'] . "&category_name=" . $_GET['category_name']; ?>"><?php echo $courseSet['course_name']; ?></a></span></h2>
-                                             
+
                                             <ul class="breadcrumb">
                                                 <li><a href="index.php" ><i class="icon-home6"></i>Home</a></li>
                                                 <li class="active">Courses</li>
@@ -292,7 +292,7 @@ if (isset($_POST['submit'])) {
             </section>
             <section>
                 <div id="lgx-course" class="lgx-course lgx-normal-single">
-                    
+
                     <div class="lgx-inner2">
                         <div class="container">
                             <div class="row">
@@ -302,7 +302,7 @@ if (isset($_POST['submit'])) {
                                             <div class="text-area">
                                                     <!--<h1 class="title"><a href="<?php echo " course-single.php?course_id=" . $_GET['course_id'] . " &category_name=" . $_GET['category_name']; ?>">
                                                 <?php echo $courseSet['course_name']; ?></a></h1>-->
-                                               
+
                                             </div>
                                             <!--<figure>
 
@@ -311,54 +311,59 @@ if (isset($_POST['submit'])) {
                                             </figure>-->
                                         </header>
                                         <section>
-                                            <?php 
-                                                 if ($courseSet['course_id'] == 30){
-                                                     echo '<iframe width="560" height="315" src="https://www.youtube.com/embed/xNlQVdK1gEE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
-                                                  } ?>
+                                            <?php
+                                            if ($courseSet['course_id'] == 30) {
+                                                echo '<iframe width="560" height="315" src="https://www.youtube.com/embed/xNlQVdK1gEE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+                                            }
+                                            ?>
                                             <div class="lgx-course-feature-area">
                                                 <h3 class="title">Course Features</h3>
                                                 <ul class="list-unstyled lgx-course-feature">
-                                                    
+
                                                     <li class="duration-feature"> <i class="fa fa-book"></i> <span class="label">Categories</span> <span class="value">
                                                             <?php echo $_GET['category_name']; ?> </span></li>
                                                     <li class="duration-feature"> <i class="fa fa-clock-o"></i> <span class="label">Duration</span> <span class="value">
-                                                            <?php echo $courseSet['course_hours']; ?> hours</span></li>
+                                                    <?php echo $courseSet['course_hours']; ?> hours</span></li>
                                                     <!--<li class="skill-feature"> <i class="fa fa-level-up"></i> <span class="label">level</span> <span class="value">
-                                                    <?php echo $courseSet['course_level']; ?></span></li>-->
+<?php echo $courseSet['course_level']; ?></span></li>-->
                                                     <li class="language-feature"> <i class="fa fa-language"></i> <span class="label">Language</span> <span class="value">Arabic/English</span></li>
                                                     <!--<li class="students-feature"> <i class="fa fa-dollar"></i> <span class="label">Price</span> <span class="value"><del>
-                                                    <?php echo $courseSet['course_price']; ?></del> JD</span></li>-->
+                                                            <?php echo $courseSet['course_price']; ?></del> JD</span></li>-->
                                                     <li class="students-feature"> <i class="fa fa-money"></i> <span class="label">Discount</span> <span class="value">
                                                             <?php echo $courseSet['course_special_price']; ?> %</span></li>
                                                     <li class="assessments-feature"> <i class="fa fa-calendar-o"></i> <span class="label">Start Date</span> <span class="value">
                                                             <?php echo date('Y-m-d', strtotime($courseSet['start_date'])); ?></span></li>
                                                     <li class="assessments-feature"> <i class="fa fa-calendar-check-o"></i> <span class="label">End Date</span> <span class="value">
-                                                            <?php echo date('Y-m-d', strtotime($courseSet['end_date'])); ?></span></li>
+<?php echo date('Y-m-d', strtotime($courseSet['end_date'])); ?></span></li>
                                                     <li><div class="course-hitcourse-payment">
-                                                        
 
-                                                        <button class="button lgx-btn" data-toggle='modal' data-target='#exampleModalCenter'> Take this course </button>
 
-                                                    </div></li>
+                                                            <button class="button lgx-btn" data-toggle='modal' data-target='#exampleModalCenter'> Take this course </button>
+
+                                                        </div></li>
 
 
                                                 </ul>
                                             </div>
-                                            
+
                                             <div class="wrapper">
                                                 <h3>Course Description</h3>
                                                 <p>
-                                                    <?php echo $courseSet['course_desc']; ?>
+<?php echo $courseSet['course_desc']; ?>
                                                 </p>
 
                                                 <h3>Course Content</h3>
-                                                <?php echo $courseSet['course_content']; ?>
+<?php echo $courseSet['course_content']; ?>
 
                                                 <h3>Course Outcome</h3>
-                                                <?php echo $courseSet['course_outcome']; ?>
+<?php echo $courseSet['course_outcome']; ?>
+                                                <h3>Certification UpSkills in <?php echo $courseSet['course_name']; ?></h3>
+                                                <p>
+                                                    <img src="../assets/img/WEBSITE/500_F_83358366_YQDgkf2cIpqPt3zKwPbTZsP67piRjfr8.jpg"
+                                                </p>
                                             </div>
-                                            
-                                           
+
+
                                         </section>
 
                                     </article>
