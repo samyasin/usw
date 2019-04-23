@@ -17,13 +17,8 @@ if (isset($_POST['submit'])) {
     }
 }
 ?>
-<?php
-$query = "select * from certification";
 
-$result = mysqli_query($con, $query);
-$cerset = mysqli_fetch_assoc($result)
 
-?> 
 <!doctype html>
 <html class="no-js" lang="en">
 
@@ -32,14 +27,14 @@ $cerset = mysqli_fetch_assoc($result)
     <head>
         <!-- SITE TITLE -->
 
-        <?php
-        $query = "SELECT * FROM course WHERE course_id ={$course_id}";
-        $res = mysqli_query($con, $query);
-        $metaSet = mysqli_fetch_assoc($res);
-        echo "<title>{$metaSet['meta_title_ar']}</title>";
-        echo "<meta name='decription'  content='{$metaSet['meta_desc_ar']}>'";
-        echo "<meta name='keywords'  content='{$metaSet['meta_keys_ar']}'>";
-        ?>
+<?php
+$query = "SELECT * FROM course WHERE course_id ={$course_id}";
+$res = mysqli_query($con, $query);
+$metaSet = mysqli_fetch_assoc($res);
+echo "<title>{$metaSet['meta_title_ar']}</title>";
+echo "<meta name='decription'  content='{$metaSet['meta_desc_ar']}>'";
+echo "<meta name='keywords'  content='{$metaSet['meta_keys_ar']}'>";
+?>
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
@@ -111,7 +106,7 @@ $cerset = mysqli_fetch_assoc($result)
                                         <div class="contact">
                                             <ul class="list-inline">
                                                 <!--<li class="login-register"><a href="#">Login/Register</a></li>-->
-                                                <!--<a href="en/course-single.php?<? //php echo $courseSet['course_id']&$courseSet['course_name'];        ?>" type="button" class="btn btn-warning en">EN</a>-->
+                                                <!--<a href="en/course-single.php?<? //php echo $courseSet['course_id']&$courseSet['course_name'];       ?>" type="button" class="btn btn-warning en">EN</a>-->
                                                 <a href="en/courses.php" type="button" class="btn btn-warning en">EN</a>
                                                 <!--<li><a href=""><i class="fa fa-twitter"></i></a></li>-->
                                                 <li><a href="https://web.facebook.com/upskills1/"><i class="fa fa-facebook-f"></i></a></li>
@@ -235,7 +230,7 @@ $cerset = mysqli_fetch_assoc($result)
 
                                                             <li><a class="lgx-scroll" href="contact.php">تواصل معنا</a></li>
                                                             <li><a class="lgx-scroll" href="gallery.php">معرض الصور</a></li>
-                                                            <li><a class="lgx-scroll" href="courses.php" style="color:#e39a31">الدورات</a></li>
+                                                            <li><a class="lgx-scroll" href="courses.php">الدورات</a></li>
                                                             <li><a class="lgx-scroll" href="events.php">الأحداث</a></li>
                                                             <li><a class="lgx-scroll active" href="about.php">عنّا</a></li>
                                                             <li><a href="index.php" class="dropdown-toggle active" role="button" aria-haspopup="true" aria-expanded="false">الرئيسية</a></li>
@@ -320,11 +315,11 @@ $cerset = mysqli_fetch_assoc($result)
                                                                                         </figure>-->
                                                                                     </header>
                                                                                     <section>
-                                                                                        <?php
-                                                                                        if ($courseSet['course_id'] == 30) {
-                                                                                            echo '<iframe width="560" height="315" src="https://www.youtube.com/embed/xNlQVdK1gEE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
-                                                                                        }
-                                                                                        ?>
+<?php
+if ($courseSet['course_id'] == 30) {
+    echo '<iframe width="560" height="315" src="https://www.youtube.com/embed/xNlQVdK1gEE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+}
+?>
                                                                                         <div class="lgx-course-feature-area">
                                                                                             <h3 class="title">تفاصيل الدورة</h3>
                                                                                             <ul class="list-unstyled lgx-course-feature">
@@ -338,22 +333,20 @@ $cerset = mysqli_fetch_assoc($result)
 <?php echo $courseSet['course_level']; ?></span></li>-->
                                                                                                 <li class="language-feature"> <i class="fa fa-"></i> <span class="label"> اللغة &nbsp;<i class="fa fa-language"></i></span> <span class="value"> عربي / إنجليزي </span></li>
                                                                                                 <!--<li class="students-feature"> <i class="fa fa-dollar"></i> <span class="label">Price</span> <span class="value"><del>
-                                                                                                        <?php echo $courseSet['course_price']; ?></del> JD</span></li>-->
+<?php echo $courseSet['course_price']; ?></del> JD</span></li>-->
                                                                                                 <li class="students-feature"> <i class="fa fa-"></i> <span class="label">  الخصم&nbsp;<i class="fa fa-money"></i></span> <span class="value">
-                                                                                                        <?php echo $courseSet['course_special_price']; ?> %</span></li>
+                                                                                                <?php echo $courseSet['course_special_price']; ?> %</span></li>
                                                                                                 <li class="assessments-feature">  <i class="fa fa-"> </i>   <span class="label"> تاريخ البدء &nbsp;<i class="fa fa-calendar-o"> </i></span> <span class="value">
                                                                                                         <?php echo date('Y-m-d', strtotime($courseSet['start_date'])); ?></span></li>
                                                                                                 <li class="assessments-feature"> <i class="fa fa-"> </i> <span class="label"> تاريخ الإنتهاء &nbsp;<i class="fa fa-calendar-check-o"> </i></span> <span class="value">
-<?php echo date('Y-m-d', strtotime($courseSet['end_date'])); ?></span></li>
+                                                                                                        <?php echo date('Y-m-d', strtotime($courseSet['end_date'])); ?></span></li>
                                                                                                 <li><div class="course-hitcourse-payment ar-float-l">
                                                                                                         <button class="button lgx-btn" data-toggle='modal' data-target='#exampleModalCenter'> اسألنا عن التفاصيل </button>
                                                                                                     </div></li>
 
 
                                                                                             </ul>
-                                                                                            
                                                                                         </div>
-                                                                                        
                                                                                         <div class="wrapper">
                                                                                             <h3>تفاصيل الدورة</h3>
                                                                                             <p>
@@ -364,9 +357,9 @@ $cerset = mysqli_fetch_assoc($result)
 
 
                                                                                             <h3>محتويات الدورة</h3>
-                                                                                            <?php
-                                                                                            echo $courseSet['course_content_ar'];
-                                                                                            ?>
+<?php
+echo $courseSet['course_content_ar'];
+?>
 
 
 
@@ -374,6 +367,10 @@ $cerset = mysqli_fetch_assoc($result)
                                                                                             <h3>أهداف الدورة</h3>
                                                                                             <p>
 <?php echo $courseSet['course_outcome_ar']; ?>
+                                                                                            </p>
+                                                                                            <h3>شهادة الاكاديمية في <?php echo $courseSet['course_name_ar']; ?></h3>
+                                                                                            <p>
+                                                                                                 <img src="./assets/img/WEBSITE/500_F_83358366_YQDgkf2cIpqPt3zKwPbTZsP67piRjfr8.jpg"
                                                                                             </p>
                                                                                         </div>
                                                                                     </section>
@@ -436,4 +433,4 @@ $cerset = mysqli_fetch_assoc($result)
                                                             </div>
                                                         </div>
 
-                                                        <?php require 'includes/website_footer.php'; ?>
+<?php require 'includes/website_footer.php'; ?>
