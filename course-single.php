@@ -27,14 +27,14 @@ if (isset($_POST['submit'])) {
     <head>
         <!-- SITE TITLE -->
 
-<?php
-$query = "SELECT * FROM course WHERE course_id ={$course_id}";
-$res = mysqli_query($con, $query);
-$metaSet = mysqli_fetch_assoc($res);
-echo "<title>{$metaSet['meta_title_ar']}</title>";
-echo "<meta name='decription'  content='{$metaSet['meta_desc_ar']}>'";
-echo "<meta name='keywords'  content='{$metaSet['meta_keys_ar']}'>";
-?>
+        <?php
+        $query = "SELECT * FROM course WHERE course_id ={$course_id}";
+        $res = mysqli_query($con, $query);
+        $metaSet = mysqli_fetch_assoc($res);
+        echo "<title>{$metaSet['meta_title_ar']}</title>";
+        echo "<meta name='decription'  content='{$metaSet['meta_desc_ar']}>'";
+        echo "<meta name='keywords'  content='{$metaSet['meta_keys_ar']}'>";
+        ?>
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
@@ -106,7 +106,7 @@ echo "<meta name='keywords'  content='{$metaSet['meta_keys_ar']}'>";
                                         <div class="contact">
                                             <ul class="list-inline">
                                                 <!--<li class="login-register"><a href="#">Login/Register</a></li>-->
-                                                <!--<a href="en/course-single.php?<? //php echo $courseSet['course_id']&$courseSet['course_name'];       ?>" type="button" class="btn btn-warning en">EN</a>-->
+                                                <!--<a href="en/course-single.php?<? //php echo $courseSet['course_id']&$courseSet['course_name'];          ?>" type="button" class="btn btn-warning en">EN</a>-->
                                                 <a href="en/courses.php" type="button" class="btn btn-warning en">EN</a>
                                                 <!--<li><a href=""><i class="fa fa-twitter"></i></a></li>-->
                                                 <li><a href="https://web.facebook.com/upskills1/"><i class="fa fa-facebook-f"></i></a></li>
@@ -280,7 +280,7 @@ echo "<meta name='keywords'  content='{$metaSet['meta_keys_ar']}'>";
                                                             <li><a href="index.php"><i class="icon-home6"></i>الرئيسية</a></li>
                                                             <li class="active">الدورات</li>
                                                             <li class="active">
-<?php echo $_GET['category_name']; ?>
+                                                                <?php echo $_GET['category_name']; ?>
                                                             </li>
                                                         </ul>
                                                         </div>
@@ -304,7 +304,7 @@ echo "<meta name='keywords'  content='{$metaSet['meta_keys_ar']}'>";
                                                                                     <header>
                                                                                         <div class="text-area">
                                                                                                 <!--<h1 class="title"><a href="<?php echo " course-single.php?course_id=" . $_GET['course_id'] . " &category_name=" . $_GET['category_name_ar']; ?>">
-<?php echo $courseSet['course_name_ar']; ?></a></h1>-->
+                                                                                            <?php echo $courseSet['course_name_ar']; ?></a></h1>-->
 
 
                                                                                         </div>
@@ -315,11 +315,11 @@ echo "<meta name='keywords'  content='{$metaSet['meta_keys_ar']}'>";
                                                                                         </figure>-->
                                                                                     </header>
                                                                                     <section>
-<?php
-if ($courseSet['course_id'] == 30) {
-    echo '<iframe width="560" height="315" src="https://www.youtube.com/embed/xNlQVdK1gEE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
-}
-?>
+                                                                                        <?php
+                                                                                        if ($courseSet['course_id'] == 30) {
+                                                                                            echo '<iframe width="560" height="315" src="https://www.youtube.com/embed/xNlQVdK1gEE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+                                                                                        }
+                                                                                        ?>
                                                                                         <div class="lgx-course-feature-area">
                                                                                             <h3 class="title">تفاصيل الدورة</h3>
                                                                                             <ul class="list-unstyled lgx-course-feature">
@@ -330,12 +330,12 @@ if ($courseSet['course_id'] == 30) {
                                                                                                 <li class="duration-feature"> <i class="fa fa- "></i> <span class="label"> المدة &nbsp;<i class="fa fa-clock-o "></i></span> <span class="value"> 
                                                                                                         <span dir="ltr">ساعة</span> <?php echo $courseSet['course_hours']; ?> </span></li>
                                                                                         <!--<li class="skill-feature"> <i class="fa fa-level-up"></i> <span class="label">level</span> <span class="value">
-<?php echo $courseSet['course_level']; ?></span></li>-->
+                                                                                                <?php echo $courseSet['course_level']; ?></span></li>-->
                                                                                                 <li class="language-feature"> <i class="fa fa-"></i> <span class="label"> اللغة &nbsp;<i class="fa fa-language"></i></span> <span class="value"> عربي / إنجليزي </span></li>
                                                                                                 <!--<li class="students-feature"> <i class="fa fa-dollar"></i> <span class="label">Price</span> <span class="value"><del>
-<?php echo $courseSet['course_price']; ?></del> JD</span></li>-->
+                                                                                                <?php echo $courseSet['course_price']; ?></del> JD</span></li>-->
                                                                                                 <li class="students-feature"> <i class="fa fa-"></i> <span class="label">  الخصم&nbsp;<i class="fa fa-money"></i></span> <span class="value">
-                                                                                                <?php echo $courseSet['course_special_price']; ?> %</span></li>
+                                                                                                        <?php echo $courseSet['course_special_price']; ?> %</span></li>
                                                                                                 <li class="assessments-feature">  <i class="fa fa-"> </i>   <span class="label"> تاريخ البدء &nbsp;<i class="fa fa-calendar-o"> </i></span> <span class="value">
                                                                                                         <?php echo date('Y-m-d', strtotime($courseSet['start_date'])); ?></span></li>
                                                                                                 <li class="assessments-feature"> <i class="fa fa-"> </i> <span class="label"> تاريخ الإنتهاء &nbsp;<i class="fa fa-calendar-check-o"> </i></span> <span class="value">
@@ -350,23 +350,23 @@ if ($courseSet['course_id'] == 30) {
                                                                                         <div class="wrapper">
                                                                                             <h3>تفاصيل الدورة</h3>
                                                                                             <p>
-<?php echo $courseSet['course_desc_ar']; ?>
+                                                                                                <?php echo $courseSet['course_desc_ar']; ?>
                                                                                             </p>
 
 
 
 
                                                                                             <h3>محتويات الدورة</h3>
-<?php
-echo $courseSet['course_content_ar'];
-?>
+                                                                                            <?php
+                                                                                            echo $courseSet['course_content_ar'];
+                                                                                            ?>
 
 
 
 
                                                                                             <h3>أهداف الدورة</h3>
                                                                                             <p>
-<?php echo $courseSet['course_outcome_ar']; ?>
+                                                                                                <?php echo $courseSet['course_outcome_ar']; ?>
                                                                                             </p>
                                                                                             <h3>شهادة الاكاديمية في <?php echo $courseSet['course_name_ar']; ?></h3>
                                                                                             <p>
@@ -382,6 +382,94 @@ echo $courseSet['course_content_ar'];
                                                                 </div><!-- //.INNER -->
                                                             </div>
                                                         </section>
+
+                                                        <section>
+                                                            <div class="lgx-slider">
+                                                                <!--lgx-slider-content -->
+                                                                <div class="lgx-banner-style">
+                                                                    <div class="lgx-inner">
+
+                                                                        <div id="lgx-main-slider" class="owl-carousel">
+
+                                                                            <!--SLIDER ITEM 1-->
+                                                                            <?php
+                                                                            $query = "SELECT * FROM slider limit 6";
+                                                                            $result = mysqli_query($con, $query);
+                                                                            while ($sliderSet = mysqli_fetch_assoc($result)) {
+                                                                                echo"<div class='lgx-item-common'>
+                        <div class='col-sm-12g'>
+                        <div class='opacity'></div>
+                            <div class='slider-text-single'>
+                                <figure>
+                                    <img src='images/slider/{$sliderSet['image_src']}' alt='cv'/>
+                                    <figcaption>
+                                        <div class='lgx-container'>
+                                            <div class='lgx-hover-link'>
+                                                <div class='lgx-vertical'>
+                                                        <div class='lgx-banner-info slider-opa lgx-banner-info-{$sliderSet['text_alignment']}' >  <!--lgx-banner-info-white-->
+                                                        <h3 class='subtitle lgx-zoomIn-one' ><span class='slide'>{$sliderSet['arabic_title']}</span></h3>
+                                                        <p class='text lgx-zoomIn-three'><span class='slide'>{$sliderSet['arabic_desc']}</span></br></p>
+                                                        <div class='btn-area lgx-zoomIn-four'>
+                                                            <a class='lgx-btn' href='courses.php'>المزيد من المعلومات حول الدورات</a>
+                                                            
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                        </div> <!--//.col-->
+                    </div>";
+                                                                            }
+                                                                            ?>
+                                                                            <!--SLIDER ITEM 1 End-->
+                                                                            
+                                                                            <div class="slider-item" style="background-image: url('img/slider-2.jpg');">
+
+                                                                                <div class="container">
+                                                                                    <div class="row slider-text align-items-center">
+                                                                                        <div class="col-md-7 col-sm-12 element-animate">
+                                                                                            <h1>We Care For You</h1>
+                                                                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi unde impedit, necessitatibus, soluta sit quam minima expedita atque corrupti reiciendis.</p>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+
+                                                                            </div>
+
+                                                                            <div class="slider-item" style="background-image: url('img/slider-1.jpg');">
+                                                                                <div class="container">
+                                                                                    <div class="row slider-text align-items-center">
+                                                                                        <div class="col-md-7 col-sm-12 element-animate">
+                                                                                            <h1>We Provide Health Care Solutions</h1>
+                                                                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi unde impedit, necessitatibus, soluta sit quam minima expedita atque corrupti reiciendis.</p>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+
+                                                                            </div>
+
+                                                                            <!--SLIDER ITEM 2-->
+
+                                                                            <!--SLIDER ITEM 3 End-->
+
+                                                                        </div>
+                                                                        <!--//.lgx-main-slider-->
+
+
+                                                                        <!-- //.CONTAINER -->
+                                                                    </div>
+                                                                    <!-- //.INNER -->
+                                                                </div>
+                                                            </div>
+                                                        </section>
+                                                        <!--SLIDER END-->
+
+
+                                                        <!-- END slider -->
+
 
                                                         <!--//.NEWS-->
                                                         <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -433,4 +521,4 @@ echo $courseSet['course_content_ar'];
                                                             </div>
                                                         </div>
 
-<?php require 'includes/website_footer.php'; ?>
+                                                        <?php require 'includes/website_footer.php'; ?>
