@@ -14,5 +14,14 @@ a,a.active,a:focus,a:hover{text-decoration:none;outline:0}.lgx-btn,blockquote{po
   
   max-width: 560px !important;
   max-height: 315px !important;
+  
+}
+.tales2 {
+  width: 100% !important;
+}
+.carousel-inner2{
+  
+  max-width: 560px !important;
+  max-height: 315px !important;
   margin-left: 260px !important;
 }

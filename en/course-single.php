@@ -313,7 +313,7 @@ if (isset($_POST['submit'])) {
                                         <section>
                                             <?php
                                             if ($courseSet['course_id'] == 30) {
-                                                echo '<iframe width="560" height="315" src="https://www.youtube.com/embed/xNlQVdK1gEE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+                                                echo '<iframe width="690" height="450" src="https://www.youtube.com/embed/xNlQVdK1gEE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
                                             }
                                             ?>
                                             <div class="lgx-course-feature-area">
@@ -323,18 +323,18 @@ if (isset($_POST['submit'])) {
                                                     <li class="duration-feature"> <i class="fa fa-book"></i> <span class="label">Categories</span> <span class="value">
                                                             <?php echo $_GET['category_name']; ?> </span></li>
                                                     <li class="duration-feature"> <i class="fa fa-clock-o"></i> <span class="label">Duration</span> <span class="value">
-                                                    <?php echo $courseSet['course_hours']; ?> hours</span></li>
+                                                            <?php echo $courseSet['course_hours']; ?> hours</span></li>
                                                     <!--<li class="skill-feature"> <i class="fa fa-level-up"></i> <span class="label">level</span> <span class="value">
-<?php echo $courseSet['course_level']; ?></span></li>-->
+                                                    <?php echo $courseSet['course_level']; ?></span></li>-->
                                                     <li class="language-feature"> <i class="fa fa-language"></i> <span class="label">Language</span> <span class="value">Arabic/English</span></li>
                                                     <!--<li class="students-feature"> <i class="fa fa-dollar"></i> <span class="label">Price</span> <span class="value"><del>
-                                                            <?php echo $courseSet['course_price']; ?></del> JD</span></li>-->
+                                                    <?php echo $courseSet['course_price']; ?></del> JD</span></li>-->
                                                     <li class="students-feature"> <i class="fa fa-money"></i> <span class="label">Discount</span> <span class="value">
                                                             <?php echo $courseSet['course_special_price']; ?> %</span></li>
                                                     <li class="assessments-feature"> <i class="fa fa-calendar-o"></i> <span class="label">Start Date</span> <span class="value">
                                                             <?php echo date('Y-m-d', strtotime($courseSet['start_date'])); ?></span></li>
                                                     <li class="assessments-feature"> <i class="fa fa-calendar-check-o"></i> <span class="label">End Date</span> <span class="value">
-<?php echo date('Y-m-d', strtotime($courseSet['end_date'])); ?></span></li>
+                                                            <?php echo date('Y-m-d', strtotime($courseSet['end_date'])); ?></span></li>
                                                     <li><div class="course-hitcourse-payment">
 
 
@@ -347,21 +347,92 @@ if (isset($_POST['submit'])) {
                                             </div>
 
                                             <div class="wrapper">
+                                                <?php
+                                                if ($courseSet['course_id'] != 30) {
+                                                    echo "<img src='../images/course/{$courseSet['course_image']}' alt='course'>";
+                                                }
+                                                ?>
                                                 <h3>Course Description</h3>
                                                 <p>
-<?php echo $courseSet['course_desc']; ?>
+                                                    <?php echo $courseSet['course_desc']; ?>
                                                 </p>
 
                                                 <h3>Course Content</h3>
-<?php echo $courseSet['course_content']; ?>
+                                                <?php echo $courseSet['course_content']; ?>
 
                                                 <h3>Course Outcome</h3>
-<?php echo $courseSet['course_outcome']; ?>
+                                                <?php echo $courseSet['course_outcome']; ?>
                                                 <h3>Certification UpSkills in <?php echo $courseSet['course_name']; ?></h3>
                                                 <p>
                                                     <img src="../assets/img/WEBSITE/UPشهادة-سلامه.gif" height="315" width="560">
                                                 </p>
                                             </div>
+                                            <h3>TEST</h3>
+                                            <div class="container">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="lgx-slider">
+                                                            <!--lgx-slider-content -->
+                                                            <div class="lgx-banner-style">
+                                                                <div class="lgx-inner">
+
+                                                                    <div id="lgx-main-slider" class="carousel-inner">
+
+                                                                        <!--SLIDER ITEM 1-->
+
+                                                                        <?php
+                                                                        $q = "SELECT * FROM category,course 
+									WHERE category.cat_id = course.category_id";
+                                                                        $res = mysqli_query($con, $q);
+                                                                        while ($courseSet = mysqli_fetch_assoc($res)) {
+
+                                                                            echo"<div class='lgx-item-common'>
+                        <div class='col-sm-12g'>
+                        <div class='opacity'></div>
+                            <div class='slider-text-single'>
+                                <figure>
+                                    <img src='../images/course/{$courseSet['course_image']}'>
+                                    <figcaption>
+                                        <div class='lgx-container'>
+                                            <div class='lgx-hover-link'>
+                                           
+                                                <div class='lgx-vertical'>
+                                                        <div class='lgx-banner-info slider-opa lgx-banner-info-course_id={$courseSet['course_id']}&category_name={$courseSet['cat_name_ar']}' class: 'tales' >  <!--lgx-banner-info-white-->
+                                                     
+                                                        
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+                                            <center><div class='btn-area lgx-zoomIn-four'>
+                                                            <a class='lgx-btn' href='courses.php'>شاهد دورات اخرى</a>
+                                                            
+                                                        </div></center>
+                                        </div>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                        </div> <!--//.col-->
+                    </div>";
+                                                                        }
+                                                                        ?>
+                                                                        <!--SLIDER ITEM 1 End-->
+
+
+
+                                                                        <!--SLIDER ITEM 2-->
+
+                                                                        <!--SLIDER ITEM 3 End-->
+
+                                                                    </div>
+                                                                    <!--//.lgx-main-slider-->
+
+
+                                                                    <!-- //.CONTAINER -->
+                                                                </div>
+                                                                <!-- //.INNER -->
+                                                            </div>
+                                                        </div></div></div>
 
 
                                         </section>
