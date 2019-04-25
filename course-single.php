@@ -106,7 +106,7 @@ if (isset($_POST['submit'])) {
                                         <div class="contact">
                                             <ul class="list-inline">
                                                 <!--<li class="login-register"><a href="#">Login/Register</a></li>-->
-                                                <!--<a href="en/course-single.php?<? //php echo $courseSet['course_id']&$courseSet['course_name'];          ?>" type="button" class="btn btn-warning en">EN</a>-->
+                                                <!--<a href="en/course-single.php?<? //php echo $courseSet['course_id']&$courseSet['course_name'];           ?>" type="button" class="btn btn-warning en">EN</a>-->
                                                 <a href="en/courses.php" type="button" class="btn btn-warning en">EN</a>
                                                 <!--<li><a href=""><i class="fa fa-twitter"></i></a></li>-->
                                                 <li><a href="https://web.facebook.com/upskills1/"><i class="fa fa-facebook-f"></i></a></li>
@@ -384,19 +384,23 @@ if (isset($_POST['submit'])) {
                                                         </section>
 
                                                         <section>
-                                                            <div class="lgx-slider">
-                                                                <!--lgx-slider-content -->
-                                                                <div class="lgx-banner-style">
-                                                                    <div class="lgx-inner">
+                                                            <center><h3>TEST</h3></center>
+                                                            <div class="container">
+                                                                <div class="row">
+                                                                    <div class="col-md-12">
+                                                                        <div class="lgx-slider">
+                                                                            <!--lgx-slider-content -->
+                                                                            <div class="lgx-banner-style">
+                                                                                <div class="lgx-inner">
 
-                                                                        <div id="lgx-main-slider" class="owl-carousel">
+                                                                                    <div id="lgx-main-slider" class="owl-carousel">
 
-                                                                            <!--SLIDER ITEM 1-->
-                                                                            <?php
-                                                                            $query = "SELECT * FROM slider limit 6";
-                                                                            $result = mysqli_query($con, $query);
-                                                                            while ($sliderSet = mysqli_fetch_assoc($result)) {
-                                                                                echo"<div class='lgx-item-common'>
+                                                                                        <!--SLIDER ITEM 1-->
+                                                                                        <?php
+                                                                                        $query = "SELECT * FROM slider limit 6";
+                                                                                        $result = mysqli_query($con, $query);
+                                                                                        while ($sliderSet = mysqli_fetch_assoc($result)) {
+                                                                                            echo"<div class='lgx-item-common'>
                         <div class='col-sm-12g'>
                         <div class='opacity'></div>
                             <div class='slider-text-single'>
@@ -422,48 +426,25 @@ if (isset($_POST['submit'])) {
                             </div>
                         </div> <!--//.col-->
                     </div>";
-                                                                            }
-                                                                            ?>
-                                                                            <!--SLIDER ITEM 1 End-->
-                                                                            
-                                                                            <div class="slider-item" style="background-image: url('img/slider-2.jpg');">
+                                                                                        }
+                                                                                        ?>
+                                                                                        <!--SLIDER ITEM 1 End-->
 
-                                                                                <div class="container">
-                                                                                    <div class="row slider-text align-items-center">
-                                                                                        <div class="col-md-7 col-sm-12 element-animate">
-                                                                                            <h1>We Care For You</h1>
-                                                                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi unde impedit, necessitatibus, soluta sit quam minima expedita atque corrupti reiciendis.</p>
-                                                                                        </div>
+
+
+                                                                                        <!--SLIDER ITEM 2-->
+
+                                                                                        <!--SLIDER ITEM 3 End-->
+
                                                                                     </div>
+                                                                                    <!--//.lgx-main-slider-->
+
+
+                                                                                    <!-- //.CONTAINER -->
                                                                                 </div>
-
+                                                                                <!-- //.INNER -->
                                                                             </div>
-
-                                                                            <div class="slider-item" style="background-image: url('img/slider-1.jpg');">
-                                                                                <div class="container">
-                                                                                    <div class="row slider-text align-items-center">
-                                                                                        <div class="col-md-7 col-sm-12 element-animate">
-                                                                                            <h1>We Provide Health Care Solutions</h1>
-                                                                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi unde impedit, necessitatibus, soluta sit quam minima expedita atque corrupti reiciendis.</p>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-
-                                                                            </div>
-
-                                                                            <!--SLIDER ITEM 2-->
-
-                                                                            <!--SLIDER ITEM 3 End-->
-
-                                                                        </div>
-                                                                        <!--//.lgx-main-slider-->
-
-
-                                                                        <!-- //.CONTAINER -->
-                                                                    </div>
-                                                                    <!-- //.INNER -->
-                                                                </div>
-                                                            </div>
+                                                                        </div></div></div>
                                                         </section>
                                                         <!--SLIDER END-->
 
