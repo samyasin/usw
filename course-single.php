@@ -317,7 +317,7 @@ if (isset($_POST['submit'])) {
                                                                                     <section>
                                                                                         <?php
                                                                                         if ($courseSet['course_id'] == 30) {
-                                                                                            echo '<iframe width="560" height="315" src="https://www.youtube.com/embed/xNlQVdK1gEE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+                                                                                            echo '<iframe width="690" height="450" src="https://www.youtube.com/embed/xNlQVdK1gEE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
                                                                                         }
                                                                                         ?>
                                                                                         <div class="lgx-course-feature-area">
