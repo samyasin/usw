@@ -318,8 +318,6 @@ if (isset($_POST['submit'])) {
                                                                                         <?php
                                                                                         if ($courseSet['course_id'] == 30) {
                                                                                             echo '<iframe width="560" height="315" src="https://www.youtube.com/embed/xNlQVdK1gEE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
-                                                                                        } else {
-                                                                                            echo "<img src='images/course/{$courseSet['course_image']}' alt='course' height='220'>";
                                                                                         }
                                                                                         ?>
                                                                                         <div class="lgx-course-feature-area">
@@ -350,6 +348,9 @@ if (isset($_POST['submit'])) {
                                                                                             </ul>
                                                                                         </div>
                                                                                         <div class="wrapper">
+                                                                                           <?php if($courseSet['course_id'] != 30){
+                                                                                               echo "<img src='images/course/{$courseSet['course_image']}' alt='course'>";
+                                                                                           } ?>
                                                                                             <h3>تفاصيل الدورة</h3>
                                                                                             <p>
                                                                                                 <?php echo $courseSet['course_desc_ar']; ?>

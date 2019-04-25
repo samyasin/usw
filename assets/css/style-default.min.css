@@ -11,7 +11,8 @@ a,a.active,a:focus,a:hover{text-decoration:none;outline:0}.lgx-btn,blockquote{po
   width: 100%;
 }
 .carousel-inner{
-  width:40%;
-  max-height: 400px !important;
-  margin-left: 350px !important;
+  
+  max-width: 560px !important;
+  max-height: 315px !important;
+  margin-left: 260px !important;
 }
