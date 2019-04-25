@@ -396,7 +396,7 @@ if (isset($_POST['submit'])) {
                                                                             <div class="lgx-banner-style">
                                                                                 <div class="lgx-inner">
 
-                                                                                    <div id="lgx-main-slider" class="carousel-inner">
+                                                                                    <div id="lgx-main-slider" class="carousel-inner" style="margin-left: 260px;">
 
                                                                                         <!--SLIDER ITEM 1-->
 
