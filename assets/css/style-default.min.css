@@ -7,3 +7,11 @@ a,a.active,a:focus,a:hover{text-decoration:none;outline:0}.lgx-btn,blockquote{po
 .ar-float-r{ float: right !important;}
 .ar-float-r li{margin-right: 0 !important; padding-right: 0 !important;}
 .ar-float-l{ float: left !important;}
+.tales {
+  width: 100%;
+}
+.carousel-inner{
+  width:40%;
+  max-height: 400px !important;
+  margin-left: 350px !important;
+}

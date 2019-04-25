@@ -106,7 +106,7 @@ if (isset($_POST['submit'])) {
                                         <div class="contact">
                                             <ul class="list-inline">
                                                 <!--<li class="login-register"><a href="#">Login/Register</a></li>-->
-                                                <!--<a href="en/course-single.php?<? //php echo $courseSet['course_id']&$courseSet['course_name'];           ?>" type="button" class="btn btn-warning en">EN</a>-->
+                                                <!--<a href="en/course-single.php?<? //php echo $courseSet['course_id']&$courseSet['course_name'];             ?>" type="button" class="btn btn-warning en">EN</a>-->
                                                 <a href="en/courses.php" type="button" class="btn btn-warning en">EN</a>
                                                 <!--<li><a href=""><i class="fa fa-twitter"></i></a></li>-->
                                                 <li><a href="https://web.facebook.com/upskills1/"><i class="fa fa-facebook-f"></i></a></li>
@@ -318,6 +318,8 @@ if (isset($_POST['submit'])) {
                                                                                         <?php
                                                                                         if ($courseSet['course_id'] == 30) {
                                                                                             echo '<iframe width="560" height="315" src="https://www.youtube.com/embed/xNlQVdK1gEE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+                                                                                        } else {
+                                                                                            echo "<img src='images/course/{$courseSet['course_image']}' alt='course' height='220'>";
                                                                                         }
                                                                                         ?>
                                                                                         <div class="lgx-course-feature-area">
@@ -393,33 +395,38 @@ if (isset($_POST['submit'])) {
                                                                             <div class="lgx-banner-style">
                                                                                 <div class="lgx-inner">
 
-                                                                                    <div id="lgx-main-slider" class="owl-carousel">
+                                                                                    <div id="lgx-main-slider" class="carousel-inner">
 
                                                                                         <!--SLIDER ITEM 1-->
+
                                                                                         <?php
-                                                                                        $query = "SELECT * FROM slider limit 6";
-                                                                                        $result = mysqli_query($con, $query);
-                                                                                        while ($sliderSet = mysqli_fetch_assoc($result)) {
+                                                                                        $q = "SELECT * FROM category,course 
+									WHERE category.cat_id = course.category_id";
+                                                                                        $res = mysqli_query($con, $q);
+                                                                                        while ($courseSet = mysqli_fetch_assoc($res)) {
+                                                                                            
                                                                                             echo"<div class='lgx-item-common'>
                         <div class='col-sm-12g'>
                         <div class='opacity'></div>
                             <div class='slider-text-single'>
                                 <figure>
-                                    <img src='images/slider/{$sliderSet['image_src']}' alt='cv'/>
+                                    <img src='images/course/{$courseSet['course_image']}'>
                                     <figcaption>
                                         <div class='lgx-container'>
                                             <div class='lgx-hover-link'>
+                                           
                                                 <div class='lgx-vertical'>
-                                                        <div class='lgx-banner-info slider-opa lgx-banner-info-{$sliderSet['text_alignment']}' >  <!--lgx-banner-info-white-->
-                                                        <h3 class='subtitle lgx-zoomIn-one' ><span class='slide'>{$sliderSet['arabic_title']}</span></h3>
-                                                        <p class='text lgx-zoomIn-three'><span class='slide'>{$sliderSet['arabic_desc']}</span></br></p>
-                                                        <div class='btn-area lgx-zoomIn-four'>
-                                                            <a class='lgx-btn' href='courses.php'>المزيد من المعلومات حول الدورات</a>
-                                                            
-                                                        </div>
+                                                        <div class='lgx-banner-info slider-opa lgx-banner-info-course_id={$courseSet['course_id']}&category_name={$courseSet['cat_name_ar']}' class: 'tales' >  <!--lgx-banner-info-white-->
+                                                     
+                                                        
                                                     </div>
                                                 </div>
+                                                
                                             </div>
+                                            <center><div class='btn-area lgx-zoomIn-four'>
+                                                            <a class='lgx-btn' href='courses.php'>شاهد دورات اخرى</a>
+                                                            
+                                                        </div></center>
                                         </div>
                                     </figcaption>
                                 </figure>
