@@ -375,6 +375,7 @@ if (isset($_POST['submit'])) {
                                                                                             <p>
                                                                                                 <img src="./assets/img/WEBSITE/UPشهادة-سلامه.gif" height="315" width="560">
                                                                                             </p>
+                                                                                            <h3>TEST</h3>
                                                                                         </div>
                                                                                     </section>
 
@@ -387,7 +388,6 @@ if (isset($_POST['submit'])) {
                                                         </section>
 
                                                         <section>
-                                                            <center><h3>TEST</h3></center>
                                                             <div class="container">
                                                                 <div class="row">
                                                                     <div class="col-md-12">
@@ -424,10 +424,6 @@ if (isset($_POST['submit'])) {
                                                 </div>
                                                 
                                             </div>
-                                            <center><div class='btn-area lgx-zoomIn-four'>
-                                                            <a class='lgx-btn' href='courses.php'>شاهد دورات اخرى</a>
-                                                            
-                                                        </div></center>
                                         </div>
                                     </figcaption>
                                 </figure>

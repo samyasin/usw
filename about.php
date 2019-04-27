@@ -255,7 +255,7 @@
                                 <div class="col-xs-12">
                                     <div class="lgx-heading-area">
                                         <div class="lgx-heading lgx-heading-white">
-                                            <h2 class="heading-title"><a href="<?php echo $_SERVER['PHP_SELF']; ?>" style="color:white">عنّا</a></h2>
+                                            <h2 class="heading-title"><a href="<?php echo $_SERVER['PHP_SELF']; ?>" >عنّا</a></h2>
                                         </div>
                                         <ul class="breadcrumb">
                                             <li><a href="index.php"><i class="icon-home6"></i>الرئيسية</a></li>
@@ -456,7 +456,7 @@
 
 
 
-            <div style="height:100px">
+            <div>
 
             </div>
             <!--TEACHERS-->

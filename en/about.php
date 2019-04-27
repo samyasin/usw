@@ -130,7 +130,7 @@
                                                             <span class="icon-bar"></span>
                                                         </button>
                                                         <a href="#toggle-search" class="hidden-lg hidden-md hidden-sm lgx-search-mobile search-animate"><span class="glyphicon glyphicon-search"></span></a>
-                                                        <div class="lgx-logo" style="margin-top:8px">
+                                                        <div class="lgx-logo">
                                                             <a href="index.php" class="lgx-scroll">
                                                                 <img src="../images/other/Logo3.png" alt="Logo" />
                                                             </a>
@@ -389,6 +389,15 @@
                                             <div class="milestone-inner">
                                                 <div class="lgx-content">
                                                     <div class="row">
+                                                        <div class="col-sm-3">
+                                                            <div class="lgx-counter-area">
+                                                                <img src="../assets/img/trophy.png" alt="teacher icon">
+                                                                <div class="counter-text">
+                                                                    <span class="lgx-counter">500</span>
+                                                                    <small>المنافسات</small>
+                                                                </div>
+                                                            </div>
+                                                        </div>
 
                                                         <!--//.COL-->
                                                         <div class="col-sm-3">
@@ -440,7 +449,7 @@
 
 
 
-            <div style="height:100px">
+            <div>
 
             </div>
             <!--TEACHERS-->
