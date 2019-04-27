@@ -394,7 +394,7 @@
                                                                 <img src="../assets/img/trophy.png" alt="teacher icon">
                                                                 <div class="counter-text">
                                                                     <span class="lgx-counter">500</span>
-                                                                    <small>المنافسات</small>
+                                                                    <small>Competitions</small>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -414,7 +414,7 @@
                                                             <div class="lgx-counter-area">
                                                                 <img src="../assets/img/graduate.png" alt="teacher icon">
                                                                 <div class="counter-text">
-                                                                    <span class="lgx-counter">500</span>
+                                                                    <span class="lgx-counter">7896</span>
                                                                     <small>Regular Students</small>
                                                                 </div>
                                                             </div>
@@ -424,7 +424,7 @@
                                                             <div class="lgx-counter-area">
                                                                 <img src="../assets/img/teacher.png" alt="teacher icon">
                                                                 <div class="counter-text">
-                                                                    <span class="lgx-counter">30</span>
+                                                                    <span class="lgx-counter">600</span>
                                                                     <small>Skilled Teachers</small>
                                                                 </div>
                                                             </div>
