@@ -375,7 +375,7 @@ if (isset($_POST['submit'])) {
                                                                                             <p>
                                                                                                 <img src="./assets/img/WEBSITE/UPشهادة-سلامه.gif" height="315" width="560">
                                                                                             </p>
-                                                                                            <h3>TEST</h3>
+                                                                                            <h3>دورات اخرى لتطوير مهاراتك في سوق العمل</h3>
                                                                                         </div>
                                                                                     </section>
 
