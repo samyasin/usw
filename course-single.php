@@ -315,11 +315,7 @@ if (isset($_POST['submit'])) {
                                                                                         </figure>-->
                                                                                     </header>
                                                                                     <section>
-                                                                                        <?php
-                                                                                        if ($courseSet['course_id'] == 30) {
-                                                                                            echo '<iframe width="690" height="450" src="https://www.youtube.com/embed/xNlQVdK1gEE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
-                                                                                        }
-                                                                                        ?>
+                                                                                        
                                                                                         <div class="lgx-course-feature-area">
                                                                                             <h3 class="title">تفاصيل الدورة</h3>
                                                                                             <ul class="list-unstyled lgx-course-feature">
@@ -348,6 +344,11 @@ if (isset($_POST['submit'])) {
                                                                                             </ul>
                                                                                         </div>
                                                                                         <div class="wrapper">
+                                                                                            <?php
+                                                                                        if ($courseSet['course_id'] == 30) {
+                                                                                            echo '<iframe width="690" height="450" src="https://www.youtube.com/embed/xNlQVdK1gEE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+                                                                                        }
+                                                                                        ?>
                                                                                            <?php if($courseSet['course_id'] != 30){
                                                                                                echo "<img src='images/course/{$courseSet['course_image']}' alt='course'>";
                                                                                            } ?>
