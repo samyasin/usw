@@ -311,11 +311,7 @@ if (isset($_POST['submit'])) {
                                             </figure>-->
                                         </header>
                                         <section>
-                                            <?php
-                                            if ($courseSet['course_id'] == 30) {
-                                                echo '<iframe width="690" height="450" src="https://www.youtube.com/embed/xNlQVdK1gEE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
-                                            }
-                                            ?>
+
                                             <div class="lgx-course-feature-area">
                                                 <h3 class="title">Course Features</h3>
                                                 <ul class="list-unstyled lgx-course-feature">
@@ -348,6 +344,11 @@ if (isset($_POST['submit'])) {
 
                                             <div class="wrapper">
                                                 <?php
+                                                if ($courseSet['course_id'] == 30) {
+                                                    echo '<div class="embed-responsive embed-responsive-16by9"> <iframe class="embed-responsive-item" width="690" height="450" src="https://www.youtube.com/embed/xNlQVdK1gEE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> </div>';
+                                                }
+                                                ?>
+                                                <?php
                                                 if ($courseSet['course_id'] != 30) {
                                                     echo "<img src='../images/course/{$courseSet['course_image']}' alt='course'>";
                                                 }
@@ -364,7 +365,7 @@ if (isset($_POST['submit'])) {
                                                 <?php echo $courseSet['course_outcome']; ?>
                                                 <h3>Certification UpSkills in <?php echo $courseSet['course_name']; ?></h3>
                                                 <p>
-                                                    <img src="../assets/img/WEBSITE/UPشهادة-سلامه.gif" height="315" width="560">
+                                                    <img src="../assets/img/WEBSITE/UPشهادة-سلامه.gif" class="img-responsive" alt="Cinque Terre">
                                                 </p>
                                             </div>
                                             <h3>Other Courses to Up Skills in the Labor Market</h3>
@@ -465,23 +466,23 @@ if (isset($_POST['submit'])) {
                                     <label class="form-control-label">Name</label>
                                     <input type="text" name="name" class="form-control " placeholder="Enter Your Name" required>
                                 </div>
-
+                                <hr>
                                 <div class="form-group">
                                     <label class="form-control-label">Mobile</label>
                                     <input type="number" name="mobile" class="form-control" placeholder="Enter Your Mobile" required>
                                 </div>
-
+                                <hr>
                                 <div class="form-group">
                                     <label class="form-control-label">Email</label>
                                     <input type="email" name="email" class="form-control" placeholder="Enter Your Email" required>
                                 </div>
-
+                                <hr>
                                 <div class="form-group">
                                     <label class="form-control-label">Major</label>
-                                    <select name="major" >
-                                        <option value="High School">High School</option>
-                                        <option value="Bachelors">Bachelor's</option>
-                                        <option value="Master">master</option>
+                                    <select class="form-control" name="major" >
+                                        <option class="form-control" value="High School">High School</option>
+                                        <option class="form-control" value="Bachelors">Bachelor's</option>
+                                        <option class="form-control" value="Master">master</option>
                                     </select>
                                 </div>
 

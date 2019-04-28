@@ -106,7 +106,7 @@ if (isset($_POST['submit'])) {
                                         <div class="contact">
                                             <ul class="list-inline">
                                                 <!--<li class="login-register"><a href="#">Login/Register</a></li>-->
-                                                <!--<a href="en/course-single.php?<? //php echo $courseSet['course_id']&$courseSet['course_name'];             ?>" type="button" class="btn btn-warning en">EN</a>-->
+                                                <!--<a href="en/course-single.php?<? //php echo $courseSet['course_id']&$courseSet['course_name'];              ?>" type="button" class="btn btn-warning en">EN</a>-->
                                                 <a href="en/courses.php" type="button" class="btn btn-warning en">EN</a>
                                                 <!--<li><a href=""><i class="fa fa-twitter"></i></a></li>-->
                                                 <li><a href="https://web.facebook.com/upskills1/"><i class="fa fa-facebook-f"></i></a></li>
@@ -315,7 +315,7 @@ if (isset($_POST['submit'])) {
                                                                                         </figure>-->
                                                                                     </header>
                                                                                     <section>
-                                                                                        
+
                                                                                         <div class="lgx-course-feature-area">
                                                                                             <h3 class="title">تفاصيل الدورة</h3>
                                                                                             <ul class="list-unstyled lgx-course-feature">
@@ -345,16 +345,18 @@ if (isset($_POST['submit'])) {
                                                                                         </div>
                                                                                         <div class="wrapper">
                                                                                             <?php
-                                                                                        if ($courseSet['course_id'] == 30) {
-                                                                                            echo '<iframe width="690" height="450" src="https://www.youtube.com/embed/xNlQVdK1gEE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
-                                                                                        }
-                                                                                        ?>
-                                                                                           <?php if($courseSet['course_id'] != 30){
-                                                                                               echo "<img src='images/course/{$courseSet['course_image']}' alt='course'>";
-                                                                                           } ?>
+                                                                                            if ($courseSet['course_id'] == 30) {
+                                                                                                echo '<div class="embed-responsive embed-responsive-16by9"> <iframe class="embed-responsive-item" width="690" height="450" src="https://www.youtube.com/embed/xNlQVdK1gEE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> </div>';
+                                                                                            }
+                                                                                            ?>
+                                                                                            <?php
+                                                                                            if ($courseSet['course_id'] != 30) {
+                                                                                                echo "<img src='images/course/{$courseSet['course_image']}' alt='course'>";
+                                                                                            }
+                                                                                            ?>
                                                                                             <h3>تفاصيل الدورة</h3>
                                                                                             <p>
-                                                                                                <?php echo $courseSet['course_desc_ar']; ?>
+<?php echo $courseSet['course_desc_ar']; ?>
                                                                                             </p>
 
 
@@ -370,11 +372,11 @@ if (isset($_POST['submit'])) {
 
                                                                                             <h3>أهداف الدورة</h3>
                                                                                             <p>
-                                                                                                <?php echo $courseSet['course_outcome_ar']; ?>
+<?php echo $courseSet['course_outcome_ar']; ?>
                                                                                             </p>
                                                                                             <h3>شهادة الاكاديمية في <?php echo $courseSet['course_name_ar']; ?></h3>
                                                                                             <p>
-                                                                                                <img src="./assets/img/WEBSITE/UPشهادة-سلامه.gif" height="315" width="560">
+                                                                                                <img src="./assets/img/WEBSITE/UPشهادة-سلامه.gif" class="img-responsive" alt="Cinque Terre">
                                                                                             </p>
                                                                                             <h3>دورات اخرى لتطوير مهاراتك في سوق العمل</h3>
                                                                                         </div>
@@ -397,17 +399,17 @@ if (isset($_POST['submit'])) {
                                                                             <div class="lgx-banner-style">
                                                                                 <div class="lgx-inner">
 
-                                                                                   <center> <div id="lgx-main-slider" class="carousel-inner">
+                                                                                    <center> <div id="lgx-main-slider" class="carousel-inner">
 
-                                                                                        <!--SLIDER ITEM 1-->
+                                                                                            <!--SLIDER ITEM 1-->
 
-                                                                                        <?php
-                                                                                        $q = "SELECT * FROM category,course 
+                                                                                            <?php
+                                                                                            $q = "SELECT * FROM category,course 
 									WHERE category.cat_id = course.category_id";
-                                                                                        $res = mysqli_query($con, $q);
-                                                                                        while ($courseSet = mysqli_fetch_assoc($res)) {
-                                                                                            
-                                                                                            echo"<div class='lgx-item-common'>
+                                                                                            $res = mysqli_query($con, $q);
+                                                                                            while ($courseSet = mysqli_fetch_assoc($res)) {
+
+                                                                                                echo"<div class='lgx-item-common'>
                         <div class='col-sm-12g'>
                         <div class='opacity'></div>
                             <div class='slider-text-single'>
@@ -431,17 +433,17 @@ if (isset($_POST['submit'])) {
                             </div>
                         </div> <!--//.col-->
                     </div>";
-                                                                                        }
-                                                                                        ?>
-                                                                                        <!--SLIDER ITEM 1 End-->
+                                                                                            }
+                                                                                            ?>
+                                                                                            <!--SLIDER ITEM 1 End-->
 
 
 
-                                                                                        <!--SLIDER ITEM 2-->
+                                                                                            <!--SLIDER ITEM 2-->
 
-                                                                                        <!--SLIDER ITEM 3 End-->
+                                                                                            <!--SLIDER ITEM 3 End-->
 
-                                                                                    </div></center>
+                                                                                        </div></center>
                                                                                     <!--//.lgx-main-slider-->
 
 
@@ -477,23 +479,23 @@ if (isset($_POST['submit'])) {
                                                                                 <label class="form-control-label">الأسم</label>
                                                                                 <input type="text" name="name" class="form-control " placeholder="ادخل اسمك" required>
                                                                             </div>
-
+                                                                            <hr>
                                                                             <div class="form-group">
                                                                                 <label class="form-control-label">رقم الهاتف</label>
                                                                                 <input type="number" name="mobile" class="form-control" placeholder="ادخل رقم هاتفك" required>
                                                                             </div>
-
+                                                                            <hr>
                                                                             <div class="form-group">
                                                                                 <label class="form-control-label">البريد الإلكتروني</label>
                                                                                 <input type="email" name="email" class="form-control" placeholder="ادخل بريدك الإلكتروني" required>
                                                                             </div>
-
+                                                                            <hr>
                                                                             <div class="form-group">
                                                                                 <label class="form-control-label">الدرجة العلمية</label>
-                                                                                <select name="major" >
-                                                                                    <option value="High School">توجيهي</option>
-                                                                                    <option value="Bachelors">بكالوريس</option>
-                                                                                    <option value="Master">ماجستير</option>
+                                                                                <select class="form-control" name="major" >
+                                                                                    <option class="form-control" value="High School">توجيهي</option>
+                                                                                    <option class="form-control" value="Bachelors">بكالوريس</option>
+                                                                                    <option class="form-control" value="Master">ماجستير</option>
                                                                                 </select>
                                                                             </div>
 
@@ -507,4 +509,4 @@ if (isset($_POST['submit'])) {
                                                             </div>
                                                         </div>
 
-                                                        <?php require 'includes/website_footer.php'; ?>
+<?php require 'includes/website_footer.php'; ?>
