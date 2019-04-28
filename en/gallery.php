@@ -110,14 +110,14 @@
                                             <ul class="list-inline">
                                                 <a href="../gallery.php" type="button" class="btn btn-warning en">AR</a>
         <!--<li><a href=""><i class="fa fa-twitter"></i></a></li>-->
-                                                <li><a href="https://web.facebook.com/upskills1/"><i class="fa fa-facebook-f"></i></a></li>
+                                                <li><a href="https://web.facebook.com/upskills1/" target="_blank"><i class="fa fa-facebook-f"></i></a></li>
                                                 <!--
                                                 <li><a href=""><i class="fa fa-google-plus"></i></a></li>
                                                 -->
-                                                <li><a href="https://www.linkedin.com/in/upskills-academy-b67743154/"><i class="fa fa-linkedin"></i></a></li>
+                                                <li><a href="https://www.linkedin.com/in/upskills-academy-b67743154/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
                                                 <!--						<li><a href=""><i class="fa fa-instagram"></i></a></li>-->
                                                 <!--						<li><a href=""><i class="fa fa-pinterest-p"></i></a></li>-->
-                                                <li><a href="https://www.youtube.com/channel/UCIeGyNQeeS-Etd_bwRXEZ5A/"><i class="fa fa-youtube-play"></i></a></li>
+                                                <li><a href="https://www.youtube.com/channel/UCIeGyNQeeS-Etd_bwRXEZ5A/" target="_blank"><i class="fa fa-youtube-play"></i></a></li>
                                             </ul>
                                         </div>
                                     </div>

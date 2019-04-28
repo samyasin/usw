@@ -115,14 +115,14 @@ if (isset($_POST['submit'])) {
                                                 <!--<li class="login-register"><a href="#">Login/Register</a></li>-->
                                                 <a href="../contact.php" type="button" class="btn btn-warning en">AR</a>
        <!--<li><a href=""><i class="fa fa-twitter"></i></a></li>-->
-                                                <li><a href="https://web.facebook.com/upskills1/"><i class="fa fa-facebook-f"></i></a></li>
+                                                <li><a href="https://web.facebook.com/upskills1/" target="_blank"><i class="fa fa-facebook-f"></i></a></li>
                                                 <!--
                                                 <li><a href=""><i class="fa fa-google-plus"></i></a></li>
                                                 -->
-                                                <li><a href="https://www.linkedin.com/in/upskills-academy-b67743154/"><i class="fa fa-linkedin"></i></a></li>
+                                                <li><a href="https://www.linkedin.com/in/upskills-academy-b67743154/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
                                                 <!--						<li><a href=""><i class="fa fa-instagram"></i></a></li>-->
                                                 <!--						<li><a href=""><i class="fa fa-pinterest-p"></i></a></li>-->
-                                                <li><a href="https://www.youtube.com/channel/UCIeGyNQeeS-Etd_bwRXEZ5A/"><i class="fa fa-youtube-play"></i></a></li>
+                                                <li><a href="https://www.youtube.com/channel/UCIeGyNQeeS-Etd_bwRXEZ5A/" target="_blank"><i class="fa fa-youtube-play"></i></a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -374,8 +374,8 @@ if (isset($_POST['submit'])) {
                             <div class="row">
                                 <div class="col-xs-12">
                                     <div class="innerpage-section">
-                                        <center><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13536.077755815664!2d35.9031799!3d31.9874885!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xdc9535598d200ad!2supskills+academy!5e0!3m2!1sar!2sjo!4v1550067494111" width="900" height="450" frameborder="0" allowfullscreen></iframe>
-                                        </center>
+                                        <div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13536.077755815664!2d35.9031799!3d31.9874885!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xdc9535598d200ad!2supskills+academy!5e0!3m2!1sar!2sjo!4v1550067494111" width="900" height="450" frameborder="0" style="border:0" allowfullscreen></iframe></div>
+                                        
                                     </div>
                                 </div>
                                 <!--//.ROW-->
