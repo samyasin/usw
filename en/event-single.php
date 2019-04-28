@@ -91,7 +91,6 @@ $eventSet = mysqli_fetch_assoc($result);
                                     <div class="col-md-6">
                                         <div class="contact">
                                             <ul class="list-inline">
-
                                                 <li><span class="question-text">Questions?</span> <i class="fa fa-phone" aria-hidden="true"></i>(079)5 693 900 </li>
                                                 <li><i class="fa fa-envelope" aria-hidden="true"></i> info@upskills-academy.com</li>
                                             </ul>
@@ -101,8 +100,6 @@ $eventSet = mysqli_fetch_assoc($result);
                                         <div class="right-menu">
                                             <ul class="list-inline">
                                                 <!--<li class="login-register"><a href="#">Login/Register</a></li>-->
-                                                <a href="../events.php" type="button" class="btn btn-warning en">AR</a>
-                                                  <!--<li><a href=""><i class="fa fa-twitter"></i></a></li>-->
                                                 <li><a href="https://web.facebook.com/upskills1/" target="_blank"><i class="fa fa-facebook-f"></i></a></li>
                                                 <!--
                                                 <li><a href=""><i class="fa fa-google-plus"></i></a></li>
@@ -111,6 +108,7 @@ $eventSet = mysqli_fetch_assoc($result);
                                                 <!--						<li><a href=""><i class="fa fa-instagram"></i></a></li>-->
                                                 <!--						<li><a href=""><i class="fa fa-pinterest-p"></i></a></li>-->
                                                 <li><a href="https://www.youtube.com/channel/UCIeGyNQeeS-Etd_bwRXEZ5A/" target="_blank"><i class="fa fa-youtube-play"></i></a></li>
+                                                <a href="../index.php" type="button" class="btn btn-warning ar">العربية</a>
                                             </ul>
                                         </div>
                                     </div>
@@ -138,7 +136,7 @@ $eventSet = mysqli_fetch_assoc($result);
                                                             <span class="icon-bar"></span>
                                                         </button>
                                                         <a href="#toggle-search" class="hidden-lg hidden-md hidden-sm lgx-search-mobile search-animate"><span class="glyphicon glyphicon-search"></span></a>
-                                                        <div class="lgx-logo" style="margin-top:8px">
+                                                        <div class="lgx-logo">
                                                             <a href="index.php" class="lgx-scroll">
                                                                 <img src="../images/other/Logo3.png" alt="Logo" />
                                                             </a>
@@ -212,10 +210,10 @@ $eventSet = mysqli_fetch_assoc($result);
                                                                 </ul>
                                                         </li>-->
                                                             <li><a class="lgx-scroll active" href="about.php">About Us</a></li>
-                                                            <li><a class="lgx-scroll " href="courses.php" >Courses</a></li>
-                                                            <li><a class="lgx-scroll" href="events.php">Events</a></li>
-                                                            <li><a class="lgx-scroll" href="gallery.php">Gallery</a></li>
-                                                            <li><a class="lgx-scroll" href="contact.php">Contact US</a></li>
+                                                            <li><a class="lgx-scroll " href="courses.php">Courses</a></li>
+                                                            <li><a class="lgx-scroll" href="gallery.php">Events</a></li>
+                                                            <li><a class="lgx-scroll" href="gallery.php" >Gallery</a></li>
+                                                            <li><a class="lgx-scroll" href="contact.php">Contact Us</a></li>
                                                             <li class="hidden-xs"><a href="#toggle-search" class="search-animate"><span class="glyphicon glyphicon-search"></span></a></li>
                                                         </ul>
                                                     </div>

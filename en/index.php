@@ -135,7 +135,7 @@
                                                             <span class="icon-bar"></span>
                                                         </button>
                                                         <a href="#toggle-search" class="hidden-lg hidden-md hidden-sm lgx-search-mobile search-animate"><span class="glyphicon glyphicon-search"></span></a>
-                                                        <div class="lgx-logo" style="margin-top:8px">
+                                                        <div class="lgx-logo">
                                                             <a href="index.php" class="lgx-scroll">
                                                                 <img src="../images/other/Logo3.png" alt="Logo" />
                                                             </a>
@@ -144,7 +144,7 @@
                                                     <div class="collapse navbar-collapse">
                                                         <ul class="nav navbar-nav lgx-nav">
                                                             <li>
-                                                                <a style="color:#e39a31" href="index.php" class="dropdown-toggle active" role="button" aria-haspopup="true" aria-expanded="false">Home</a>
+                                                                <a href="index.php" class="dropdown-toggle active" role="button" aria-haspopup="true" aria-expanded="false">Home</a>
                                                                 <!--<ul class="dropdown-menu multi-level">
                                                                         <li><a href="index.php">Home (Default)</a></li>
                                                                         <li><a href="home-slider.html">Home Slider</a></li>
