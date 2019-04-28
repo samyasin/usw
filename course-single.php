@@ -451,7 +451,7 @@ if (isset($_POST['submit'])) {
                                                                                 </div>
                                                                                 <!-- //.INNER -->
                                                                             </div>
-                                                                        </div></div></div>
+                                                                        </div></div></div></div>
                                                         </section>
                                                         <!--SLIDER END-->
 
