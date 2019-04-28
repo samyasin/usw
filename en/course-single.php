@@ -122,7 +122,7 @@ if (isset($_POST['submit'])) {
                                                 <!--						<li><a href=""><i class="fa fa-instagram"></i></a></li>-->
                                                 <!--						<li><a href=""><i class="fa fa-pinterest-p"></i></a></li>-->
                                                 <li><a href="https://www.youtube.com/channel/UCIeGyNQeeS-Etd_bwRXEZ5A/" target="_blank"><i class="fa fa-youtube-play"></i></a></li>
-                                                <a href="../index.php" type="button" class="btn btn-warning ar">العربية</a>
+                                                <a href="../courses.php" type="button" class="btn btn-warning ar">العربية</a>
                                             </ul>
                                         </div>
                                     </div>
