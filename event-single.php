@@ -93,18 +93,9 @@ $eventSet = mysqli_fetch_assoc($result);
                                     <div class="col-md-6">
                                         <div class="contact">
                                             <ul class="list-inline">
-
-                                                <li><span class="question-text">اي اسئلة ؟</span> <i class="fa fa-phone" aria-hidden="true"></i>(079)5 693 900 </li>
-                                                <li><i class="fa fa-envelope" aria-hidden="true"></i> info@upskills-academy.com</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="right-menu">
-                                            <ul class="list-inline">
                                                 <!--<li class="login-register"><a href="#">Login/Register</a></li>-->
-                                                <a href="en/events.php" type="button" class="btn btn-warning en">EN</a>
-                                                  <!--<li><a href=""><i class="fa fa-twitter"></i></a></li>-->
+                                                <a href="en/about.php" type="button" class="btn btn-warning en">EN</a>
+                                                <!--<li><a href=""><i class="fa fa-twitter"></i></a></li>-->
                                                 <li><a href="https://web.facebook.com/upskills1/" target="_blank"><i class="fa fa-facebook-f"></i></a></li>
                                                 <!--
                                                 <li><a href=""><i class="fa fa-google-plus"></i></a></li>
@@ -116,6 +107,15 @@ $eventSet = mysqli_fetch_assoc($result);
                                             </ul>
                                         </div>
                                     </div>
+                                    <div class="col-md-6">
+                                        <div class="contact">
+                                            <ul class="list-inline right-menu">
+                                                <li><span class="question-text">أيّ أسئلة ؟</span> <i class="fa fa-phone" aria-hidden="true"></i> 900 693 5 (079) </li>
+                                                <li><i class="fa fa-envelope" aria-hidden="true"></i> info@upskills-academy.com</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
                                 </div>
                             </div>
                         </div>
@@ -215,11 +215,11 @@ $eventSet = mysqli_fetch_assoc($result);
                                                         </li>-->
 
 
-                                                            <li><a class="lgx-scroll" href="contact.php" >تواصل معنا</a></li>
+                                                            <li><a class="lgx-scroll" href="contact.php">تواصل معنا</a></li>
                                                             <li><a class="lgx-scroll" href="gallery.php">معرض الصور</a></li>
-                                                            <li><a class="lgx-scroll" href="courses.php" >الدورات</a></li>
+                                                            <li><a class="lgx-scroll" href="courses.php">الدورات</a></li>
                                                             <li><a class="lgx-scroll" href="events.php">الأحداث</a></li>
-                                                            <li><a class="lgx-scroll active" href="about.php" >عنّا</a></li>
+                                                            <li><a class="lgx-scroll active" href="about.php">عنّا</a></li>
                                                             <li><a href="index.php" class="dropdown-toggle active" role="button" aria-haspopup="true" aria-expanded="false" >الرئيسية</a></li>
 
                                                             <li class="hidden-xs"><a href="#toggle-search" class="search-animate"><span class="glyphicon glyphicon-search"></span></a></li>
