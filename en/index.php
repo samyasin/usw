@@ -936,7 +936,7 @@
 <section class="gallery-block compact-gallery">
     <div class="container">
         <div class="lgx-heading">
-            <h2 class="heading-title"><a></a>Photo Gallery</h2>
+            <h2 class="heading-title"><a></a><center>Photo Gallery</center></h2>
             <h4 class="heading-subtitle">Some of amazing Screenshots for UpSkills Academy</h4>
         </div>
         <div class="row no-gutters">
