@@ -212,7 +212,7 @@
 
 
                                                             <li><a class="lgx-scroll" href="contact.php">تواصل معنا</a></li>
-                                                            <li><a class="lgx-scroll" href="#lgx-photo-gallery" style="color:#e39a31">معرض الصور</a></li>
+                                                            <li><a class="lgx-scroll" href="#lgx-photo-gallery">معرض الصور</a></li>
                                                             <li><a class="lgx-scroll" href="courses.php">الدورات</a></li>
                                                             <li><a class="lgx-scroll" href="events.php">الأحداث</a></li>
                                                             <li><a class="lgx-scroll active" href="about.php">عنّا</a></li>
@@ -258,7 +258,8 @@
                                 <div class="col-xs-12">
                                     <div class="lgx-heading-area">
                                         <div class="lgx-heading lgx-heading-white">
-                                            <h2 class="heading-title">معرض الصور</h2>
+                                            <h2 class="heading-title"><a href="<?php echo $_SERVER['PHP_SELF']; ?>">معرض الصور</a></h2>
+                                            
                                         </div>
                                         <ul class="breadcrumb">
                                             <li><a href="index.php"><i class="icon-home6"></i>الرئيسية</a></li>
