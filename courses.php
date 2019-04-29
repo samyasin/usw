@@ -213,7 +213,7 @@
                                                             <li><a class="lgx-scroll active" href="about.php" >عنّا</a></li>
                                                             <li><a href="index.php" class="dropdown-toggle active" role="button" aria-haspopup="true" aria-expanded="false" >الرئيسية</a></li>
 
-                                                            <li class="hidden-xs"><a href="#toggle-search" class="search-animate"><span class="glyphicon glyphicon-search"></span></a></li>
+                                                            
                                                         </ul>
                                                     </div>
                                                     <!--/.nav-collapse -->
