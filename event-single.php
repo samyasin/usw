@@ -291,7 +291,7 @@ $eventSet = mysqli_fetch_assoc($result);
                                         <header>
                                             <div class="lgxpage-header">
                                                 <figure>
-                                                    <img src="images/event/<?php echo $eventSet['event_image']; ?>" alt="" height="380" width="1140"/>
+                                                    <img src="images/event/<?php echo $eventSet['event_image']; ?>" alt="<?php echo $eventSet['event_name']; ?>" height="380" width="1140"/>
                                                     <figcaption>
                                                             <!--<p class="figcaption-text"><span>Capacity 200 Persons</span> ( 2 Interested 2 Going )</p>-->
                                                     </figcaption>
