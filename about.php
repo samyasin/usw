@@ -29,7 +29,7 @@
         <!-- when you post this page url in facebook , this image will be shown -->
         <!-- facebook open graph ends from here -->
 
-        <link rel="icon" type="image/png" href="images/other/Logo-01.png">
+        <link rel="icon" type="image/png" href="images/other/Logo-01.png" alt="icon">
 
         <!-- BOOTSTRAP CSS -->
         <link rel="stylesheet" href="assets/libs/bootstrap/css/bootstrap.min.css" media="all" />
