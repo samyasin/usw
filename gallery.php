@@ -32,11 +32,11 @@
         <link rel="icon" type="image/png" href="images/other/Logo-01.png">
 
         <!-- BOOTSTRAP CSS -->
-        <link rel="stylesheet" href="assets/libs/bootstrap/css/bootstrap.min.css" media="all" />
+        <link rel="stylesheet" href="assets/libs/bootstrap/css/bootstrap.min.css" media="all" /><!-- 
+        
+        <!--BOOTSTRAP CSS -->
+        <link rel="stylesheet" href="assets/css/custom.css"	 media="all" />
 
-        <!--Custom CSS -->
-
-        <link rel="stylesheet" href="assets/css/custom.css" media="all" />
         <!-- FONT AWESOME -->
         <link rel="stylesheet" href="assets/libs/fontawesome/css/font-awesome.min.css" media="all" />
 
@@ -49,13 +49,12 @@
 
         <!-- GOOGLE FONT -->
         <!--<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Merriweather:300,400,400i,700,900%7cLato:400,700,900"/>-->
-        <link href="https://fonts.googleapis.com/css?family=Cairo|Changa" rel="stylesheet">
-
         <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,900%7cUbuntu:300,300i,400,500,700" />
+        <link href="https://fonts.googleapis.com/css?family=Montserrat|Cairo" rel="stylesheet">
 
         <!--photo Gallery-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css" />
-        <link rel="stylesheet" href="../assets/css/compact-gallery.css">
+        <link rel="stylesheet" href="assets/css/compact-gallery.css">
 
         <link rel="stylesheet" href="assets/libs/animate/animate.css" media="all" />
 
