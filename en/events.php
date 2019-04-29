@@ -281,7 +281,7 @@
                                             while ($eventSet = mysqli_fetch_assoc($result)) {
                                                 echo " <div class='lgx-single-event'>
                                     <div class='thumb'>
-                                        <a href='event-single.php?event_id={$eventSet['event_id']}'><img src='../images/event/{$eventSet['event_image']}' alt='event' height='120' width='120'></a>
+                                        <a href='event-single.php?event_id={$eventSet['event_id']}'><img src='../images/event/{$eventSet['event_image']}' alt='{$eventSet['event_name']}' height='120' width='120'></a>
                                     </div>
                                     <div class='event-info'>
                                         <a class='date' href='#'>";
