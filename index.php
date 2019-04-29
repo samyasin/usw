@@ -81,7 +81,7 @@
                                         <div class="contact">
                                             <ul class="list-inline">
                                                 <!--<li class="login-register"><a href="#">Login/Register</a></li>-->
-                                                <a href="en/about.php" type="button" class="btn btn-warning en">EN</a>
+                                                <a href="en/index.php" type="button" class="btn btn-warning en">EN</a>
                                                 <!--<li><a href=""><i class="fa fa-twitter"></i></a></li>-->
                                                 <li><a href="https://web.facebook.com/upskills1/" target="_blank"><i class="fa fa-facebook-f"></i></a></li>
                                                 <!--
