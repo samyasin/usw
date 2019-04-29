@@ -315,7 +315,7 @@
                                                                                     
 											<div class='lgx-single-course-inner'>
 												<figure>
-													<img src='../images/course/{$courseSet['course_image']}' alt='course' height='220'>
+													<img src='../images/course/{$courseSet['course_image']}' alt='{$courseSet['course_name']}' height='220'>
 													<figcaption>
                                                                                                         
 														<div class='lgx-hover-link'>
@@ -331,7 +331,7 @@
 												<div class='course-info'>
 													<div class='course-author'>
                                                                                                         <a href='course-single.php?course_id={$courseSet['course_id']}&category_name={$courseSet['cat_name']}'>
-														<img src='../images/category/{$courseSet['cat_image']}' alt='course' height='66'>
+														<img src='../images/category/{$courseSet['cat_image']}' alt='{$courseSet['course_name']}' height='66'>
                                                                                                                 
 														<div class='author-info'>
 															<!--<h4 class='title'><a href='#'>Riaz Sagar</a></h4>-->

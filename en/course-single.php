@@ -152,7 +152,7 @@ if (isset($_POST['submit'])) {
                                                         <a href="#toggle-search" class="hidden-lg hidden-md hidden-sm lgx-search-mobile search-animate"><span class="glyphicon glyphicon-search"></span></a>
                                                         <div class="lgx-logo">
                                                             <a href="index.php" class="lgx-scroll">
-                                                                <img src="../images/other/Logo3.png" alt="Logo" />
+                                                                <img src="../images/other/Logo3.png" alt="Logo3" />
                                                             </a>
                                                         </div>
                                                     </div>
@@ -344,12 +344,12 @@ if (isset($_POST['submit'])) {
                                             <div class="wrapper">
                                                 <?php
                                                 if ($courseSet['course_id'] == 30) {
-                                                    echo '<div class="embed-responsive embed-responsive-16by9"> <iframe class="embed-responsive-item" width="690" height="450" src="https://www.youtube.com/embed/xNlQVdK1gEE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> </div>';
+                                                    echo ' <div class="embed-responsive embed-responsive-4by3"> <iframe class="embed-responsive-item" width="690" height="450" src="https://www.youtube.com/embed/xNlQVdK1gEE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> </div>';
                                                 }
                                                 ?>
                                                 <?php
                                                 if ($courseSet['course_id'] != 30) {
-                                                    echo "<img src='../images/course/{$courseSet['course_image']}' alt='course'>";
+                                                    echo "<img src='../images/course/{$courseSet['course_image']}' alt='{$courseSet['course_name']}'>";
                                                 }
                                                 ?>
                                                 <h3>Course Description</h3>
@@ -364,7 +364,7 @@ if (isset($_POST['submit'])) {
                                                 <?php echo $courseSet['course_outcome']; ?>
                                                 <h3>Certification UpSkills in <?php echo $courseSet['course_name']; ?></h3>
                                                 <p>
-                                                    <img src="../assets/img/WEBSITE/UPشهادة-سلامه.gif" class="img-responsive" alt="Cinque Terre">
+                                                    <img src="../assets/img/WEBSITE/UPشهادة-سلامه.gif" class="img-responsive" alt="cirt">
                                                 </p>
                                             </div>
                                             <h3>Other Courses to Up Skills in the Labor Market</h3>
@@ -391,7 +391,7 @@ if (isset($_POST['submit'])) {
                         <div class='opacity'></div>
                             <div class='slider-text-single'>
                                 <figure>
-                                    <img src='../images/course/{$courseSet['course_image']}'>
+                                    <img src='../images/course/{$courseSet['course_image']}' alt='{$courseSet['course_name']}'>
                                     <figcaption>
                                         <div class='lgx-container'>
                                             <div class='lgx-hover-link'>
@@ -453,7 +453,7 @@ if (isset($_POST['submit'])) {
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">×</span>
                             </button>
-                            <img src="../images/other/Logo-01.png"  height="80" width="80">
+                            <img src="../images/other/Logo-01.png"  height="80" width="80" alt="logo">
 
 
                         </div>

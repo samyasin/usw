@@ -48,7 +48,7 @@ if (isset($_POST['submit'])) {
         <!-- when you post this page url in facebook , this image will be shown -->
         <!-- facebook open graph ends from here -->
 
-        <link rel="icon" type="image/png" href="images/other/Logo-01.png">
+        <link rel="icon" type="image/png" href="images/other/Logo-01.png" alt="icon">
 
         <!-- BOOTSTRAP CSS -->
         <link rel="stylesheet" href="assets/libs/bootstrap/css/bootstrap.min.css" media="all" />
@@ -346,12 +346,12 @@ if (isset($_POST['submit'])) {
                                                                                         <div class="wrapper">
                                                                                             <?php
                                                                                             if ($courseSet['course_id'] == 30) {
-                                                                                                echo '<div class="embed-responsive embed-responsive-16by9"> <iframe class="embed-responsive-item" width="690" height="450" src="https://www.youtube.com/embed/xNlQVdK1gEE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> </div>';
+                                                                                                echo ' <div class="embed-responsive embed-responsive-4by3"><iframe class="embed-responsive-item" width="690" height="450" src="https://www.youtube.com/embed/xNlQVdK1gEE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div> ';
                                                                                             }
                                                                                             ?>
                                                                                             <?php
                                                                                             if ($courseSet['course_id'] != 30) {
-                                                                                                echo "<img src='images/course/{$courseSet['course_image']}' alt='course'>";
+                                                                                                echo "<img src='images/course/{$courseSet['course_image']}' alt='{$courseSet['course_name']}'>";
                                                                                             }
                                                                                             ?>
                                                                                             <h3>تفاصيل الدورة</h3>
@@ -376,7 +376,7 @@ if (isset($_POST['submit'])) {
                                                                                             </p>
                                                                                             <h3>شهادة الاكاديمية في <?php echo $courseSet['course_name_ar']; ?></h3>
                                                                                             <p>
-                                                                                                <img src="./assets/img/WEBSITE/UPشهادة-سلامه.gif" class="img-responsive" alt="Cinque Terre">
+                                                                                                <img src="./assets/img/WEBSITE/UPشهادة-سلامه.gif" class="img-responsive" alt="Cirtif">
                                                                                             </p>
                                                                                             <h3>دورات اخرى لتطوير مهاراتك في سوق العمل</h3>
                                                                                         </div>
@@ -414,7 +414,7 @@ if (isset($_POST['submit'])) {
                         <div class='opacity'></div>
                             <div class='slider-text-single'>
                                 <figure>
-                                    <img src='images/course/{$courseSet['course_image']}'>
+                                    <img src='images/course/{$courseSet['course_image']}' alt='{$courseSet['course_name']}'>
                                     <figcaption>
                                         <div class='lgx-container'>
                                             <div class='lgx-hover-link'>
@@ -465,7 +465,7 @@ if (isset($_POST['submit'])) {
                                                                 <div class="modal-content">
                                                                     <div class="modal-header">
                                                                         <h5 class="modal-title" id="exampleModalCenterTitle">اسألنا عن التفاصيل</h5>
-                                                                        <img src="./images/other/Logo-01.png"  height="80" width="80">
+                                                                        <img src="./images/other/Logo-01.png"  height="80" width="80" alt="logo01">
                                                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                                             <span aria-hidden="true">&times;</span>
                                                                         </button>
