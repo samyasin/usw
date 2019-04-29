@@ -293,7 +293,7 @@
                         while ($imageSet = mysqli_fetch_assoc($res)) {
                             echo "<div class='col-md-6 col-lg-4  item zoom-on-hover'>
                     <a class='lightbox' href='./images/albums/{$imageSet['album_name']}/{$imageSet['image_src']}'>
-                        <img class='img-fluid image' height='247' width='370' src='./images/albums/{$imageSet['album_name']}/{$imageSet['image_src']}'>
+                        <img class='img-fluid image' height='247' width='370' src='./images/albums/{$imageSet['album_name']}/{$imageSet['image_src']}' alt='{$imageSet['album_name']}'>
                         <span class='description'>
                             <span class='description-heading'>UpSkills Academy</span>
 
