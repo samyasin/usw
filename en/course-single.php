@@ -364,7 +364,7 @@ if (isset($_POST['submit'])) {
                                                 <?php echo $courseSet['course_outcome']; ?>
                                                 <h3>Certification UpSkills in <?php echo $courseSet['course_name']; ?></h3>
                                                 <p>
-                                                    <img src="../assets/img/WEBSITE/UPشهادة-سلامه.gif" class="img-responsive" alt="cirt">
+                                                    <img src="../assets/img/WEBSITE/certificate.jpg" class="img-responsive" alt="cirt">
                                                 </p>
                                             </div>
                                             <h3>Other Courses to Up Skills in the Labor Market</h3>

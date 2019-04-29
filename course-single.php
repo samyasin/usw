@@ -376,7 +376,7 @@ if (isset($_POST['submit'])) {
                                                                                             </p>
                                                                                             <h3>شهادة الاكاديمية في <?php echo $courseSet['course_name_ar']; ?></h3>
                                                                                             <p>
-                                                                                                <img src="./assets/img/WEBSITE/UPشهادة-سلامه.gif" class="img-responsive" alt="Cirtif">
+                                                                                                <img src="./assets/img/WEBSITE/certificate.jpg" class="img-responsive" alt="Cirtif">
                                                                                             </p>
                                                                                             <h3>دورات اخرى لتطوير مهاراتك في سوق العمل</h3>
                                                                                         </div>
