@@ -84,7 +84,7 @@ if (isset($_POST['submit'])){
 								<label class="form-control-label">Category Name to Student</label>
 								<?php $query="SELECT * FROM category";
 								  $result = mysqli_query($con,$query);
-									echo "<select name='category_id'>Category";
+									echo "<select name='category_id' class='form-control' >Category";
 								  while($cat_data=mysqli_fetch_assoc($result)){
 							      echo "<option value='".$cat_data['cat_id']."'>".$cat_data['cat_name']." - ".$cat_data['cat_name_ar']."</option>" ;
 								}
