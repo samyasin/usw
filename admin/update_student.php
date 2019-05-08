@@ -7,8 +7,8 @@ $(document).ready(function(){
   	var x = $("select").val();
     
     //alert("The text has been changed.");
-    if($("select").val() == "C"){
-    	alert(111);
+    if($("select").val() == "Other"){
+    	//alert(111);
     	$("input").show();
     }
   });
@@ -246,7 +246,7 @@ if (isset($_POST['update'])) {
                                     <option class="form-control" value="طالب قديم">طالب قديم</option>
                                     <option class="form-control" value="صديق">صديق</option>
                                     <option class="form-control" value="جامعات">جامعات</option>
-                                    <option class="form-control" value="C">C</option>
+                                    <option class="form-control" value="Other">Other</option>
                                     
 
                                 </select><input type="text" style="display:none">
