@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: May 08, 2019 at 09:15 AM
+-- Generation Time: May 08, 2019 at 12:14 PM
 -- Server version: 5.7.19
 -- PHP Version: 5.6.31
 
@@ -323,21 +323,23 @@ CREATE TABLE IF NOT EXISTS `register` (
   `emp_name` varchar(300) CHARACTER SET utf8 DEFAULT NULL,
   `reg_date` date DEFAULT NULL,
   `image_sign` text CHARACTER SET utf8,
-  `stu_nat_num` int(50) DEFAULT NULL,
+  `stu_nat_num` text,
   `pay` varchar(50) CHARACTER SET utf8 DEFAULT NULL,
   `amount_required` varchar(50) CHARACTER SET utf8 DEFAULT NULL,
   `training` varchar(50) CHARACTER SET utf8 DEFAULT NULL,
+  `know` text CHARACTER SET utf8,
   PRIMARY KEY (`stu_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `register`
 --
 
-INSERT INTO `register` (`stu_id`, `stu_name`, `stu_name_ar`, `stu_birth`, `stu_nat`, `stu_phone`, `stu_mobile`, `stu_email`, `stu_qualifications`, `stu_major`, `stu_univ`, `stu_job`, `course_id`, `emp_name`, `reg_date`, `image_sign`, `stu_nat_num`, `pay`, `amount_required`, `training`) VALUES
-(4, 'test name', 'test name ar', '1995-04-08', 'test nat con', '5555', '5555', 'test@test', 'test Q', 'test major', 'test uni', 'test job', 36, 'test emp', '2019-07-22', '1557228560-BB.jpg', 999999999, NULL, NULL, NULL),
-(9, 'test name2', 'test name ar', '1995-04-08', 'test nat con', '5555', '5555', 'test@test', 'High School', 'test major', 'test uni', 'test job', 21, 'test emp', '2019-07-22', '1557232518-BB.jpg', 999999999, 'Cash', '50', 'Public'),
-(10, 'majd esam ', 'مجد عصام', '1995-04-08', 'jordinin', '0795963900', '0795963900', 'test@test', 'High School', 'computer since', 'zaitona', 'test job', 21, 'alaa alraei', '2019-07-22', '1557233523-BB.jpg', 999999999, 'Cash', '350', 'Public');
+INSERT INTO `register` (`stu_id`, `stu_name`, `stu_name_ar`, `stu_birth`, `stu_nat`, `stu_phone`, `stu_mobile`, `stu_email`, `stu_qualifications`, `stu_major`, `stu_univ`, `stu_job`, `course_id`, `emp_name`, `reg_date`, `image_sign`, `stu_nat_num`, `pay`, `amount_required`, `training`, `know`) VALUES
+(4, 'test name', 'test name ar', '1995-04-08', 'test nat con', '5555', '5555', 'test@test', 'High School', 'test major', 'test uni', 'test job', 21, 'test emp', '2019-07-22', '1557228560-BB.jpg', '999999999', NULL, NULL, NULL, NULL),
+(9, 'test name2', 'test name ar', '1995-04-08', 'test nat con', '5555', '5555', 'test@test', 'High School', 'test major', 'test uni', 'test job', 21, 'test emp', '2019-07-22', '1557232518-BB.jpg', '999999999', 'Cash', '50', 'Public', NULL),
+(12, 'majd esam ', 'مجد عصام', '1995-04-08', 'jordinin', '0795963900', '0795963900', 'majd@gmail.com', 'High School', 'test major', 'zaitona', 'test job', 21, 'alaa alraei', '2019-07-22', '1557311609-nm.jpg', '9841053333', 'Cash', '350', 'Public', 'اخرى'),
+(13, 'Mohammed Fayez Ahmed Ghanem ', 'محمد فايز احمد غانم', '1995-04-08', 'اردني', '0796499602', '0796499602', 'mohammadghanem432@gmail.com', 'High School', 'نظم معلومات ادارية', 'جامعة الاسراء / كلية الاعمال', 'لايوجد', 21, 'ديانا المصري', '2019-07-22', '1557312884-BB.jpg', '9961012036', 'Cash', '350', 'Public', 'Website');
 
 -- --------------------------------------------------------
 

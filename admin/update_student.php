@@ -25,6 +25,7 @@ if (isset($_POST['update'])) {
     $pay                = $_POST['pay'];
     $amount_required    = $_POST['amount_required'];
     $training           = $_POST['training'];
+    $know               = $_POST['know'];
     $old_image          = $_POST['old_image_sign'];
     $img_tmp            = $_FILES['image_sign']['tmp_name'];
     
@@ -38,7 +39,7 @@ if (isset($_POST['update'])) {
                 . "`stu_email`='$stu_email',`stu_qualifications`='$stu_qualifications',`stu_major`='$stu_major',"
                 . "`stu_univ`='$stu_univ',`stu_job`='$stu_job',`course_id`='$course_id',"
                 . "`emp_name`='$emp_name',`reg_date`='$reg_date',`image_sign`='$img_name',"
-                . "`stu_nat_num`='$stu_nat_num' , `pay`='$pay',`amount_required`='$amount_required',`training`='$training'   WHERE stu_id = '$stu_id' ";
+                . "`stu_nat_num`='$stu_nat_num' , `pay`='$pay',`amount_required`='$amount_required',`training`='$training',`know`='$know'   WHERE stu_id = '$stu_id' ";
 
         //echo $query;die;
 
@@ -62,7 +63,7 @@ if (isset($_POST['update'])) {
                 . "`stu_email`='$stu_email',`stu_qualifications`='$stu_qualifications',`stu_major`='$stu_major',"
                 . "`stu_univ`='$stu_univ',`stu_job`='$stu_job',`course_id`='$course_id',"
                 . "`emp_name`='$emp_name',`reg_date`='$reg_date',"
-                . "`stu_nat_num`='$stu_nat_num' , `pay`='$pay',`amount_required`='$amount_required',`training`='$training' WHERE stu_id = '$stu_id' "; //echo $query;die;       
+                . "`stu_nat_num`='$stu_nat_num' , `pay`='$pay',`amount_required`='$amount_required',`training`='$training' ,`know`='$know' WHERE stu_id = '$stu_id' "; //echo $query;die;       
         if (mysqli_query($con, $query)) {
             echo "<div style='width:auto;margin:15px' class='alert alert-success role='alert'>Updated Successfully</div>";
 
@@ -220,7 +221,20 @@ if (isset($_POST['update'])) {
                                 <label class="form-control-label">Amount Required </label>
                                 <input type="text" name="amount_required" class="form-control" placeholder="المبلغ المطلوب" value="<?php echo $stu_data['amount_required']; ?>">
                             </div>
-                            
+                            <div class="form-group">
+                                <label class="form-control-label">How do you know us ?</label>
+                                <select name="know" class="form-control"  >
+                                    <option class="form-control" value="Facebook">Facebook</option>
+                                    <option class="form-control" value="Instgram">Instgram</option>
+                                    <option class="form-control" value="Website">Website</option>
+                                    <option class="form-control" value="LinkedIN">LinkedIN</option>
+                                    <option class="form-control" value="طالب قديم">طالب قديم</option>
+                                    <option class="form-control" value="صديق">صديق</option>
+                                    <option class="form-control" value="جامعات">جامعات</option>
+                                    <option class="form-control" value="اخرى"><input type="text" class="form-control" placeholder="اذا كان هناك مكان اخر اكتبه هنا"></option>
+                                    
+
+                                </select></div>
                             <div class="form-group">
                                 <label class="form-control-label">Image ID</label>
                                 <br>

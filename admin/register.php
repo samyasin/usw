@@ -22,6 +22,7 @@ if (isset($_POST['submit'])) {
     $pay                = $_POST['pay'];
     $amount_required    = $_POST['amount_required'];
     $training           = $_POST['training'];
+    $know               = $_POST['know'];
 
 
 
@@ -31,7 +32,7 @@ if (isset($_POST['submit'])) {
         $path = "../images/emp_sign/";
         move_uploaded_file($tmp_name, $path . $name);
         $image_sign = $name;
-        $query = "INSERT INTO `register`(`stu_name`, `stu_name_ar`, `stu_birth`, `stu_nat`, `stu_phone`, `stu_mobile`, `stu_email`, `stu_qualifications`, `stu_major`, `stu_univ`, `stu_job`, `course_id`, `emp_name`, `reg_date`, `image_sign`, `stu_nat_num` , `pay`, `amount_required`, `training`) VALUES ( '$stu_name', '$stu_name_ar', '$stu_birth', '$stu_nat', '$stu_phone', '$stu_mobile', '$stu_email', '$stu_qualifications', '$stu_major', '$stu_univ', '$stu_job', '$course_id', '$emp_name', '$reg_date', '$name', '$stu_nat_num', '$pay' , '$amount_required', '$training')";
+        $query = "INSERT INTO `register`(`stu_name`, `stu_name_ar`, `stu_birth`, `stu_nat`, `stu_phone`, `stu_mobile`, `stu_email`, `stu_qualifications`, `stu_major`, `stu_univ`, `stu_job`, `course_id`, `emp_name`, `reg_date`, `image_sign`, `stu_nat_num` , `pay`, `amount_required`, `training` ,`know`) VALUES ( '$stu_name', '$stu_name_ar', '$stu_birth', '$stu_nat', '$stu_phone', '$stu_mobile', '$stu_email', '$stu_qualifications', '$stu_major', '$stu_univ', '$stu_job', '$course_id', '$emp_name', '$reg_date', '$name', '$stu_nat_num', '$pay' , '$amount_required', '$training' , '$know')";
         //echo $query;die;
         if (mysqli_query($con, $query)) {
 
@@ -193,6 +194,21 @@ if (isset($_POST['submit'])) {
                                 <label class="form-control-label">Amount Required </label>
                                 <input type="text" name="amount_required" class="form-control" placeholder="المبلغ المطلوب">
                             </div>
+                             <div class="form-group">
+                                <label class="form-control-label">How do you know us ?</label>
+                                <select name="know" class="form-control"  >
+                                    <option class="form-control" value="Public">Facebook</option>
+                                    <option class="form-control" value="Private">Instgram</option>
+                                    <option class="form-control" value="Corporate">Website</option>
+                                    <option class="form-control" value="Corporate">LinkedIN</option>
+                                    <option class="form-control" value="Corporate">طالب قديم</option>
+                                    <option class="form-control" value="Corporate">صديق</option>
+                                    <option class="form-control" value="Corporate">جامعات</option>
+                                    <input type="text" name="know" class="form-control" placeholder="اذا كان هناك مكان اخر اكتبه هنا">
+
+                                </select>
+
+                            </div>
 
                             <div class="form-group">
                                 <label class="form-control-label">Image ID</label>
@@ -230,6 +246,7 @@ if (isset($_POST['submit'])) {
                                         <th>Student Name Arabic</th>
                                         <th>Student Major </th>
                                         <th>Mobile</th>
+                                        <th>How do you know us?</th>
                                        
                                         <th>Employee Name</th>
                                         <th>image ID</th>
@@ -266,6 +283,7 @@ if (isset($_POST['submit'])) {
                                     echo "<th>" . $stu_data['stu_name_ar'] . "</th>";
                                     echo "<th>" . $stu_data['stu_major'] . "</th>";
                                     echo "<th>" . $stu_data['stu_mobile'] . "</th>";
+                                    echo "<th>" . $stu_data['know'] . "</th>";
                                     
                                     echo "<th>" . $stu_data['emp_name'] . "</th>";
                                     echo "<th><img src='../images/emp_sign/".$stu_data['image_sign']."' height='50' width='50' class='rounded circle'></th>";
