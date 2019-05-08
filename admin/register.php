@@ -197,15 +197,15 @@ if (isset($_POST['submit'])) {
                              <div class="form-group">
                                 <label class="form-control-label">How do you know us ?</label>
                                 <select name="know" class="form-control"  >
-                                    <option class="form-control" value="Public">Facebook</option>
-                                    <option class="form-control" value="Private">Instgram</option>
-                                    <option class="form-control" value="Corporate">Website</option>
-                                    <option class="form-control" value="Corporate">LinkedIN</option>
-                                    <option class="form-control" value="Corporate">طالب قديم</option>
-                                    <option class="form-control" value="Corporate">صديق</option>
-                                    <option class="form-control" value="Corporate">جامعات</option>
-                                    <input type="text" name="know" class="form-control" placeholder="اذا كان هناك مكان اخر اكتبه هنا">
-
+                                   <option class="form-control" value="Facebook">Facebook</option>
+                                    <option class="form-control" value="Instgram">Instgram</option>
+                                    <option class="form-control" value="Website">Website</option>
+                                    <option class="form-control" value="LinkedIN">LinkedIN</option>
+                                    <option class="form-control" value="طالب قديم">طالب قديم</option>
+                                    <option class="form-control" value="صديق">صديق</option>
+                                    <option class="form-control" value="جامعات">جامعات</option>
+                                    <option class="form-control" value="اخرى"><input type="text" class="form-control" placeholder="اذا كان هناك مكان اخر اكتبه هنا"></option>
+                                    
                                 </select>
 
                             </div>
