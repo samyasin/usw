@@ -1,4 +1,19 @@
 <?php include '../includes/header.php'; ?>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+<script>
+$(document).ready(function(){
+  $("select").change(function(){
+  	var x = $("select").val();
+    
+    //alert("The text has been changed.");
+    if($("select").val() == "C"){
+    	alert(111);
+    	$("input").show();
+    }
+  });
+});
+</script>
 <?php include '../includes/connect_db.php'; ?>
 
 <?php
@@ -231,10 +246,11 @@ if (isset($_POST['update'])) {
                                     <option class="form-control" value="طالب قديم">طالب قديم</option>
                                     <option class="form-control" value="صديق">صديق</option>
                                     <option class="form-control" value="جامعات">جامعات</option>
-                                    <option class="form-control" value="اخرى"><input type="text" class="form-control" placeholder="اذا كان هناك مكان اخر اكتبه هنا"></option>
+                                    <option class="form-control" value="C">C</option>
                                     
 
-                                </select></div>
+                                </select><input type="text" style="display:none">
+                            </div>
                             
                             <div class="form-group">
                                 <label class="form-control-label">Image ID</label>
