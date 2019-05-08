@@ -235,6 +235,7 @@ if (isset($_POST['update'])) {
                                     
 
                                 </select></div>
+                            
                             <div class="form-group">
                                 <label class="form-control-label">Image ID</label>
                                 <br>
