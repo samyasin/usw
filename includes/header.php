@@ -91,7 +91,7 @@ require 'connect_db.php';
                         <div class="avatar"><img src="../images/adminProfile/<?php echo $admin['admin_image']; ?>" alt="..." class="img-fluid rounded-circle"></div>
                         <div class="title">
                             <h6 class="s">
-<?php echo $admin['full_name']; ?>
+                                <?php echo $admin['full_name']; ?>
                             </h6>
                             <p>Admin</p>
                         </div>
@@ -100,10 +100,11 @@ require 'connect_db.php';
                     <ul class="list-unstyled">
                         <li <?php echo (basename($_SERVER['PHP_SELF'], ".php")) == "index" ? "class='active'" : ''; ?> ><a href="index.php"> <i class="icon-home"></i> Home </a></li>
                         <li <?php echo (basename($_SERVER['PHP_SELF'], ".php")) == "admin" ? "class='active'" : ''; ?> ><a href="admin.php"> <i class="icon-user"></i>&nbsp; Manage Admin </a></li>
+                        <li <?php echo (basename($_SERVER['PHP_SELF'], ".php")) == "register" ? "class='active'" : ''; ?> ><a href="register.php"> <i class="icon-user"></i>&nbsp; Register Student </a></li>
                         <li <?php echo (basename($_SERVER['PHP_SELF'], ".php")) == "students" ? "class='active'" : ''; ?> ><a href="students.php"> <i class="icon-group"></i>&nbsp; Manage Students </a></li>
                         <li <?php echo (basename($_SERVER['PHP_SELF'], ".php")) == "categories" ? "class='active'" : ''; ?> ><a href="categories.php"> <i class="icon-list"></i> Manage Categories </a></li>
                         <li <?php echo (basename($_SERVER['PHP_SELF'], ".php")) == "courses" ? "class='active'" : ''; ?> ><a href="courses.php"> <i class="icon-book"></i> Manage Courses </a></li>
-                        <!--<li <?//php echo (basename($_SERVER['PHP_SELF'], ".php")) == "events" ? "class='active'" : ''; ?> ><a href="certification.php"> <i class="icon-calendar"></i> Manage Certification </a></li>-->
+                        <!--<li <? //php echo (basename($_SERVER['PHP_SELF'], ".php")) == "events" ? "class='active'" : '';  ?> ><a href="certification.php"> <i class="icon-calendar"></i> Manage Certification </a></li>-->
                         <li <?php echo (basename($_SERVER['PHP_SELF'], ".php")) == "events" ? "class='active'" : ''; ?> ><a href="events.php"> <i class="icon-calendar"></i> Manage Events </a></li>
                         <li <?php echo ((basename($_SERVER['PHP_SELF'], ".php")) == "albums" || (basename($_SERVER['PHP_SELF'], ".php")) == "images" ) ? "class='active'" : ''; ?> ><a href="albums.php"> <i class="icon-picture"></i> Manage Gallary </a></li>
                         <li <?php echo (basename($_SERVER['PHP_SELF'], ".php")) == "slider" ? "class='active'" : ''; ?> ><a href="slider.php"><i class="fa fa-toggle-on"></i>Manage Slider </a></li><li <?php echo (basename($_SERVER['PHP_SELF'], ".php")) == "settings" ? "class='active'" : ''; ?> ><a href="settings.php"><i class="fa fa-cog"></i>Manage Pages </a></li>

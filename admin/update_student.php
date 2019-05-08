@@ -2,24 +2,32 @@
 <?php include '../includes/connect_db.php'; ?>
 
 <?php
+$stu_id = $_GET['stu_id'];
+$query = "SELECT * FROM register where stu_id = $stu_id";
+$result = mysqli_query($con, $query);
+$stu_data = mysqli_fetch_assoc($result);
 if (isset($_POST['update'])) {
-    $stu_nat_num = $_POST['stu_nat_num'];
-    $stu_name = $_POST['stu_name'];
-    $stu_name_ar = $_POST['stu_name_ar'];
-    $stu_birth = $_POST['stu_birth'];
-    $stu_nat = $_POST['stu_nat'];
-    $stu_phone = $_POST['stu_phone'];
-    $stu_mobile = $_POST['stu_mobile'];
-    $stu_email = $_POST['stu_email'];
+    $stu_nat_num        = $_POST['stu_nat_num'];
+    $stu_name           = $_POST['stu_name'];
+    $stu_name_ar        = $_POST['stu_name_ar'];
+    $stu_birth          = $_POST['stu_birth'];
+    $stu_nat            = $_POST['stu_nat'];
+    $stu_phone          = $_POST['stu_phone'];
+    $stu_mobile         = $_POST['stu_mobile'];
+    $stu_email          = $_POST['stu_email'];
     $stu_qualifications = $_POST['stu_qualifications'];
-    $stu_major = $_POST['stu_major'];
-    $stu_univ = $_POST['stu_univ'];
-    $stu_job = $_POST['stu_job'];
-    $course_id = $_POST['course_id'];
-    $emp_name = $_POST['emp_name'];
-    $reg_date = $_POST['reg_date'];
-    $old_image = $_POST['old_image_sign'];
-    $img_tmp = $_FILES['image_sign']['tmp_name'];
+    $stu_major          = $_POST['stu_major'];
+    $stu_univ           = $_POST['stu_univ'];
+    $stu_job            = $_POST['stu_job'];
+    $course_id          = $_POST['course_id'];
+    $emp_name           = $_POST['emp_name'];
+    $reg_date           = $_POST['reg_date'];
+    $pay                = $_POST['pay'];
+    $amount_required    = $_POST['amount_required'];
+    $training           = $_POST['training'];
+    $old_image          = $_POST['old_image_sign'];
+    $img_tmp            = $_FILES['image_sign']['tmp_name'];
+    
     $path = "../images/emp_sign/";
     if ($_FILES['image_sign']['error'] == 0) {
         $img_name = time() . '-' . $_FILES['image_sign']['name'];
@@ -30,7 +38,8 @@ if (isset($_POST['update'])) {
                 . "`stu_email`='$stu_email',`stu_qualifications`='$stu_qualifications',`stu_major`='$stu_major',"
                 . "`stu_univ`='$stu_univ',`stu_job`='$stu_job',`course_id`='$course_id',"
                 . "`emp_name`='$emp_name',`reg_date`='$reg_date',`image_sign`='$img_name',"
-                . "`stu_nat_num`=$stu_nat_num WHERE WHERE stu_id = $stu_id";
+                . "`stu_nat_num`='$stu_nat_num' , `pay`='$pay',`amount_required`='$amount_required',`training`='$training'   WHERE stu_id = '$stu_id' ";
+
         //echo $query;die;
 
         if (mysqli_query($con, $query)) {
@@ -48,7 +57,12 @@ if (isset($_POST['update'])) {
         }
     } else if ($_FILES['image_sign']['error'] == 4) {
 
-        $query = "UPDATE `register` SET `stu_name`=$stu_name,`stu_name_ar`='$stu_name_ar',`stu_birth`= '$stu_birth',`stu_nat`='$stu_nat',`stu_phone`='$stu_phone',`stu_mobile`='$stu_mobile',`stu_qualifications`='$stu_qualifications',`stu_major`='$stu_major',`stu_univ`='$stu_univ',`stu_job`='$stu_job',`course_id`='$course_id',`emp_name`='$emp_name',`reg_date`='$reg_date',`stu_nat_num`='$stu_nat_num' WHERE stu_id = $stu_id";
+         $query = "UPDATE `register` SET `stu_name`='$stu_name',`stu_name_ar`='$stu_name_ar',"
+                . "`stu_birth`='$stu_birth',`stu_nat`='$stu_nat',`stu_phone`='$stu_phone',`stu_mobile`='$stu_mobile',"
+                . "`stu_email`='$stu_email',`stu_qualifications`='$stu_qualifications',`stu_major`='$stu_major',"
+                . "`stu_univ`='$stu_univ',`stu_job`='$stu_job',`course_id`='$course_id',"
+                . "`emp_name`='$emp_name',`reg_date`='$reg_date',"
+                . "`stu_nat_num`='$stu_nat_num' , `pay`='$pay',`amount_required`='$amount_required',`training`='$training' WHERE stu_id = '$stu_id' "; //echo $query;die;       
         if (mysqli_query($con, $query)) {
             echo "<div style='width:auto;margin:15px' class='alert alert-success role='alert'>Updated Successfully</div>";
 
@@ -70,10 +84,7 @@ if (isset($_POST['update'])) {
 }
 
 // fetch old data 
-$stu_id = $_GET['stu_id'];
-$query = "SELECT * FROM register where stu_id = $stu_id";
-$result = mysqli_query($con, $query);
-$stu_data = mysqli_fetch_assoc($result);
+
 ?>
 
 
@@ -99,15 +110,15 @@ $stu_data = mysqli_fetch_assoc($result);
                         <form method="post" action="" enctype="multipart/form-data">
                             <div class="form-group">
                                 <label class="form-control-label">course Name to Student</label>
-<?php
-$query = "SELECT * FROM course";
-$result = mysqli_query($con, $query);
-echo "<select name='course_id' class='form-control' >course";
-while ($cat_data = mysqli_fetch_assoc($result)) {
-    echo "<option value='" . $cat_data['course_id'] . "'>" . $cat_data['course_name'] . " - " . $cat_data['course_name_ar'] . "</option>";
-}
-echo "</select>";
-?>
+                                <?php
+                                $query = "SELECT * FROM course";
+                                $result = mysqli_query($con, $query);
+                                echo "<select name='course_id' class='form-control' >course";
+                                while ($cat_data = mysqli_fetch_assoc($result)) {
+                                    echo "<option value='" . $cat_data['course_id'] . "'>" . $cat_data['course_name'] . " - " . $cat_data['course_name_ar'] . "</option>";
+                                }
+                                echo "</select>";
+                                ?>
                             </div>
 
                             <div class="form-group">
@@ -186,11 +197,32 @@ echo "</select>";
                                 <label class="form-control-label">Register Date</label>
                                 <input type="reg_date" name="reg_date" class="form-control" value="2019-07-22" min="2019-01-02" value="<?php echo $stu_data['reg_date']; ?>" >
                             </div>
-
-
-
                             <div class="form-group">
-                                <label class="form-control-label">Sign Image</label>
+                                <label class="form-control-label">Training</label>
+                                <select name="training" class="form-control"  >
+                                    <option class="form-control" value="Public">Public</option>
+                                    <option class="form-control" value="Private">Private</option>
+                                    <option class="form-control" value="Corporate">Corporate</option>
+
+                                </select>
+
+                            </div>
+                            <div class="form-group">
+                                <label class="form-control-label">Pay</label>
+                                <select name="pay" class="form-control"  >
+                                    <option class="form-control" value="Cash">كاش</option>
+                                    <option class="form-control" value="Payments">اقساط</option>
+
+                                </select>
+
+                            </div>
+                            <div class="form-group">
+                                <label class="form-control-label">Amount Required </label>
+                                <input type="text" name="amount_required" class="form-control" placeholder="المبلغ المطلوب" value="<?php echo $stu_data['amount_required']; ?>">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-control-label">Image ID</label>
                                 <br>
                                 <img src="<?php echo '../images/emp_sign/' . $stu_data['image_sign'] ?>" height="80" width="80">
                                 <input type="file" name="image_sign" class="form-control">

@@ -4,24 +4,24 @@
 
 <?php
 if (isset($_POST['submit'])) {
-    $stu_nat_num = $_POST['stu_nat_num'];
-    $stu_name = $_POST['stu_name'];
-    $stu_name_ar = $_POST['stu_name_ar'];
-    $stu_birth = $_POST['stu_birth'];
-    $stu_nat = $_POST['stu_nat'];
-    $stu_phone = $_POST['stu_phone'];
-    $stu_mobile = $_POST['stu_mobile'];
-    $stu_email = $_POST['stu_email'];
+    $stu_nat_num        = $_POST['stu_nat_num'];
+    $stu_name           = $_POST['stu_name'];
+    $stu_name_ar        = $_POST['stu_name_ar'];
+    $stu_birth          = $_POST['stu_birth'];
+    $stu_nat            = $_POST['stu_nat'];
+    $stu_phone          = $_POST['stu_phone'];
+    $stu_mobile         = $_POST['stu_mobile'];
+    $stu_email          = $_POST['stu_email'];
     $stu_qualifications = $_POST['stu_qualifications'];
-    $stu_major = $_POST['stu_major'];
-    $stu_univ = $_POST['stu_univ'];
-    $stu_job = $_POST['stu_job'];
-    $course_id = $_POST['course_id'];
-    $emp_name = $_POST['emp_name'];
-    $reg_date = $_POST['reg_date'];
-    $pay = $_POST['pay'];
-    $amount_required = $_POST['amount_required'];
-    $training = $_POST['training'];
+    $stu_major          = $_POST['stu_major'];
+    $stu_univ           = $_POST['stu_univ'];
+    $stu_job            = $_POST['stu_job'];
+    $course_id          = $_POST['course_id'];
+    $emp_name           = $_POST['emp_name'];
+    $reg_date           = $_POST['reg_date'];
+    $pay                = $_POST['pay'];
+    $amount_required    = $_POST['amount_required'];
+    $training           = $_POST['training'];
 
 
 
@@ -92,38 +92,38 @@ if (isset($_POST['submit'])) {
 
                             <div class="form-group">
                                 <label class="form-control-label">Student Name</label>
-                                <input type="text" name="stu_name" placeholder="stu_name_ar" class="form-control">
+                                <input type="text" name="stu_name" placeholder="Name of student in English" class="form-control">
                             </div>
                             <div class="form-group">
                                 <label class="form-control-label">Student Name Arabic</label>
-                                <input type="text" name="stu_name_ar" placeholder="stu_name_ar " class="form-control">
+                                <input type="text" name="stu_name_ar" placeholder="اسم الطالب باللغة العربية " class="form-control">
                             </div>
 
                             <div class="form-group">
                                 <label class="form-control-label">Student Nationality's Number </label><br>
-                                <input type="text" name="stu_nat_num" placeholder="stu_nat_num" class="form-control">
+                                <input type="text" name="stu_nat_num" placeholder="الرقم الوطني او رقم الجواز" class="form-control">
                             </div>
 
                             <div class="form-group">
                                 <label class="form-control-label">Student Nationality's Country </label><br>
-                                <input type="text" name="stu_nat" placeholder="stu_nat" class="form-control">
+                                <input type="text" name="stu_nat" placeholder="جنسية الطالب" class="form-control">
                             </div>
 
                             <div class="form-group">
                                 <label class="form-control-label">Student Phone </label><br>
-                                <input type="text" name="stu_phone" placeholder="stu_phone" class="form-control">
+                                <input type="text" name="stu_phone" placeholder="رقم الهاتف" class="form-control">
                             </div>
 
                             <div class="form-group">
                                 <label class="form-control-label">Student Mobile </label><br>
-                                <input type="text" name="stu_mobile" placeholder="stu_mobile" class="form-control">
+                                <input type="text" name="stu_mobile" placeholder="رقم الجوال" class="form-control">
                             </div>
 
 
 
                             <div class="form-group">
                                 <label class="form-control-label">Student Email </label><br>
-                                <input type="email" name="stu_email" placeholder="stu_email" class="form-control">
+                                <input type="email" name="stu_email" placeholder="البريد الالكتروني" class="form-control">
                             </div>
 
                             <!-- <div class="form-group">
@@ -142,23 +142,23 @@ if (isset($_POST['submit'])) {
 
                             <div class="form-group">
                                 <label class="form-control-label">Student Major</label>
-                                <input type="text" name="stu_major" class="form-control" placeholder="stu_major">
+                                <input type="text" name="stu_major" class="form-control" placeholder="التخصص">
                             </div>
 
                             <div class="form-group">
                                 <label class="form-control-label">Student Job</label>
-                                <input type="text" name="stu_job" class="form-control" placeholder="stu_job">
+                                <input type="text" name="stu_job" class="form-control" placeholder="المسمى الوظيفي للطالب">
                             </div>
 
 
                             <div class="form-group">
                                 <label class="form-control-label">Student University</label>
-                                <input type="text" name="stu_univ" class="form-control" placeholder="stu_univ">
+                                <input type="text" name="stu_univ" class="form-control" placeholder="الجامعة / الكلية">
                             </div>
 
                             <div class="form-group">
                                 <label class="form-control-label">Employee Name</label>
-                                <input type="text" name="emp_name" class="form-control" placeholder="emp_name">
+                                <input type="text" name="emp_name" class="form-control" placeholder="اسم الموظف">
                             </div>
 
                             <div class="form-group">
@@ -183,19 +183,19 @@ if (isset($_POST['submit'])) {
                             <div class="form-group">
                                 <label class="form-control-label">Pay</label>
                                 <select name="pay" class="form-control"  >
-                                    <option class="form-control" value="Cash">Cash</option>
-                                    <option class="form-control" value="Payments">Payments</option>
+                                    <option class="form-control" value="Cash">كاش</option>
+                                    <option class="form-control" value="Payments">اقساط</option>
 
                                 </select>
 
                             </div>
                             <div class="form-group">
                                 <label class="form-control-label">Amount Required </label>
-                                <input type="text" name="amount_required" class="form-control" placeholder="Amount Required ">
+                                <input type="text" name="amount_required" class="form-control" placeholder="المبلغ المطلوب">
                             </div>
 
                             <div class="form-group">
-                                <label class="form-control-label">Sign Image</label>
+                                <label class="form-control-label">Image ID</label>
                                 <input type="file" name="image_sign" class="form-control">
                             </div>
 
