@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: May 08, 2019 at 12:14 PM
+-- Generation Time: May 09, 2019 at 11:37 AM
 -- Server version: 5.7.19
 -- PHP Version: 5.6.31
 
@@ -336,10 +336,8 @@ CREATE TABLE IF NOT EXISTS `register` (
 --
 
 INSERT INTO `register` (`stu_id`, `stu_name`, `stu_name_ar`, `stu_birth`, `stu_nat`, `stu_phone`, `stu_mobile`, `stu_email`, `stu_qualifications`, `stu_major`, `stu_univ`, `stu_job`, `course_id`, `emp_name`, `reg_date`, `image_sign`, `stu_nat_num`, `pay`, `amount_required`, `training`, `know`) VALUES
-(4, 'test name', 'test name ar', '1995-04-08', 'test nat con', '5555', '5555', 'test@test', 'High School', 'test major', 'test uni', 'test job', 21, 'test emp', '2019-07-22', '1557228560-BB.jpg', '999999999', NULL, NULL, NULL, NULL),
-(9, 'test name2', 'test name ar', '1995-04-08', 'test nat con', '5555', '5555', 'test@test', 'High School', 'test major', 'test uni', 'test job', 21, 'test emp', '2019-07-22', '1557232518-BB.jpg', '999999999', 'Cash', '50', 'Public', NULL),
-(12, 'majd esam ', 'مجد عصام', '1995-04-08', 'jordinin', '0795963900', '0795963900', 'majd@gmail.com', 'High School', 'test major', 'zaitona', 'test job', 21, 'alaa alraei', '2019-07-22', '1557311609-nm.jpg', '9841053333', 'Cash', '350', 'Public', 'اخرى'),
-(13, 'Mohammed Fayez Ahmed Ghanem ', 'محمد فايز احمد غانم', '1995-04-08', 'اردني', '0796499602', '0796499602', 'mohammadghanem432@gmail.com', 'High School', 'نظم معلومات ادارية', 'جامعة الاسراء / كلية الاعمال', 'لايوجد', 21, 'ديانا المصري', '2019-07-22', '1557312884-BB.jpg', '9961012036', 'Cash', '350', 'Public', 'Website');
+(12, 'majd esam ', 'مجد عصام', '1995-04-08', 'أردني', '+962795963900', '+962795963900', 'majd@gmail.com', 'High School', 'طب', 'zaitona', 'test job', 30, 'alaa alraei', '2019-07-22', '1557311609-nm.jpg', '9841053333', 'Cash', '350', 'Public', 'Facebook'),
+(13, 'Mohammed Fayez Ahmed Ghanem ', 'محمد فايز احمد غانم', '1995-04-08', 'أردني', '+962796499602', '+962796499602', 'mohammadghanem432@gmail.com', 'High School', 'طب', 'جامعة الاسراء / كلية الاعمال', 'لايوجد', 21, 'ديانا المصري', '2019-07-22', '1557312884-BB.jpg', '9961012036', 'Cash', '350', 'Public', 'Facebook');
 
 -- --------------------------------------------------------
 
