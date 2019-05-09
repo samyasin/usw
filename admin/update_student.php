@@ -153,7 +153,15 @@ if (isset($_POST['update'])) {
 
                             <div class="form-group">
                                 <label class="form-control-label">Student Nationality's Country </label><br>
-                                <input type="text" name="stu_nat" placeholder="stu_nat" class="form-control" value="<?php echo $stu_data['stu_nat']; ?>">
+                                <select name="stu_nat" class="form-control"  >
+                                    <option class="form-control" value="أردني">أردني</option>
+                                    <option class="form-control" value="فلسطيني">فلسطيني</option>
+                                    <option class="form-control" value="سوري">سوري</option>
+                                    <option class="form-control" value="عراقي">عراقي</option>
+                                    <option class="form-control" value="سعودي">سعودي</option>
+                                    <option class="form-control" value="اخرى">اخرى</option>
+
+                                </select>
                             </div>
 
                             <div class="form-group">
@@ -179,13 +187,22 @@ if (isset($_POST['update'])) {
                                     <option class="form-control" value="High School">توجيهي</option>
                                     <option class="form-control" value="Bachelors">بكالوريس</option>
                                     <option class="form-control" value="Master">ماجستير</option>
+                                    <option class="form-control" value="Ph.D.">دكتوراه</option>
                                 </select>
 
                             </div>
 
                             <div class="form-group">
                                 <label class="form-control-label">Student Major</label>
-                                <input type="text" name="stu_major" class="form-control" placeholder="stu_major" value="<?php echo $stu_data['stu_major']; ?>"> 
+                                <select name="stu_major" class="form-control"  >
+                                    <option class="form-control" value="طب">طب</option>
+                                    <option class="form-control" value="هندسة">هندسة</option>
+                                    <option class="form-control" value="تكنولوجيا المعلومات / IT">تكنولوجيا المعلومات / IT</option>
+                                    <option class="form-control" value="محاسبة">محاسبة</option>
+                                    <option class="form-control" value="ادارة الاعمال">ادارة الاعمال</option>
+                                    <option class="form-control" value="اخرى">اخرى</option>
+
+                                </select>
                             </div>
 
                             <div class="form-group">

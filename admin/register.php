@@ -107,17 +107,25 @@ if (isset($_POST['submit'])) {
 
                             <div class="form-group">
                                 <label class="form-control-label">Student Nationality's Country </label><br>
-                                <input type="text" name="stu_nat" placeholder="جنسية الطالب" class="form-control">
+                                <select name="stu_nat" class="form-control"  >
+                                    <option class="form-control" value="أردني">أردني</option>
+                                    <option class="form-control" value="فلسطيني">فلسطيني</option>
+                                    <option class="form-control" value="سوري">سوري</option>
+                                    <option class="form-control" value="عراقي">عراقي</option>
+                                    <option class="form-control" value="سعودي">سعودي</option>
+                                    <option class="form-control" value="اخرى">اخرى</option>
+
+                                </select>
                             </div>
 
                             <div class="form-group">
                                 <label class="form-control-label">Student Phone </label><br>
-                                <input type="text" name="stu_phone" placeholder="رقم الهاتف" class="form-control">
+                                <input type="text" name="stu_phone" placeholder="رقم الهاتف الارضي" class="form-control" value="+962">
                             </div>
 
                             <div class="form-group">
                                 <label class="form-control-label">Student Mobile </label><br>
-                                <input type="text" name="stu_mobile" placeholder="رقم الجوال" class="form-control">
+                                <input type="text" name="stu_mobile" placeholder="رقم الجوال" class="form-control" value="+962">
                             </div>
 
 
@@ -137,13 +145,22 @@ if (isset($_POST['submit'])) {
                                     <option class="form-control" value="High School">توجيهي</option>
                                     <option class="form-control" value="Bachelors">بكالوريس</option>
                                     <option class="form-control" value="Master">ماجستير</option>
+                                    <option class="form-control" value="Ph.D.">دكتوراه</option>
                                 </select>
 
                             </div>
 
                             <div class="form-group">
                                 <label class="form-control-label">Student Major</label>
-                                <input type="text" name="stu_major" class="form-control" placeholder="التخصص">
+                                <select name="stu_major" class="form-control"  >
+                                    <option class="form-control" value="طب">طب</option>
+                                    <option class="form-control" value="هندسة">هندسة</option>
+                                    <option class="form-control" value="تكنولوجيا المعلومات / IT">تكنولوجيا المعلومات / IT</option>
+                                    <option class="form-control" value="محاسبة">محاسبة</option>
+                                    <option class="form-control" value="ادارة الاعمال">ادارة الاعمال</option>
+                                    <option class="form-control" value="اخرى">اخرى</option>
+
+                                </select>
                             </div>
 
                             <div class="form-group">
@@ -182,7 +199,7 @@ if (isset($_POST['submit'])) {
 
                             </div>
                             <div class="form-group">
-                                <label class="form-control-label">Pay</label>
+                                <label class="form-control-label">Pay Method</label>
                                 <select name="pay" class="form-control"  >
                                     <option class="form-control" value="Cash">كاش</option>
                                     <option class="form-control" value="Payments">اقساط</option>
@@ -204,7 +221,7 @@ if (isset($_POST['submit'])) {
                                     <option class="form-control" value="طالب قديم">طالب قديم</option>
                                     <option class="form-control" value="صديق">صديق</option>
                                     <option class="form-control" value="جامعات">جامعات</option>
-                                    <option class="form-control" value="اخرى"><input type="text" class="form-control" placeholder="اذا كان هناك مكان اخر اكتبه هنا"></option>
+                                    <option class="form-control" value="اخرى">اخرى</option>
                                     
                                 </select>
 
@@ -240,16 +257,18 @@ if (isset($_POST['submit'])) {
                             <table class="table table-striped table-sm">
                                 <thead>
                                     <tr>
-                                        <th>Student ID</th>
-                                        <th>course Name</th>
-                                        <th>Student Name</th>
-                                        <th>Student Name Arabic</th>
-                                        <th>Student Major </th>
-                                        <th>Mobile</th>
-                                        <th>How do you know us?</th>
+                                        <th>مسح</th>
+                                        <th>تعديل</th>
+                                        <th>اسم الدورة</th>
+                                        
+                                        <th>التخصص </th>
+                                        
+                                        <th>كيف عرف بنا</th>
                                        
-                                        <th>Employee Name</th>
-                                        <th>image ID</th>
+                                        <th>اسم الموظف</th>
+                                        <th>صورة العقد</th>
+                                        <th>رقم الجوال</th>
+                                        <th>اسم الطالب</th>
                                         <!--<th>Student birth </th>
                                         <th>stu nat</th>
                                         <th>stu_phone </th>
@@ -263,8 +282,7 @@ if (isset($_POST['submit'])) {
                                         
                                         <th>image_sign</th>
                                         <th>reg_date</th>-->
-                                        <th>Edit</th>
-                                        <th>Delete</th>
+                                       
                                     </tr>
                                 </thead>
                                 <?php
@@ -277,17 +295,15 @@ if (isset($_POST['submit'])) {
                                     $cat_name = mysqli_fetch_assoc($res);
 
                                     echo "<tr>";
-                                    echo "<th>" . $stu_data['stu_id'] . "</th>";
+                                    echo "<th><a href='delete_student.php?stu_id=" . $stu_data['stu_id'] . "' class='btn btn-danger'>Delete</a></th>";
+                                    echo "<th><a href='update_student.php?stu_id=" . $stu_data['stu_id'] . "' class='btn btn-primary'>Edit</a></th>";
                                     echo "<th>{$cat_name['course_name']} - {$cat_name['course_name_ar']}</th>";
-                                    echo "<th>" . $stu_data['stu_name'] . "</th>";
-                                    echo "<th>" . $stu_data['stu_name_ar'] . "</th>";
                                     echo "<th>" . $stu_data['stu_major'] . "</th>";
-                                    echo "<th>" . $stu_data['stu_mobile'] . "</th>";
                                     echo "<th>" . $stu_data['know'] . "</th>";
-                                    
                                     echo "<th>" . $stu_data['emp_name'] . "</th>";
                                     echo "<th><img src='../images/emp_sign/".$stu_data['image_sign']."' height='50' width='50' class='rounded circle'></th>";
-                                    
+                                    echo "<th>" . $stu_data['stu_mobile'] . "</th>";
+                                    echo "<th>" . $stu_data['stu_name_ar'] . "</th>";
                                     /* echo "<th>".substr($cour_data['course_desc'],0,70)."...</th>";
                                       echo "<th>".substr($cour_data['course_desc_ar'],0,70)."....</th>";
                                       echo "<th>".substr($cour_data['course_outcome'],0,70)."..</th>";
@@ -301,8 +317,7 @@ if (isset($_POST['submit'])) {
                                       echo "<th>".substr($cour_data['course_content_ar'],0,70)."...</th>";
                                       echo "<th>".date('Y-m-d',strtotime($cour_data['start_date']))."</th>";
                                       echo "<th>".date('Y-m-d',strtotime($cour_data['end_date']))."</th>"; */
-                                    echo "<th><a href='update_student.php?stu_id=" . $stu_data['stu_id'] . "' class='btn btn-primary'>Edit</a></th>";
-                                    echo "<th><a href='delete_student.php?stu_id=" . $stu_data['stu_id'] . "' class='btn btn-danger'>Delete</a></th>";
+                                    
                                     echo "</tr>";
                                 }
                                 ?>
