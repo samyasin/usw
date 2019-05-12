@@ -5,8 +5,8 @@
 <?php
 if (isset($_POST['submit'])) {
     $stu_nat_num = $_POST['stu_nat_num'];
-    $stu_name = $_POST['stu_name'];
-    $stu_name_ar = $_POST['stu_name_ar'];
+    $stu_name = mysqli_real_escape_string($con,$_POST['stu_name']);
+    $stu_name_ar = mysqli_real_escape_string($con,$_POST['stu_name_ar']);
     $stu_birth = $_POST['stu_birth'];
     $stu_nat = $_POST['stu_nat'];
     

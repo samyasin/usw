@@ -23,8 +23,8 @@ $result = mysqli_query($con, $query);
 $stu_data = mysqli_fetch_assoc($result);
 if (isset($_POST['update'])) {
     $stu_nat_num = $_POST['stu_nat_num'];
-    $stu_name = $_POST['stu_name'];
-    $stu_name_ar = $_POST['stu_name_ar'];
+    $stu_name = mysqli_real_escape_string($con,$_POST['stu_name']);
+    $stu_name_ar = mysqli_real_escape_string($con,$_POST['stu_name_ar']);
     $stu_birth = $_POST['stu_birth'];
     $stu_nat = $_POST['stu_nat'];
 
@@ -177,7 +177,7 @@ if (isset($_POST['update'])) {
                                 <div class="col-lg-6">
                                     <div class="form-group">
                                         <label class="form-control-label">Student Mobile </label><br>
-                                        <input type="text" name="stu_mobile" placeholder="رقم الجوال" class="form-control" value="+962" value="<?php echo $stu_data['stu_mobile']; ?>">
+                                        <input type="text" name="stu_mobile" placeholder="رقم الجوال" class="form-control" value="<?php echo $stu_data['stu_mobile']; ?>">
                                     </div>
                                 </div>
 
