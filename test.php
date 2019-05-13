@@ -3,7 +3,7 @@
 $currentDate = new DateTime('2019-05-13');
 $h = 10;
 while ($h>=0){
-$currentDate->modify('+1 W');
+$currentDate->modify('+7 day');
 
 $h -= 4;
 }
