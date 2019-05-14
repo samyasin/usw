@@ -101,6 +101,7 @@ require 'connect_db.php';
                         <li <?php echo (basename($_SERVER['PHP_SELF'], ".php")) == "index" ? "class='active'" : ''; ?> ><a href="index.php"> <i class="icon-home"></i> Home </a></li>
                         <li <?php echo (basename($_SERVER['PHP_SELF'], ".php")) == "admin" ? "class='active'" : ''; ?> ><a href="admin.php"> <i class="icon-user"></i>&nbsp; Manage Admin </a></li>
                         <li <?php echo (basename($_SERVER['PHP_SELF'], ".php")) == "register" ? "class='active'" : ''; ?> ><a href="register.php"> <i class="icon-user"></i>&nbsp; Register Student </a></li>
+                        <li <?php echo (basename($_SERVER['PHP_SELF'], ".php")) == "class_room" ? "class='active'" : ''; ?> ><a href="class_room.php"> <i class="icon-group"></i>&nbsp; Manage Class Room </a></li>
                         <li <?php echo (basename($_SERVER['PHP_SELF'], ".php")) == "display" ? "class='active'" : ''; ?> ><a href="display_register.php"> <i class="icon-user"></i>&nbsp; Register Table </a></li>
                         <li <?php echo (basename($_SERVER['PHP_SELF'], ".php")) == "students" ? "class='active'" : ''; ?> ><a href="students.php"> <i class="icon-group"></i>&nbsp; Manage Students </a></li>
                         <li <?php echo (basename($_SERVER['PHP_SELF'], ".php")) == "categories" ? "class='active'" : ''; ?> ><a href="categories.php"> <i class="icon-list"></i> Manage Categories </a></li>

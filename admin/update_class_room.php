@@ -10,13 +10,16 @@ $class_data = mysqli_fetch_assoc($result);
 if (isset($_POST['update'])) {
     $course_id = $_POST['course_id'];
     $days = $_POST['days'];
+    $daysString = implode(",", $days);
     $total_hours = $_POST['total_hours'];
     $hours_perday = $_POST['hours_perday'];
+    $start_time = $_POST['start_time'];
+    $end_time = $_POST['end_time'];
     $start_date = $_POST['start_date'];
     $end_date = $_POST['end_date'];
-    if (!empty($days && $total_hours && $hours_perday && $start_date)) {
+    if (!empty($daysString && $total_hours && $hours_perday && $start_date)) {
 
-        $query = "UPDATE `class` SET `course_id`='$course_id',`days`='$days',`total_hours`='$total_hours',`hours_perday`='$hours_perday',`start_date`='$start_date',`end_date`='$end_date' WHERE `class_id` = '$class_id' ";//echo $query;die;
+        $query = "UPDATE `class` SET `course_id`='$course_id',`days`='$daysString',`total_hours`='$total_hours',`hours_perday`='$hours_perday',`start_time`='$start_time',`end_time`='$end_time',`start_date`='$start_date',`end_date`='$end_date' WHERE `class_id` = '$class_id' ";//echo $query;die;
         if (mysqli_query($con, $query)) {
 
             echo "<div style='width:auto;margin:15px' class='alert alert-success role='alert'>Update Class Successfully </div>";
@@ -66,16 +69,15 @@ if (isset($_POST['update'])) {
                             <div class="col-lg-6">
                                 <div>
                                     <label class="form-control-label">Days</label><br>
-                                    <?php
-                                    
-                              echo '<input name="days" type="checkbox"  value="Sunday"> Sunday
-                                    <input name="days" type="checkbox"  value="Monday"> Monday 
-                                    <input name="days" type="checkbox"  value="Tuesday"> Tuesday
-                                    <input name="days" type="checkbox"  value="Wndnesday"> Wndnesday
-                                    <input name="days" type="checkbox"  value="Thursday"> Thursday';
-                              
-                              
-                              ?>
+
+
+                                    <input name="days[]" type="checkbox"  value="Sunday"> Sunday&nbsp;&nbsp;
+                                    <input name="days[]" type="checkbox"  value="Monday"> Monday &nbsp;&nbsp;
+                                    <input name="days[]" type="checkbox"  value="Tuesday"> Tuesday&nbsp;&nbsp;
+                                    <input name="days[]" type="checkbox"  value="Wndnesday"> Wndnesday&nbsp;&nbsp;
+                                    <input name="days[]" type="checkbox"  value="Thursday"> Thursday
+
+
 
 
                                 </div>
@@ -89,7 +91,19 @@ if (isset($_POST['update'])) {
                             <div class="col-lg-6">
                                 <div class="form-group">
                                     <label class="form-control-label">hours perday</label><br>
-                                    <input type="time" name="hours_perday" placeholder="عدد الساعات في الاسبوع" class="form-control" value="<?php echo $class_data['hours_perday']; ?>">
+                                    <input type="text" name="hours_perday" placeholder="عدد الساعات في الاسبوع" class="form-control" value="<?php echo $class_data['hours_perday']; ?>">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label class="form-control-label">Start Time</label>
+                                    <input type="time" name="start_time" class="form-control" value="2019-04-08" min="2018-01-01" >
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label class="form-control-label">Start End</label>
+                                    <input type="time" name="end_time" class="form-control" value="2019-04-08" min="2018-01-01" >
                                 </div>
                             </div>
                             <div class="col-lg-6">

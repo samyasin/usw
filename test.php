@@ -1,11 +1,10 @@
-<?php
-
-$currentDate = new DateTime('2019-05-13');
-$h = 10;
-while ($h>=0){
-$currentDate->modify('+7 day');
-
-$h -= 4;
+<body>
+ <?php   echo "<b>Today's Date:</b>".$Currentdate=date("d F Y");//current date
+$user_date = date("d F Y",strtotime("2019-05-13"));//date you get from database
+if($Currentdate<=$user_date){
+echo '<br><b>First Date :</b>'.$first_date = date("d F Y",strtotime('+2 month',strtotime($user_date)));//only if current date is less than user's date
 }
-printf("\nThe maya dooms day is at %s ?!", date_format($currentDate, 'D, M d Y'));
-?>
+else{
+echo '<br><b>Second Date :</b>'.$second_date = date("d F Y",strtotime ( '+4 month' , strtotime ( $user_date ) )) ;//only if current date is more than user's date
+}?>
+</body>

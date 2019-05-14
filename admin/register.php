@@ -78,13 +78,13 @@ if (isset($_POST['submit'])) {
                     <div class="card-body">
                         <form method="post" action="" enctype="multipart/form-data">
                             <div class="form-group">
-                                <label class="form-control-label">course Name to Student</label>
+                                <label class="form-control-label">Course & Class Name to Student</label>
                                 <?php
-                                $query = "SELECT * FROM course";
+                                $query = "SELECT * FROM class INNER JOIN course ON course.course_id = class.class_id ";
                                 $result = mysqli_query($con, $query);
-                                echo "<select name='course_id' class='form-control' >course";
+                                echo "<select name='course_id' class='form-control' >class";
                                 while ($cat_data = mysqli_fetch_assoc($result)) {
-                                    echo "<option value='" . $cat_data['course_id'] . "'>" . $cat_data['course_name'] . " - " . $cat_data['course_name_ar'] . "</option>";
+                                    echo "<option value='" . $cat_data['class_id'] . "'>" . $cat_data['class_id'] . " - " .$cat_data['course_name'] . " - " . $cat_data['start_time'] . " - " . $cat_data['end_time'] . "</option>";
                                 }
                                 echo "</select>";
                                 ?>

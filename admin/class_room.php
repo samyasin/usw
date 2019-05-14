@@ -6,15 +6,16 @@
 if (isset($_POST['submit'])) {
     $course_id = $_POST['course_id'];
     $days = $_POST['days'];
-    $len = count($days);
-    $daysString = implode(",",$days);
+    $daysString = implode(",", $days);
     $total_hours = $_POST['total_hours'];
     $hours_perday = $_POST['hours_perday'];
+    $start_time = $_POST['start_time'];
+    $end_time = $_POST['end_time'];
     $start_date = $_POST['start_date'];
     $end_date = $_POST['end_date'];
-    if (!empty($days && $total_hours && $hours_perday && $start_date)) {
+    if (!empty($daysString && $total_hours && $hours_perday && $start_date)) {
 
-        $query = "INSERT INTO `class`( `course_id`, `days`, `total_hours`, `hours_perday`, `start_date`, `end_date`) VALUES ('$course_id','$daysString','$total_hours','$hours_perday','$start_date','$end_date')"; //echo $query;die;
+        $query = "INSERT INTO `class`( `course_id`, `days`, `total_hours`, `hours_perday` , `start_time`, `end_time` , `start_date`, `end_date`) VALUES ('$course_id','$daysString','$total_hours','$hours_perday', '$start_time' , '$end_time' ,'$start_date','$end_date')"; //echo $query;die;
         if (mysqli_query($con, $query)) {
 
             echo "<div style='width:auto;margin:15px' class='alert alert-success role='alert'>Create Class Successfully </div>";
@@ -64,26 +65,15 @@ if (isset($_POST['submit'])) {
                             <div class="col-lg-6">
                                 <div>
                                     <label class="form-control-label">Days</label><br>
-                                    <?php
-                                    
-                              echo '<input name="days[]" type="checkbox"  value="Sunday"> Sunday
-                                    <input name="days[]" type="checkbox"  value="Monday"> Monday 
-                                    <input name="days[]" type="checkbox"  value="Tuesday"> Tuesday
-                                    <input name="days[]" type="checkbox"  value="Wndnesday"> Wndnesday
-                                    <input name="days[]" type="checkbox"  value="Thursday"> Thursday';
-                              $query = "SELECT * FROM class";
-                                $result = mysqli_query($con, $query);
-                                $class_data = mysqli_fetch_assoc($result);
-                              $currentDate = new DateTime($class_data['start_date']);
-                              $h = $class_data['total_hours'];
-                              while ($h>=0){
-                              $currentDate->modify('+1 W');
-                              
-                               $h-=4;
-                              }
-                              printf("\nThe maya dooms day is at %s ?!", 
-                              date_format( $currentDate, 'D, M d Y'));
-                              ?>
+
+
+                                    <input name="days[]" type="checkbox"  value="Sunday"> Sunday&nbsp;&nbsp;
+                                    <input name="days[]" type="checkbox"  value="Monday"> Monday &nbsp;&nbsp;
+                                    <input name="days[]" type="checkbox"  value="Tuesday"> Tuesday&nbsp;&nbsp;
+                                    <input name="days[]" type="checkbox"  value="Wndnesday"> Wndnesday&nbsp;&nbsp;
+                                    <input name="days[]" type="checkbox"  value="Thursday"> Thursday
+
+
 
 
                                 </div>
@@ -91,13 +81,25 @@ if (isset($_POST['submit'])) {
                             <div class="col-lg-6">
                                 <div class="form-group">
                                     <label class="form-control-label">total hours of class</label><br>
-                                    <input type="text" name="total_hours" placeholder="عدد الساعات الكلي للدورة" class="form-control">
+                                    <input type="number" name="total_hours" placeholder="عدد الساعات الكلي للدورة" class="form-control">
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="form-group">
                                     <label class="form-control-label">hours perday</label><br>
-                                    <input type="time" name="hours_perday" placeholder="عدد الساعات في الاسبوع" class="form-control">
+                                    <input type="number" name="hours_perday" placeholder="عدد الساعات في الاسبوع" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label class="form-control-label">Start Time</label>
+                                    <input type="time" name="start_time" class="form-control" value="2019-04-08" min="2018-01-01" >
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label class="form-control-label">Start End</label>
+                                    <input type="time" name="end_time" class="form-control" value="2019-04-08" min="2018-01-01" >
                                 </div>
                             </div>
                             <div class="col-lg-6">
@@ -109,13 +111,13 @@ if (isset($_POST['submit'])) {
                             <div class="col-lg-6">
                                 <div class="form-group">
                                     <label class="form-control-label">End Date</label>
-                                    <input type="hidden" name="end_date" class="form-control" value="<?php echo date_format( $currentDate, 'Y-m-d'); ?>"  >
+                                    <input type="date" name="end_date" class="form-control" value="2019-04-08" min="2018-01-01"   >
                                 </div>
                             </div>
 
 
                             <div class="form-group">
-                                <button type="submit" name="submit" class="lgx-btn "><span>Done</span></button>
+                                <button type="submit" name="submit" class="btn btn-primary"><span>Done</span></button>
                             </div>
 
                         </form>
@@ -139,6 +141,7 @@ if (isset($_POST['submit'])) {
                             <table class="table table-striped table-sm">
                                 <thead>
                                     <tr>
+                                        <th>ID </th>
                                         <th>course Name to Class </th>
                                         <th>Days </th>
                                         <th>total hours of class </th>
@@ -147,7 +150,7 @@ if (isset($_POST['submit'])) {
                                         <th>End Date</th>
                                         <th>Delete</th>
                                         <th>Edit</th>
-                                        
+
                                     </tr>
                                 </thead>
                                 <?php
@@ -160,6 +163,7 @@ if (isset($_POST['submit'])) {
                                     $cat_name = mysqli_fetch_assoc($res);
 
                                     echo "<tr>";
+                                    echo "<th>" . $class_data['class_id'] . "</th>";
                                     echo "<th>{$cat_name['course_name']} - {$cat_name['course_name_ar']}</th>";
                                     echo "<th>" . $class_data['days'] . "</th>";
                                     echo "<th>" . $class_data['total_hours'] . "</th>";

@@ -1,26 +1,13 @@
 <?php include '../includes/header.php'; ?>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-
-<script>
-    $(document).ready(function () {
-        $("select").change(function () {
-            var x = $("select").val();
-
-            //alert("The text has been changed.");
-            if ($("select").val() == "Other") {
-                //alert(111);
-                $("input").show();
-            }
-        });
-    });
-</script>
 <?php include '../includes/connect_db.php'; ?>
 
 <?php
+
 $stu_id = $_GET['stu_id'];
 $query = "SELECT * FROM register where stu_id = $stu_id";
 $result = mysqli_query($con, $query);
 $stu_data = mysqli_fetch_assoc($result);
+
 if (isset($_POST['update'])) {
     $stu_nat_num = $_POST['stu_nat_num'];
     $stu_name = mysqli_real_escape_string($con,$_POST['stu_name']);
@@ -66,7 +53,7 @@ if (isset($_POST['update'])) {
             unlink($path . $old_image);
             echo "<script type='text/Javascript'>
 			window.setTimeout(function() {
-			window.location.href = 'register.php';
+			window.location.href = 'update_student.php';
 			}, 2000);</script>";
         } else {
             echo "ERROR:" . mysqli_error($con);
@@ -84,7 +71,7 @@ if (isset($_POST['update'])) {
 
             echo "<script type='text/Javascript'>
 			window.setTimeout(function() {
-			window.location.href = 'register.php';
+			window.location.href = 'update_student.php';
 			}, 2000);</script>";
         }
     } else {
@@ -94,7 +81,7 @@ if (isset($_POST['update'])) {
 
         echo "<script type='text/Javascript'>
 			   window.setTimeout(function() {
-			   window.location.href = 'register.php';
+			   window.location.href = 'update_student.php';
 			    }, 2000);</script>";
     }
 }
@@ -124,13 +111,13 @@ if (isset($_POST['update'])) {
 
                         <form method="post" action="" enctype="multipart/form-data">
                             <div class="form-group">
-                                <label class="form-control-label">course Name to Student</label>
+                                <label class="form-control-label">Course & Class Name to Student</label>
                                 <?php
-                                $query = "SELECT * FROM course";
+                                $query = "SELECT * FROM class INNER JOIN course ON course.course_id = class.class_id ";
                                 $result = mysqli_query($con, $query);
-                                echo "<select name='course_id' class='form-control' >course";
+                                echo "<select name='course_id' class='form-control' >class";
                                 while ($cat_data = mysqli_fetch_assoc($result)) {
-                                    echo "<option value='" . $cat_data['course_id'] . "'>" . $cat_data['course_name'] . " - " . $cat_data['course_name_ar'] . "</option>";
+                                    echo "<option value='" . $cat_data['class_id'] . "'>" . $cat_data['class_id'] . " - " .$cat_data['course_name'] . " - " . $cat_data['start_time'] . " - " . $cat_data['end_time'] . "</option>";
                                 }
                                 echo "</select>";
                                 ?>
