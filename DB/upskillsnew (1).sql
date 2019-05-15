@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: May 09, 2019 at 11:42 AM
+-- Generation Time: May 15, 2019 at 09:52 AM
 -- Server version: 5.7.19
 -- PHP Version: 5.6.31
 
@@ -93,6 +93,38 @@ INSERT INTO `category` (`cat_id`, `cat_name`, `cat_name_ar`, `cat_image`) VALUES
 (21, 'Network Engineering ', 'هندسة الشبكات ', '45665.jpg'),
 (24, 'languages ', 'اللغات', '1553004041-76.jpg'),
 (25, 'Office Management', 'ادارة المكاتب', '1553082321-sketch2.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `class`
+--
+
+DROP TABLE IF EXISTS `class`;
+CREATE TABLE IF NOT EXISTS `class` (
+  `class_id` int(3) NOT NULL AUTO_INCREMENT,
+  `course_id` text NOT NULL,
+  `days` text NOT NULL,
+  `total_hours` int(50) NOT NULL,
+  `hours_perday` text NOT NULL,
+  `start_time` time NOT NULL,
+  `end_time` time NOT NULL,
+  `start_date` date NOT NULL,
+  `end_date` date NOT NULL,
+  PRIMARY KEY (`class_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=33 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `class`
+--
+
+INSERT INTO `class` (`class_id`, `course_id`, `days`, `total_hours`, `hours_perday`, `start_time`, `end_time`, `start_date`, `end_date`) VALUES
+(19, '21', 'Monday', 40, '40', '01:00:00', '03:00:00', '2019-04-08', '2019-04-08'),
+(22, '21', 'Sunday', 10, '40', '02:00:00', '00:00:00', '2019-04-08', '2019-04-08'),
+(23, '21', 'Sunday,Tuesday', 10, '40', '01:00:00', '02:00:00', '2019-04-08', '2019-04-08'),
+(27, '21', 'Sunday,Monday', 10, '40', '01:00:00', '01:00:00', '2019-04-08', '2019-04-08'),
+(30, '21', 'Sunday,Monday', 40, '40', '01:00:00', '01:00:00', '2019-04-08', '2019-04-08'),
+(32, '35', 'Sunday,Monday,Tuesday,Wndnesday', 50, '4', '13:00:00', '15:00:00', '2019-04-08', '2019-04-08');
 
 -- --------------------------------------------------------
 
@@ -329,15 +361,16 @@ CREATE TABLE IF NOT EXISTS `register` (
   `training` varchar(50) CHARACTER SET utf8 DEFAULT NULL,
   `know` text CHARACTER SET utf8,
   PRIMARY KEY (`stu_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `register`
 --
 
 INSERT INTO `register` (`stu_id`, `stu_name`, `stu_name_ar`, `stu_birth`, `stu_nat`, `stu_phone`, `stu_mobile`, `stu_email`, `stu_qualifications`, `stu_major`, `stu_univ`, `stu_job`, `course_id`, `emp_name`, `reg_date`, `image_sign`, `stu_nat_num`, `pay`, `amount_required`, `training`, `know`) VALUES
-(12, 'majd esam ', 'مجد عصام', '1995-04-08', 'أردني', '+962795963900', '+962795963900', 'majd@gmail.com', 'High School', 'طب', 'zaitona', 'test job', 30, 'alaa alraei', '2019-07-22', '1557311609-nm.jpg', '9841053333', 'Cash', '350', 'Public', 'Facebook'),
-(13, 'Mohammed Fayez Ahmed Ghanem ', 'محمد فايز احمد غانم', '1995-04-08', 'أردني', '+962796499602', '+962796499602', 'mohammadghanem432@gmail.com', 'High School', 'طب', 'جامعة الاسراء / كلية الاعمال', 'لايوجد', 21, 'ديانا المصري', '2019-07-22', '1557312884-BB.jpg', '9961012036', 'Cash', '350', 'Public', 'Facebook');
+(15, 'test name', 'مجد عصام', '1995-04-08', 'أردني', NULL, '+962796499602', 'test@test', 'High School', 'تكنولوجيا المعلومات / IT', 'جامعة الاسراء / كلية الاعمال', 'test job', 30, NULL, '2019-07-22', '1557833309-contact.jpg', '999999999', 'Cash', '350', 'Public', 'Facebook'),
+(16, 'test name', 'test name ar', '1995-04-08', 'أردني', NULL, '+962795963900', 'test@test', 'High School', 'طب', 'جامعة الاسراء / كلية الاعمال', 'test job', 19, NULL, '2019-07-22', '1557834898-aboutus.jpg', '999999999', 'Cash', '350', 'Public', 'Facebook'),
+(17, 'test name', 'test name ar', '1995-04-08', 'أردني', NULL, '+962795963900', 'test@test', 'High School', 'طب', 'جامعة الاسراء / كلية الاعمال', 'sales', 22, NULL, '2019-07-22', '1557838492-Best Photoshop courses.jpg', '9841053333', 'Cash', '350', 'Public', 'Facebook');
 
 -- --------------------------------------------------------
 

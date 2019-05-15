@@ -73,7 +73,7 @@ if (isset($_POST['submit'])) {
                                     <tr>
                                         <th>مسح</th>
                                         <th>تعديل</th>
-                                        <th>اسم الدورة</th>
+                                        <th>اسم الدورة ورقم الشعبة</th>
                                         
                                         <th>التخصص </th>
                                         
@@ -104,14 +104,14 @@ if (isset($_POST['submit'])) {
                                 $result = mysqli_query($con, $query);
                                 while ($stu_data = mysqli_fetch_assoc($result)) {
                                     $course_id = $stu_data['course_id'];
-                                    $q = "SELECT * FROM class WHERE class_id=$course_id";
+                                    $q = "SELECT * FROM class INNER JOIN course ON course.course_id = class.class_id ";
                                     $res = mysqli_query($con, $q);
                                     $cat_name = mysqli_fetch_assoc($res);
 
                                     echo "<tr>";
                                     echo "<th><a href='delete_student.php?stu_id=" . $stu_data['stu_id'] . "' class='btn btn-danger'>Delete</a></th>";
                                     echo "<th><a href='update_student.php?stu_id=" . $stu_data['stu_id'] . "' class='btn btn-primary'>Edit</a></th>";
-                                    echo "<th>{$cat_name['class_id']} -  {$cat_name['course_id']}</th>";
+                                    echo "<th>{$cat_name['class_id']} -  {$cat_name['course_name']}</th>";
                                     echo "<th>" . $stu_data['stu_major'] . "</th>";
                                     echo "<th>" . $stu_data['know'] . "</th>";
                                     

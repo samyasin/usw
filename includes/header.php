@@ -111,7 +111,7 @@ require 'connect_db.php';
                         <li <?php echo ((basename($_SERVER['PHP_SELF'], ".php")) == "albums" || (basename($_SERVER['PHP_SELF'], ".php")) == "images" ) ? "class='active'" : ''; ?> ><a href="albums.php"> <i class="icon-picture"></i> Manage Gallary </a></li>
                         <li <?php echo (basename($_SERVER['PHP_SELF'], ".php")) == "slider" ? "class='active'" : ''; ?> ><a href="slider.php"><i class="fa fa-toggle-on"></i>Manage Slider </a></li><li <?php echo (basename($_SERVER['PHP_SELF'], ".php")) == "settings" ? "class='active'" : ''; ?> ><a href="settings.php"><i class="fa fa-cog"></i>Manage Pages </a></li>
                         <li <?php echo (basename($_SERVER['PHP_SELF'], ".php")) == "contact" ? "class='active'" : ''; ?> ><a href="contact.php"> <i class="fa fa-envelope"></i> Contact / Queries </a></li>
-                        <li <?php echo (basename($_SERVER['PHP_SELF'], ".php")) == "contact" ? "class='active'" : ''; ?> ><a href="newsletter.php"> <i class="fa fa-envelope-open-o"></i> Newsletter Emails </a></li>
+                        <li <?php echo (basename($_SERVER['PHP_SELF'], ".php")) == "newsletter" ? "class='active'" : ''; ?> ><a href="newsletter.php"> <i class="fa fa-envelope-open-o"></i> Newsletter Emails </a></li>
                         <!--<li><a href="tables.html"> <i class="icon-grid"></i>tables </a></li>
         <li><a href="charts.html"> <i class="fa fa-bar-chart"></i>Charts </a></li>
         <li><a href="forms.html"> <i class="icon-padnote"></i>Forms </a></li>

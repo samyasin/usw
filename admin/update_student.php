@@ -65,13 +65,13 @@ if (isset($_POST['update'])) {
                 . "`stu_email`='$stu_email',`stu_qualifications`='$stu_qualifications',`stu_major`='$stu_major',"
                 . "`stu_univ`='$stu_univ',`stu_job`='$stu_job',`course_id`='$course_id',"
                 . "`reg_date`='$reg_date',"
-                . "`stu_nat_num`='$stu_nat_num' , `pay`='$pay',`amount_required`='$amount_required',`training`='$training' ,`know`='$know' WHERE stu_id = '$stu_id' "; //echo $query;die;       
+                . "`stu_nat_num`='$stu_nat_num' , `pay`='$pay',`amount_required`='$amount_required',`training`='$training' ,`know`='$know' WHERE stu_id = '$stu_id' ";// echo $query;die;       
         if (mysqli_query($con, $query)) {
             echo "<div style='width:auto;margin:15px' class='alert alert-success role='alert'>Updated Successfully</div>";
 
             echo "<script type='text/Javascript'>
 			window.setTimeout(function() {
-			window.location.href = 'update_student.php';
+			window.location.href = 'display_register.php';
 			}, 2000);</script>";
         }
     } else {
@@ -81,7 +81,7 @@ if (isset($_POST['update'])) {
 
         echo "<script type='text/Javascript'>
 			   window.setTimeout(function() {
-			   window.location.href = 'update_student.php';
+			   window.location.href = 'display_register.php';
 			    }, 2000);</script>";
     }
 }
@@ -115,7 +115,7 @@ if (isset($_POST['update'])) {
                                 <?php
                                 $query = "SELECT * FROM class INNER JOIN course ON course.course_id = class.class_id ";
                                 $result = mysqli_query($con, $query);
-                                echo "<select name='course_id' class='form-control' >class";
+                                echo "<select name='course_id' class='form-control' >course";
                                 while ($cat_data = mysqli_fetch_assoc($result)) {
                                     echo "<option value='" . $cat_data['class_id'] . "'>" . $cat_data['class_id'] . " - " .$cat_data['course_name'] . " - " . $cat_data['start_time'] . " - " . $cat_data['end_time'] . "</option>";
                                 }

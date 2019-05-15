@@ -62,6 +62,7 @@ if (isset($_POST['submit'])) {
                                 echo "</select>";
                                 ?>
                             </div><br>
+
                             <div class="col-lg-6">
                                 <div>
                                     <label class="form-control-label">Days</label><br>
@@ -78,43 +79,44 @@ if (isset($_POST['submit'])) {
 
                                 </div>
                             </div><br>
-                            <div class="col-lg-6">
-                                <div class="form-group">
-                                    <label class="form-control-label">total hours of class</label><br>
-                                    <input type="number" name="total_hours" placeholder="عدد الساعات الكلي للدورة" class="form-control">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label class="form-control-label">total hours of class</label><br>
+                                        <input type="number" name="total_hours" placeholder="عدد الساعات الكلي للدورة" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label class="form-control-label">hours perday</label><br>
+                                        <input type="number" name="hours_perday" placeholder="عدد الساعات في الاسبوع" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label class="form-control-label">Start Time</label>
+                                        <input type="time" name="start_time" class="form-control" value="2019-04-08" min="2018-01-01" >
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label class="form-control-label">Start End</label>
+                                        <input type="time" name="end_time" class="form-control" value="2019-04-08" min="2018-01-01" >
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label class="form-control-label">Start Date</label>
+                                        <input type="date" name="start_date" class="form-control" value="2019-04-08" min="2018-01-01" >
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label class="form-control-label">End Date</label>
+                                        <input type="date" name="end_date" class="form-control" value="2019-04-08" min="2018-01-01"   >
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-lg-6">
-                                <div class="form-group">
-                                    <label class="form-control-label">hours perday</label><br>
-                                    <input type="number" name="hours_perday" placeholder="عدد الساعات في الاسبوع" class="form-control">
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="form-group">
-                                    <label class="form-control-label">Start Time</label>
-                                    <input type="time" name="start_time" class="form-control" value="2019-04-08" min="2018-01-01" >
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="form-group">
-                                    <label class="form-control-label">Start End</label>
-                                    <input type="time" name="end_time" class="form-control" value="2019-04-08" min="2018-01-01" >
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="form-group">
-                                    <label class="form-control-label">Start Date</label>
-                                    <input type="date" name="start_date" class="form-control" value="2019-04-08" min="2018-01-01" >
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="form-group">
-                                    <label class="form-control-label">End Date</label>
-                                    <input type="date" name="end_date" class="form-control" value="2019-04-08" min="2018-01-01"   >
-                                </div>
-                            </div>
-
 
                             <div class="form-group">
                                 <button type="submit" name="submit" class="btn btn-primary"><span>Done</span></button>
@@ -141,7 +143,7 @@ if (isset($_POST['submit'])) {
                             <table class="table table-striped table-sm">
                                 <thead>
                                     <tr>
-                                        <th>ID </th>
+                                        <th>Class ID </th>
                                         <th>course Name to Class </th>
                                         <th>Days </th>
                                         <th>total hours of class </th>
