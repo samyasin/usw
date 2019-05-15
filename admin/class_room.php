@@ -3,9 +3,11 @@
 <?php include '../includes/connect_db.php'; ?>
 
 <?php
+$min = date("Y-m-d");
 if (isset($_POST['submit'])) {
     $course_id = $_POST['course_id'];
     $days = $_POST['days'];
+    
     $daysString = implode(",", $days);
     $total_hours = $_POST['total_hours'];
     $hours_perday = $_POST['hours_perday'];
@@ -110,13 +112,13 @@ if (isset($_POST['submit'])) {
                                 <div class="col-lg-6">
                                     <div class="form-group">
                                         <label class="form-control-label">Start Date</label>
-                                        <input type="date" name="start_date" class="form-control" value="2019-04-08" min="2018-01-01" >
+                                        <input type="date" name="start_date" class="form-control" value="2019-04-08" min="<?php echo  $min ?>" >
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="form-group">
                                         <label class="form-control-label">End Date</label>
-                                        <input type="date" name="end_date" class="form-control" value="2019-04-08" min="2018-01-01"   >
+                                        <input type="date" name="end_date" class="form-control" value="2019-04-08" min="<?php echo $min ?>"   >
                                     </div>
                                 </div>
                             </div>

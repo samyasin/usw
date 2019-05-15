@@ -3,6 +3,7 @@
 <?php include '../includes/connect_db.php'; ?>
 
 <?php
+$min = date("Y-m-d");
 $class_id = $_GET['class_id'];
 $query = "SELECT * FROM class where class_id = $class_id";
 $result = mysqli_query($con, $query);
@@ -71,7 +72,7 @@ if (isset($_POST['update'])) {
                                     <label class="form-control-label">Days</label><br>
 
 
-                                   <input name="days[]" type="checkbox"  value="Friday"> Saturday&nbsp;&nbsp;
+                                    <input name="days[]" type="checkbox"  value="Friday"> Saturday&nbsp;&nbsp;
                                     <input name="days[]" type="checkbox"  value="Sunday"> Sunday&nbsp;&nbsp;
                                     <input name="days[]" type="checkbox"  value="Monday"> Monday &nbsp;&nbsp;
                                     <input name="days[]" type="checkbox"  value="Tuesday"> Tuesday&nbsp;&nbsp;
@@ -112,13 +113,13 @@ if (isset($_POST['update'])) {
                                 <div class="col-lg-6">
                                     <div class="form-group">
                                         <label class="form-control-label">Start Date</label>
-                                        <input type="date" name="start_date" class="form-control" value="<?php echo $class_data['start_date']; ?>" min="2018-01-01" >
+                                        <input type="date" name="start_date" class="form-control" value="<?php echo $class_data['start_date']; ?>" min="<?php echo $min ?>" >
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="form-group">
                                         <label class="form-control-label">End Date</label>
-                                        <input type="date" name="end_date" class="form-control" value="<?php echo $class_data['end_date']; ?>" min="2018-01-01" >
+                                        <input type="date" name="end_date" class="form-control" value="<?php echo $class_data['end_date']; ?>" min="<?php echo $min ?>" >
                                     </div>
                                 </div>
                             </div>
@@ -127,7 +128,7 @@ if (isset($_POST['update'])) {
                                 <input type="submit" name="update" value="Update" class="btn btn-primary">
                                 <a href='class_room.php' class='btn btn-danger'>Cancel</a>
                             </div>
-                            
+
 
                         </form>
                     </div>
