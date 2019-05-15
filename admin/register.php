@@ -84,7 +84,7 @@ if (isset($_POST['submit'])) {
                                 $result = mysqli_query($con, $query);
                                 echo "<select name='course_id' class='form-control' >class";
                                 while ($cat_data = mysqli_fetch_assoc($result)) {
-                                    echo "<option value='" . $cat_data['class_id'] . "'>" . $cat_data['class_id'] . " - " .$cat_data['course_name'] . " - " . $cat_data['start_time'] . " - " . $cat_data['end_time'] . "</option>";
+                                    echo "<option value='" . $cat_data['class_id'] . "'>".$cat_data['course_name'] . " - " . $cat_data['start_time'] . " - " . $cat_data['end_time'] . "</option>";
                                 }
                                 echo "</select>";
                                 ?>
@@ -185,7 +185,23 @@ if (isset($_POST['submit'])) {
                                 <div class="col-lg-6">
                                     <div class="form-group">
                                         <label class="form-control-label">Student University</label>
-                                        <input type="text" name="stu_univ" class="form-control" placeholder="الجامعة / الكلية">
+                                        <select name="stu_univ" class="form-control" >
+                                            <option class="form-control" value="الجامعة العربية المفتوحة">الجامعة العربية المفتوحة</option>
+                                            <option class="form-control" value="الجامعة الاردنية">الجامعة الاردنية</option>
+                                            <option class="form-control" value="الجامعة الهاشمية">الجامعة الهاشمية</option>
+                                            <option class="form-control" value="جامعة العلوم والتكنولوجيا">جامعة العلوم والتكنولوجيا</option>
+                                            <option class="form-control" value=" جامعة اليرموك">جامعة اليرموك</option>
+                                            <option class="form-control" value="جامعة البلقاء التطبيقية">جامعة البلقاء التطبيقية</option>
+                                            <option class="form-control" value="جامعة فيلادلفيا">جامعة فيلادلفيا</option>
+                                            <option class="form-control" value="جامعة الزيتونة">جامعة الزيتونة</option>
+                                            <option class="form-control" value="جامعة اربد الاهلية">جامعة اربد الاهلية</option>
+                                            <option class="form-control" value="جامعة عمان الاهلية">جامعة عمان الاهلية</option>
+                                            <option class="form-control" value="جامعة العلوم الاسلامية">جامعة العلوم الاسلامية</option>
+                                            <option class="form-control" value="جامعة آل البيت">جامعة آل البيت</option>
+                                            <option class="form-control" value="الجامعة الالمانية ">الجامعة الالمانية </option>
+                                            <option class="form-control" value="اخرى">اخرى</option>
+
+                                        </select>
                                     </div>
                                 </div>
 

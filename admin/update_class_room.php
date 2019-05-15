@@ -66,16 +66,18 @@ if (isset($_POST['update'])) {
                                 echo "</select>";
                                 ?>
                             </div><br>
-                            <div class="col-lg-6">
+                            <div class="col-lg-9">
                                 <div>
                                     <label class="form-control-label">Days</label><br>
 
 
+                                   <input name="days[]" type="checkbox"  value="Friday"> Saturday&nbsp;&nbsp;
                                     <input name="days[]" type="checkbox"  value="Sunday"> Sunday&nbsp;&nbsp;
                                     <input name="days[]" type="checkbox"  value="Monday"> Monday &nbsp;&nbsp;
                                     <input name="days[]" type="checkbox"  value="Tuesday"> Tuesday&nbsp;&nbsp;
                                     <input name="days[]" type="checkbox"  value="Wndnesday"> Wndnesday&nbsp;&nbsp;
-                                    <input name="days[]" type="checkbox"  value="Thursday"> Thursday
+                                    <input name="days[]" type="checkbox"  value="Thursday"> Thursday&nbsp;&nbsp;
+                                    <input name="days[]" type="checkbox"  value="Friday"> Friday
 
 
 
@@ -92,19 +94,19 @@ if (isset($_POST['update'])) {
                                 <div class="col-lg-6">
                                     <div class="form-group">
                                         <label class="form-control-label">hours perday</label><br>
-                                        <input type="text" name="hours_perday" placeholder="عدد الساعات في الاسبوع" class="form-control" value="<?php echo $class_data['hours_perday']; ?>">
+                                        <input type="text" name="hours_perday" placeholder="عدد الساعات في اليوم" class="form-control" value="<?php echo $class_data['hours_perday']; ?>">
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="form-group">
                                         <label class="form-control-label">Start Time</label>
-                                        <input type="time" name="start_time" class="form-control" value="2019-04-08" min="2018-01-01" >
+                                        <input type="time" name="start_time" class="form-control" value="<?php echo $class_data['start_time']; ?>" >
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="form-group">
-                                        <label class="form-control-label">Start End</label>
-                                        <input type="time" name="end_time" class="form-control" value="2019-04-08" min="2018-01-01" >
+                                        <label class="form-control-label">End Time</label>
+                                        <input type="time" name="end_time" class="form-control" value="<?php echo $class_data['end_time']; ?>" >
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
@@ -123,7 +125,9 @@ if (isset($_POST['update'])) {
 
                             <div class="form-group">
                                 <input type="submit" name="update" value="Update" class="btn btn-primary">
+                                <a href='class_room.php' class='btn btn-danger'>Cancel</a>
                             </div>
+                            
 
                         </form>
                     </div>

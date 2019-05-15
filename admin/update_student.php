@@ -196,6 +196,7 @@ if (isset($_POST['update'])) {
                                     <div class="form-group">
                                         <label class="form-control-label">Student Major</label>
                                         <select name="stu_major" class="form-control"  >
+                                            
                                             <option class="form-control" value="طب">طب</option>
                                             <option class="form-control" value="هندسة">هندسة</option>
                                             <option class="form-control" value="تكنولوجيا المعلومات / IT">تكنولوجيا المعلومات / IT</option>
@@ -218,8 +219,26 @@ if (isset($_POST['update'])) {
                                 <div class="col-lg-6">
                                     <div class="form-group">
                                         <label class="form-control-label">Student University</label>
-                                        <input type="text" name="stu_univ" class="form-control" placeholder="الجامعة / الكلية" value="<?php echo $stu_data['stu_univ']; ?>">
-                                    </div>
+                                        <select name="stu_univ" class="form-control" >
+                                            <option class="form-control" value="<?php echo $stu_data['stu_univ']; ?>"> <?php echo $stu_data['stu_univ']; ?> </option>
+                                            <option class="form-control" value="الجامعة العربية المفتوحة">الجامعة العربية المفتوحة</option>
+                                            <option class="form-control" value="الجامعة الاردنية">الجامعة الاردنية</option>
+                                            <option class="form-control" value="الجامعة الهاشمية">الجامعة الهاشمية</option>
+                                            <option class="form-control" value="جامعة العلوم والتكنولوجيا">جامعة العلوم والتكنولوجيا</option>
+                                            <option class="form-control" value=" جامعة اليرموك">جامعة اليرموك</option>
+                                            <option class="form-control" value="جامعة البلقاء التطبيقية">جامعة البلقاء التطبيقية</option>
+                                            <option class="form-control" value="جامعة فيلادلفيا">جامعة فيلادلفيا</option>
+                                            <option class="form-control" value="جامعة الزيتونة">جامعة الزيتونة</option>
+                                            <option class="form-control" value="جامعة اربد الاهلية">جامعة اربد الاهلية</option>
+                                            <option class="form-control" value="جامعة عمان الاهلية">جامعة عمان الاهلية</option>
+                                            <option class="form-control" value="جامعة العلوم الاسلامية">جامعة العلوم الاسلامية</option>
+                                            <option class="form-control" value="جامعة آل البيت">جامعة آل البيت</option>
+                                            <option class="form-control" value="الجامعة الالمانية ">الجامعة الالمانية </option>
+                                            <option class="form-control" value="الجامعة الالمانية ">جامعة الاسراء </option>
+                                            <option class="form-control" value="اخرى">اخرى</option>
+
+                                        </select>
+                                    </div>                              
                                 </div>
 
                                 <div class="col-lg-6">

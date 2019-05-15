@@ -63,16 +63,19 @@ if (isset($_POST['submit'])) {
                                 ?>
                             </div><br>
 
-                            <div class="col-lg-6">
+                            <div class="col-lg-9">
                                 <div>
                                     <label class="form-control-label">Days</label><br>
 
 
+                                    
+                                    <input name="days[]" type="checkbox"  value="Friday"> Saturday&nbsp;&nbsp;
                                     <input name="days[]" type="checkbox"  value="Sunday"> Sunday&nbsp;&nbsp;
                                     <input name="days[]" type="checkbox"  value="Monday"> Monday &nbsp;&nbsp;
                                     <input name="days[]" type="checkbox"  value="Tuesday"> Tuesday&nbsp;&nbsp;
                                     <input name="days[]" type="checkbox"  value="Wndnesday"> Wndnesday&nbsp;&nbsp;
-                                    <input name="days[]" type="checkbox"  value="Thursday"> Thursday
+                                    <input name="days[]" type="checkbox"  value="Thursday"> Thursday&nbsp;&nbsp;
+                                    <input name="days[]" type="checkbox"  value="Friday"> Friday
 
 
 
@@ -88,8 +91,8 @@ if (isset($_POST['submit'])) {
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="form-group">
-                                        <label class="form-control-label">hours perday</label><br>
-                                        <input type="number" name="hours_perday" placeholder="عدد الساعات في الاسبوع" class="form-control">
+                                        <label class="form-control-label">hours perday</label><br>                                        
+                                        <input type="number" name="hours_perday" placeholder="عدد الساعات في اليوم" class="form-control">
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
@@ -100,7 +103,7 @@ if (isset($_POST['submit'])) {
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="form-group">
-                                        <label class="form-control-label">Start End</label>
+                                        <label class="form-control-label">End Time</label>
                                         <input type="time" name="end_time" class="form-control" value="2019-04-08" min="2018-01-01" >
                                     </div>
                                 </div>
@@ -121,6 +124,7 @@ if (isset($_POST['submit'])) {
                             <div class="form-group">
                                 <button type="submit" name="submit" class="btn btn-primary"><span>Done</span></button>
                             </div>
+                            
 
                         </form>
                     </div>
